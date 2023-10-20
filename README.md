@@ -7,13 +7,20 @@
 
 </div>
 
-For Registry Files
-
 ``` Shell
-run regedit.exe
+regedit.exe
 ```
+Git-Bash & Git-Gui in Folder:<br>
+[Bash.reg ](https://github.com/EstebanMqz/Registries/blob/main/Git-Gui) &#10003; <br><br>
+[Git-Gui.reg](https://github.com/EstebanMqz/Registries/blob/main/bash)<br><br>
+[CMD.reg](https://github.com/EstebanMqz/Registries/blob/main/CMD)<br><br>
+[PyCharm.reg](https://github.com/EstebanMqz/Registries/blob/main/PyCharm)<br><br>
+[PowerShell.reg](https://github.com/EstebanMqz/Registries/blob/main/PowerShell)<br><br>
 
-[Bash.reg](https://github.com/EstebanMqz/Registries/blob/main/Git-Gui)<br>
-[Git-Gui.reg](https://github.com/EstebanMqz/Registries/blob/main/bash)<br>
-[CMD.reg](https://github.com/EstebanMqz/Registries/blob/main/CMD)<br>
-[PowerShell.reg](https://github.com/EstebanMqz/Registries/blob/main/PowerShell)<br>
+<span style="font-size: 14px;">
+
+Icon's registry [Powershell.exe](https://github.com/PowerShell/PowerShell) <i>double-back-slashed <b></i>.reg</b></i> <b>PATH:</b></span>
+
+``` powershell 
+Write-Output(([System.Diagnostics.Process]::GetCurrentProcess().MainModule.FileName)).replace('\', '\\') #PowerShell terminal
+```
