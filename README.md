@@ -16,16 +16,11 @@ regedit.exe
 [Git-Gui.reg](https://github.com/EstebanMqz/Registries/blob/main/bash.reg) &#10003; <br><br>
 [gitk.reg](https://github.com/EstebanMqz/Registries/blob/main/bash.reg) &#10003; <br><br>
 
-``` CMD
-reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System /v EnableLUA /t REG_DWORD /d 1 /f && regedit.exe
-```
-<br>
-
 1. <img src="https://img.shields.io/badge/CMD-000000.svg?style=flat&logo=windows-terminal&logoColor=white" width="45" height="20"> &nbsp; <b>CMD @ &#x1F4C1;</b><br>
 
     Set up <b><i>[UAC](https://learn.microsoft.com/en-us/windows/security/application-security/application-control/user-account-control/):</b></i>
 
-
+    
     ``` cmd
     reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System /v ConsentPromptBehaviorAdmin /t REG_DWORD /d 2 /f
     ```
@@ -41,8 +36,7 @@ reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System /v Enable
 
     [CMD.reg](https://github.com/EstebanMqz/Registries/blob/main/CMD.reg) &#10003; 
 
-<br><br>
-
+<br>
 
 
 [PyCharm.reg](https://github.com/EstebanMqz/Registries/blob/main/PyCharm) <br><br>
