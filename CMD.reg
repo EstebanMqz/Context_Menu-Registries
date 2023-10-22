@@ -1,0 +1,12 @@
+Windows Registry Editor Version 5.00
+%Author: EstebanMqz(www.github.com/EstebanMqz)
+
+%% Create a CMD terminal Context Menu & Command.
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\cmd]
+@ = "CMD Here"
+"Icon"= "C:\\Windows\\System32\\cmd.exe"
+MUIVerb = "CMD Here"
+[HKEY_CLASSES_ROOT\Directory\Background\shell\cmd\command]
+@="cmd.exe /s /k pushd \"%V\""
+
