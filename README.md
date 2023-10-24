@@ -13,7 +13,7 @@
 
 </div>
 
-</div><br><br><br><br>
+</div><br><br>
 
 ``` CMD
 regedit.exe
@@ -50,25 +50,27 @@ regedit.exe
     ---
 
 
-    
 
-
-[PowerShell.reg](https://github.com/EstebanMqz/Registries/blob/main/PowerShell) <br>
-[VSCode.reg](https://github.com/EstebanMqz/Registries/blob/main/VSCode) <br>
-[PyCharm.reg](https://github.com/EstebanMqz/Registries/blob/main/PyCharm) <br>
-[Notepad.reg](https://github.com/EstebanMqz/Registries/blob/main/Notepad) <br>
-
+[PowerShell.reg](https://github.com/EstebanMqz/Registries/blob/main/PowerShell.reg) &#10003; <br>
 
 <span style="font-size: 14px;">
+
+[![PowerShell](https://img.shields.io/badge/PowerShell-5391FE.svg?style=flat&logo=PowerShell&logoColor=white)](https://learn.microsoft.com/en-us/powershell/?view=powershell-7.3) &nbsp; [![PowerShell_gui](https://img.shields.io/badge/PowerShell_gui-5391FE.svg?style=flat&logo=PowerShell&logoColor=white)](https://learn.microsoft.com/en-us/dotnet/api/microsoft.windows.powershell.gui.internal?view=powershellsdk-1.1.0)
 
 Icon's registry [Powershell.exe](https://github.com/PowerShell/PowerShell) <i>double-back-slashed <b></i>.reg</b></i> <b>PATH:</b></span>
 
 ``` powershell
 Write-Output(([System.Diagnostics.Process]::GetCurrentProcess().MainModule.FileName)).replace('\', '\\') #PowerShell terminal
 ```
+<br><br>
+[VSCode.reg](https://github.com/EstebanMqz/Registries/blob/main/VSCode.reg) <br>
+[PyCharm.reg](https://github.com/EstebanMqz/Registries/blob/main/PyCharm.reg) <br>
+[Notepad.reg](https://github.com/EstebanMqz/Registries/blob/main/Notepad.reg) <br>
+
+<span style="font-size: 14px;">
 
 ###### Official Refs:
 [CMD](https://microsoft.com/en-us/windows-server/administration/windows-commands/reg) <br>
-[PowerShell](https://Windows.com/en-us/powershell/scripting/overview) <br>
+[PowerShell](https://learn.microsoft.com/en-us/powershell/?view=powershell-7.3) &nbsp; [PowerShell_Gui](https://learn.microsoft.com/en-us/powershell/?view=powershell-7.3) <br> 
 [Bash](https://gitforwindows.org) <br>
 [Git](https://git-scm.com/docs) <br>
