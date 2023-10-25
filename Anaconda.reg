@@ -5,10 +5,13 @@ Windows Registry Editor Version 5.00
 [-HKEY_CLASSES_ROOT\Directory\Background\shell\Anaconda]
 [-HKEY_CLASSES_ROOT\Directory\Background\shell\Anaconda\command]
 
+%% Create an Anaconda Context Menu & Command for the Registry Editor 
 [HKEY_CLASSES_ROOT\Directory\Background\shell\Anaconda]
-%% Create a Context Menu & Command for the Registry Editor 
-@ = "Open Anaconda"
+@ = "Anaconda env"
 "Icon" = "C:\\ProgramData\\Anaconda3\\_conda.exe"
-MUIVerb = = "Open Anaconda"
+MUIVerb = "Anaconda env"
+
 [HKEY_CLASSES_ROOT\Directory\Background\shell\Anaconda\command]
-@="cmd.exe /k \"C:\\ProgramData\\Anaconda3\\Scripts\\conda.exe\" \"%1\""
+%Refs: .exe (C:\ProgramData\Anaconda3\Scripts\anaconda-navigator) OR
+%      .Ink (C:\ProgramData\Microsoft\Windows\Start Menu\Programs)
+@ = "cmd.exe /k -Verb RunAs \"\"C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Anaconda3 (64-bit)\\Anaconda Navigator (Anaconda3).lnk\" \"%V\"\""

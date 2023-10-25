@@ -1,2 +1,15 @@
+ Windows Registry Editor Version 5.00
+%Author: EstebanMqz(www.github.com/EstebanMqz)
+
+%Regedit Existing Notepad Context Menu & Command Deletion. - User's Option: Manual del)
 [-HKEY_CLASSES_ROOT\Directory\Background\shell\Notepad]
 [-HKEY_CLASSES_ROOT\Directory\Background\shell\Notepad\command]
+
+; Create new Notepad context menu and command
+[HKEY_CLASSES_ROOT\Directory\Background\shell\Notepad]
+@="Notepad in cd"
+"Icon"="C:\\Windows\\System32\\notepad.exe"
+"MUIVerb"="Notepad in cd"
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\Notepad\command]
+@="cmd.exe /k \"\"C:\\Windows\\System32\\notepad.exe\" \"%V\"\""

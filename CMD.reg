@@ -1,15 +1,15 @@
 Windows Registry Editor Version 5.00
 %Author: EstebanMqz(www.github.com/EstebanMqz)
 
-%% regedit Existing Cmd Context Menu & Command Deletion. - User's Option: Manual del) 
+%% regedit Existing CMD Context Menu & Command Deletion. - User's Option: Manual del) 
 [-HKEY_CLASSES_ROOT\Directory\Background\shell\cmd]
 [-HKEY_CLASSES_ROOT\Directory\Background\shell\cmd\command]
 
-%% Create a CMD Context Menu & Command for the Registry Editor 
+%% Create CMD Context Menu & Command for the Registry Editor 
 [HKEY_CLASSES_ROOT\Directory\Background\shell\cmd]
-@ = "CMD Here"
+@ = "CMD @ cd"
 "Icon" = "C:\\Windows\\System32\\cmd.exe"
-MUIVerb = "CMD Here"
+MUIVerb = "CMD @ cd"
 [HKEY_CLASSES_ROOT\Directory\Background\shell\cmd\command]
 @="cmd.exe /s /k /runas pushd \"%V\""
 

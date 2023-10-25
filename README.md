@@ -15,11 +15,13 @@
 
 </div><br><br>
 
-<b>Registry</b> &rarr; <i>Ctrl+Shift+F</i> 
-``` regex
-Computer\\HKEY_CLASSES_ROOT\\Directory.*Terminal
+To perform Regex searches in the registry, use the following CMD command:
+``` CMD
+:: CMD Registry Regex
+reg query HKEY_CLASSES_ROOT /f "<regex_search>" /s /e
 ```
-<br>
+
+Registry <b>Regex</b>  &rarr; <i>Ctrl+Shift+F</i> 
 
 ---
 1. &nbsp; [![Git](https://img.shields.io/badge/Git-F05032?style=flat&logo=git&logoColor=white)](https://git-scm.com/) &nbsp; <b>Bash, GUI & gitk @ &#x1F4C1;</b>  <br>
@@ -32,7 +34,8 @@ Computer\\HKEY_CLASSES_ROOT\\Directory.*Terminal
     Set up <i>[UAC](https://learn.microsoft.com/en-us/windows/security/application-security/application-control/user-account-control/):</i>
 
     
-    ``` cmd
+    ``` CMD
+    :: CMD UAC Admin Behavior
     reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System /v ConsentPromptBehaviorAdmin /t REG_DWORD /d 2 /f
     ```
 
@@ -62,11 +65,17 @@ Computer\\HKEY_CLASSES_ROOT\\Directory.*Terminal
 <span style="font-size: 14px;">
 
 [PowerShell.reg](https://github.com/EstebanMqz/Registries/blob/main/PowerShell.reg)
-&nbsp; [<img width="18px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/PowerShell_5.0_icon.png/18px-PowerShell_5.0_icon.png">](https://docs.microsoft.com/en-us/powershell/) <br> 
-[VSCode.reg](https://github.com/EstebanMqz/Registries/blob/main/VSCode.reg) &nbsp; [![VS-Code-Web](https://img.shields.io/badge/VS_Code%20Web-010b38?style=flat-square&logo=visual-studio-code&logoColor=266fff)](https://code.visualstudio.com) <br>
-[PyCharm.reg](https://github.com/EstebanMqz/Registries/blob/main/PyCharm.reg) &nbsp; [<img width="18px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/PyCharm_Icon.svg/512px-PyCharm_Icon.svg.png">](https://www.jetbrains.com/pycharm/) <br>
-[Anaconda.reg](https://github.com/EstebanMqz/Registries/blob/main/Anaconda.reg) &nbsp; [![Anaconda](https://img.shields.io/badge/Anaconda-44A833?style=flat&logo=Anaconda&logoColor=white)](https://anaconda.org) <br>
-[Notepad.reg](https://github.com/EstebanMqz/Registries/blob/main/Notepad.reg) &nbsp; [<img width="18px" src="https://upload.wikimedia.org/wikipedia/en/thumb/2/2a/Notepad.png/180px-Notepad.png">](https://en.wikipedia.org/wiki/Microsoft_Notepad) <br>
+&nbsp; [<img width="18px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/PowerShell_5.0_icon.png/18px-PowerShell_5.0_icon.png">](https://docs.microsoft.com/en-us/powershell/) <br></span>
+<br>
+
+
+   <b>4. &nbsp;   &nbsp; [VSCode.reg](https://github.com/EstebanMqz/Registries/blob/main/VSCode.reg) &nbsp; [![VS-Code-Web](https://img.shields.io/badge/VS_Code%20Web-010b38?style=flat-square&logo=visual-studio-code&logoColor=266fff)](https://code.visualstudio.com) <br>
+
+   <b>5. &nbsp;   &nbsp; [PyCharm.reg](https://github.com/EstebanMqz/Registries/blob/main/PyCharm.reg) &nbsp; [<img width="18px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/PyCharm_Icon.svg/512px-PyCharm_Icon.svg.png">](https://www.jetbrains.com/pycharm/) <br>
+
+   <b>6. &nbsp;   &nbsp; [Anaconda.reg](https://github.com/EstebanMqz/Registries/blob/main/Anaconda.reg) &nbsp; [![Anaconda](https://img.shields.io/badge/Anaconda-44A833?style=flat&logo=Anaconda&logoColor=white)](https://anaconda.org) <br>
+
+   <b>7. &nbsp;   &nbsp; [Notepad.reg](https://github.com/EstebanMqz/Registries/blob/main/Notepad.reg) &nbsp; [<img width="18px" src="https://upload.wikimedia.org/wikipedia/en/thumb/2/2a/Notepad.png/180px-Notepad.png">](https://en.wikipedia.org/wiki/Microsoft_Notepad) <br>
 
 </span>
 
