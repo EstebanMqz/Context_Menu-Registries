@@ -1,0 +1,18 @@
+Windows Registry Editor Version 5.00
+%Author: EstebanMqz(www.github.com/EstebanMqz)
+
+%Regedit Existing PyCharm Context Menu & Command Deletion. - User's Option: Manual del)
+[-HKEY_CLASSES_ROOT\Directory\Background\shell\PyCharm]
+[-HKEY_CLASSES_ROOT\Directory\Background\shell\PyCharm\command]
+
+%% Create a Context Menu & Command for the Registry Editor 
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\PyCharm]
+@ = "Open PyCharm"
+"Icon" = "C:\\Program Files\\JetBrains\\PyCharm 2022.2.2\\bin\\pycharm.ico"
+MUIverb = "Open PyCharm"
+[HKEY_CLASSES_ROOT\Directory\Background\shell\PyCharm\command]
+@="\"C:\\Program Files\\JetBrains\\PyCharm 2022.2.2\\bin\\pycharm64.exe\" \"%V\""
+
+
+

@@ -22,10 +22,10 @@ Computer\\HKEY_CLASSES_ROOT\\Directory.*Terminal
 <br>
 
 ---
-1. <b>Git-Bash, Git-Gui & gitk @ &#x1F4C1;</b> [![Git](https://img.shields.io/badge/Git-F05032?style=flat&logo=git&logoColor=white)](https://git-scm.com/) <br>
+1. &nbsp; [![Git](https://img.shields.io/badge/Git-F05032?style=flat&logo=git&logoColor=white)](https://git-scm.com/) &nbsp; <b>Bash, GUI & gitk @ &#x1F4C1;</b>  <br>
 [Bash.reg](https://github.com/EstebanMqz/Registries/blob/main/bash.reg) &emsp; [Git-Gui.reg](https://github.com/EstebanMqz/Registries/blob/main/bash.reg) &emsp; [gitk.reg](https://github.com/EstebanMqz/Registries/blob/main/bash.reg)  <br><br>
 
-2. <b>CMD @ &#x1F4C1;</b> [![CMD logo](https://img.shields.io/badge/CMD-000000.svg?style=flat&logo=windows-terminal&logoColor=white)](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/cmd)<br>
+1. &nbsp; [![CMD logo](https://img.shields.io/badge/CMD-000000.svg?style=flat&logo=windows-terminal&logoColor=white)](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/cmd) <b>CMD @ &#x1F4C1;</b> <br>
 [CMD.reg](https://github.com/EstebanMqz/Registries/blob/main/CMD.reg)
 
     ---
@@ -49,7 +49,7 @@ Computer\\HKEY_CLASSES_ROOT\\Directory.*Terminal
 
 
 
-   <b>3. PowerShell & PowerShell GUI @ &#x1F4C1;</b>&emsp;[![PowerShell](https://img.shields.io/badge/PowerShell-5391FE.svg?style=flat&logo=PowerShell&logoColor=white)](https://learn.microsoft.com/en-us/powershell/?view=powershell-7.3) &nbsp; [![PowerShell_gui](https://img.shields.io/badge/PowerShell_gui-5391FE.svg?style=flat&logo=PowerShell&logoColor=white)](https://learn.microsoft.com/en-us/dotnet/api/microsoft.windows.powershell.gui.internal?view=powershellsdk-1.1.0)
+   <b>3. &nbsp;   &nbsp; PowerShell & PowerShell GUI @ &#x1F4C1;</b>&emsp;
 
    <span style="font-size: 14px;">
 
@@ -58,20 +58,15 @@ Computer\\HKEY_CLASSES_ROOT\\Directory.*Terminal
    ``` powershell
    Write-Output(([System.Diagnostics.Process]::GetCurrentProcess().MainModule.FileName)).replace('\', '\\') #PowerShell terminal
    ```
-
-    <b>[PowerShell.reg](https://github.com/EstebanMqz/Registries/blob/main/PowerShell.reg)
-    <br>
-
-
-<br><br>
-[VSCode.reg](https://github.com/EstebanMqz/Registries/blob/main/VSCode.reg) &nbsp; [![VS-Code-Web](https://img.shields.io/badge/VS_Code%20Web-010b38?style=flat-square&logo=visual-studio-code&logoColor=266fff)](https://code.visualstudio.com) <br><br>
-[PyCharm.reg](https://github.com/EstebanMqz/Registries/blob/main/PyCharm.reg) &nbsp; [<img width="18px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/PyCharm_Icon.svg/512px-PyCharm_Icon.svg.png">](https://www.jetbrains.com/pycharm/) <br><br>
-[Notepad.reg](https://github.com/EstebanMqz/Registries/blob/main/Notepad.reg) &nbsp; [<img width="18px" src="https://upload.wikimedia.org/wikipedia/en/thumb/2/2a/Notepad.png/180px-Notepad.png">](https://en.wikipedia.org/wiki/Microsoft_Notepad) <br><br>
-
+<br> 
 <span style="font-size: 14px;">
 
-###### Official Refs:
-[CMD](https://microsoft.com/en-us/windows-server/administration/windows-commands/reg) <br>
-[PowerShell](https://learn.microsoft.com/en-us/powershell/?view=powershell-7.3) &nbsp; [PowerShell_Gui](https://learn.microsoft.com/en-us/powershell/?view=powershell-7.3) <br> 
-[Bash](https://gitforwindows.org) <br>
-[Git](https://git-scm.com/docs) <br>
+[PowerShell.reg](https://github.com/EstebanMqz/Registries/blob/main/PowerShell.reg)
+&nbsp; [<img width="18px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/PowerShell_5.0_icon.png/18px-PowerShell_5.0_icon.png">](https://docs.microsoft.com/en-us/powershell/) <br> 
+[VSCode.reg](https://github.com/EstebanMqz/Registries/blob/main/VSCode.reg) &nbsp; [![VS-Code-Web](https://img.shields.io/badge/VS_Code%20Web-010b38?style=flat-square&logo=visual-studio-code&logoColor=266fff)](https://code.visualstudio.com) <br>
+[PyCharm.reg](https://github.com/EstebanMqz/Registries/blob/main/PyCharm.reg) &nbsp; [<img width="18px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/PyCharm_Icon.svg/512px-PyCharm_Icon.svg.png">](https://www.jetbrains.com/pycharm/) <br>
+[Anaconda.reg](https://github.com/EstebanMqz/Registries/blob/main/Anaconda.reg) &nbsp; [![Anaconda](https://img.shields.io/badge/Anaconda-44A833?style=flat&logo=Anaconda&logoColor=white)](https://anaconda.org) <br>
+[Notepad.reg](https://github.com/EstebanMqz/Registries/blob/main/Notepad.reg) &nbsp; [<img width="18px" src="https://upload.wikimedia.org/wikipedia/en/thumb/2/2a/Notepad.png/180px-Notepad.png">](https://en.wikipedia.org/wiki/Microsoft_Notepad) <br>
+
+</span>
+

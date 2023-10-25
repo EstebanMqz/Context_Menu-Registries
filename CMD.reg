@@ -5,6 +5,7 @@ Windows Registry Editor Version 5.00
 [-HKEY_CLASSES_ROOT\Directory\Background\shell\cmd]
 [-HKEY_CLASSES_ROOT\Directory\Background\shell\cmd\command]
 
+%% Create a CMD Context Menu & Command for the Registry Editor 
 [HKEY_CLASSES_ROOT\Directory\Background\shell\cmd]
 @ = "CMD Here"
 "Icon" = "C:\\Windows\\System32\\cmd.exe"

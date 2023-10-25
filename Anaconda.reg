@@ -1,0 +1,14 @@
+Windows Registry Editor Version 5.00
+%Author: EstebanMqz(www.github.com/EstebanMqz)
+
+%Regedit Existing Anaconda Context Menu & Command Deletion. - User's Option: Manual del)
+[-HKEY_CLASSES_ROOT\Directory\Background\shell\Anaconda]
+[-HKEY_CLASSES_ROOT\Directory\Background\shell\Anaconda\command]
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\Anaconda]
+%% Create a Context Menu & Command for the Registry Editor 
+@ = "Open Anaconda"
+"Icon" = "C:\\ProgramData\\Anaconda3\\_conda.exe"
+MUIVerb = = "Open Anaconda"
+[HKEY_CLASSES_ROOT\Directory\Background\shell\Anaconda\command]
+@="cmd.exe /k \"C:\\ProgramData\\Anaconda3\\Scripts\\conda.exe\" \"%1\""
