@@ -1,0 +1,12 @@
+echo %ProgramFiles(x86)%\NVIDIA Corporation\PhysX\Common
+echo %ProgramFiles%\NVIDIA Corporation\NVIDIA NvDLISR
+echo %SystemRoot%\system32
+echo %ProgramFiles%\MATLAB\R2021a\bin
+echo %ProgramFiles%\dotnet
+echo %ProgramFiles%\nodejs
+echo %SystemDrive%\php-8.2.9
+echo %ProgramData%\ComposerSetup\bin
+echo %ProgramFiles%\Git\cmd
+echo %ProgramData%\Anaconda3\Scripts\anaconda-navigator.exe
+echo %LocalAppData%\Programs\Python\Python311\Scripts
+echo %SystemRoot%\system32

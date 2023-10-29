@@ -1,6 +1,5 @@
 <div align="center"><h2><b>Windows Registry Admin keys</h2></div></b>
 
----
 <div align="left">
 
 <div align="right">
@@ -12,16 +11,6 @@
 
 
 </div>
-
-</div><br><br>
-
-To perform Regex searches in the registry, use the following CMD command:
-``` CMD
-:: CMD Registry Regex
-reg query HKEY_CLASSES_ROOT /f "<regex_search>" /s /e
-```
-
-Registry <b>Regex</b>  &rarr; <i>Ctrl+Shift+F</i> 
 
 ---
 1. &nbsp; [![Git](https://img.shields.io/badge/Git-F05032?style=flat&logo=git&logoColor=white)](https://git-scm.com/) &nbsp; <b>Bash, GUI & gitk @ &#x1F4C1;</b>  <br>
@@ -64,6 +53,8 @@ Registry <b>Regex</b>  &rarr; <i>Ctrl+Shift+F</i>
 <br> 
 <span style="font-size: 14px;">
 
+---
+
 [PowerShell.reg](https://github.com/EstebanMqz/Registries/blob/main/PowerShell.reg)
 &nbsp; [<img width="18px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/PowerShell_5.0_icon.png/18px-PowerShell_5.0_icon.png">](https://docs.microsoft.com/en-us/powershell/) <br></span>
 <br>
@@ -79,3 +70,38 @@ Registry <b>Regex</b>  &rarr; <i>Ctrl+Shift+F</i>
 
 </span>
 
+--- 
+
+<div align= "center"> 
+
+<br>
+<section id="config">
+  <h4>Windows-config.</h4>
+
+
+<I><div style="font-size: 11px;">
+
+Registry <b>Regex</b>  &rarr; <i>Ctrl+Shift+F</i> 
+
+To perform Regex searches in the registry, use the following CMD command:
+``` CMD
+:: CMD Registry Regex
+reg query HKEY_CLASSES_ROOT /f "<regex_search>" /s /e
+```
+
+[![CMD-setx](https://img.shields.io/badge/setx-000000.svg?style=flat&logo=windows-terminal&logoColor=white)](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/setx) to enable <b>User &amp; System Environment Variables in cd:
+
+``` CMD 
+:: CMD User / System Environment Variables 
+runas /user:Administrator "%PATH%\System_Environment.bat"
+
+rem Make sure to have the admin password for the admin found in your .crd file (encrypted or not)
+rundll32.exe keymgr.dll,KRShowKeyMgr "%PATH%\file.crd"
+```
+
+<div align= "left"> 
+
+[See-also](https://github.com/EstebanMqz/GPG-Git-Encryption-Tool-760-4071bits#references)
+</i>
+
+</div></div>
