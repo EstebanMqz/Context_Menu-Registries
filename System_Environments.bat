@@ -1,0 +1,77 @@
+@echo off
+
+@REM Set system & User Environment variables & ADD to PATH @ Windows OS Machine cmdlet (.bat).
+
+@REM @REM User
+@REM setx Path "%Path%;%ProgramFiles(x86)%\NVIDIA Corporation\PhysX\Common\"
+@REM setx Path "%Path%;%ProgramFiles(x86)%\NVIDIA Corporation\NVIDIA NvDLISR\"
+@REM setx Path "%Path%;%SystemRoot%\system32\"
+@REM setx Path "%Path%;%ProgramFiles%\MATLAB\R2021a\bin\"
+@REM setx Path "%Path%;%ProgramFiles%\dotnet\"
+@REM setx Path "%Path%;%ProgramFiles%\nodejs\"
+@REM setx Path "%Path%;%SystemDrive%\php-8.2.9\"
+@REM setx Path "%Path%;%ProgramData%\ComposerSetup\bin\"
+@REM setx Path "%Path%;%ProgramFiles%\Git\cmd\"
+@REM setx Path "%Path%;%ProgramData%\Anaconda3\Scripts\anaconda-navigator.exe\"
+@REM setx Path "%Path%;%LocalAppData%\Programs\Python\Python311\Scripts\"
+@REM setx Path "%Path%;%LocalAppData%\Programs\Microsoft VS Code\bin\"
+@REM setx Path "%Path%;%SystemRoot%\WindowsPowerShell\v1.0\"
+@REM setx Path "%Path%;%SystemRoot%\Wbem\"
+@REM setx Path "%Path%;%SystemRoot%\OpenSSH\"
+@REM rem Set system environment variables & add them to Path.
+
+@REM @REM System
+@REM setx /M Path "%Path%;%ProgramFiles(x86)%\NVIDIA Corporation\PhysX\Common\"
+@REM setx /M Path "%Path%;%ProgramFiles%\NVIDIA Corporation\NVIDIA NvDLISR\"
+@REM setx /M Path "%Path%;%SystemRoot%\system32\"
+@REM setx /M Path "%Path%;%ProgramFiles%\MATLAB\R2021a\bin\"
+@REM setx /M Path "%Path%;%ProgramFiles%\dotnet\"
+@REM setx /M Path "%Path%;%ProgramFiles%\nodejs\"
+@REM setx /M Path "%Path%;%SystemDrive%\php-8.2.9\"
+@REM setx /M Path "%Path%;%ProgramData%\ComposerSetup\bin\"
+@REM setx /M Path "%Path%;%ProgramFiles%\Git\cmd\"
+@REM setx /M Path "%Path%;%ProgramData%\Anaconda3\Scripts\anaconda-navigator.exe\"
+@REM setx /M Path "%Path%;%LocalAppData%\Programs\Python\Python311\Scripts\"
+@REM setx /M Path "%Path%;%LocalAppData%\Programs\Microsoft VS Code\bin\"
+@REM setx /M Path "%Path%;%SystemRoot%\WindowsPowerShell\v1.0\"
+@REM setx /M Path "%Path%;%SystemRoot%\Wbem\"
+@REM setx /M Path "%Path%;%SystemRoot%\OpenSSH\"
+@REM setx /M Path "%Path%;%LocalAppData%\Programs\Python\Python311\Scripts\"
+
+setx PhysX "%ProgramFiles(x86)%\NVIDIA Corporation\PhysX\Common\"
+setx NvDLISR "%ProgramFiles(x86)%\NVIDIA Corporation\NVIDIA NvDLISR\"
+setx system32 "%SystemRoot%\system32\" 
+setx MATLAB "%ProgramFiles%\MATLAB\R2021a\bin\" 
+setx dotnet "%ProgramFiles%\dotnet\" 
+setx nodejs "%ProgramFiles%\nodejs\" 
+setx php-8.2.9 "%SystemDrive%\php-8.2.9\"
+setx ComposerSetup "%ProgramData%\ComposerSetup\bin\" 
+setx Git "%ProgramFiles%\Git\cmd\" 
+setx anaconda-navigator "%ProgramData%\Anaconda3\Scripts\anaconda-navigator.exe\" 
+setx Python311 "%LocalAppData%\Programs\Python\Python311\Scripts\"
+setx VS "%LocalAppData%\Programs\Microsoft VS Code\bin\" 
+setx WindowsPowerShell "%SystemRoot%\system32\WindowsPowerShell\v1.0\" 
+setx Wbem "%SystemRoot%\system32\Wbem\" 
+setx system32 "%SystemRoot%\system32\OpenSSH\"
+setx Scripts "%LocalAppData%\Programs\Python\Python311\Scripts\"
+
+setx /M PhysX "%ProgramFiles(x86)%\NVIDIA Corporation\PhysX\Common\" 
+setx /M NvDLISR "%ProgramFiles%\NVIDIA Corporation\NVIDIA NvDLISR\" 
+setx /M system32 "%SystemRoot%\system32\" 
+setx /M MATLAB "%ProgramFiles%\MATLAB\R2021a\bin\"
+setx /M dotnet "%ProgramFiles%\dotnet\" 
+setx /M nodejs "%ProgramFiles%\nodejs\" 
+setx /M php-8.2.9 "%SystemDrive%\php-8.2.9\"
+setx /M ComposerSetup "%ProgramData%\ComposerSetup\bin\"
+setx /M Git "%ProgramFiles%\Git\cmd\" 
+setx /M anaconda-navigator "%ProgramData%\Anaconda3\Scripts\anaconda-navigator.exe\" 
+setx /M Python311 "%LocalAppData%\Programs\Python\Python311\Scripts\" 
+setx /M VS "%LocalAppData%\Programs\Microsoft VS Code\bin\" 
+setx /M WindowsPowerShell "%SystemRoot%\system32\WindowsPowerShell\v1.0\"
+setx /M Wbem "%SystemRoot%\system32\Wbem\"
+setx /M System32 "%SystemRoot%\system32\OpenSSH\"
+setx /M Scripts "%LocalAppData%\Programs\Python\Python311\Scripts\"
+
+@REM docs: https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/setx
+
+

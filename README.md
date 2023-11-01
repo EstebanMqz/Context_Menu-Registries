@@ -1,4 +1,4 @@
-<div align="center"><h2><b>Windows Registry Admin keys</h2></div></b>
+<div align="center"><h2><b>Automatically Load Windows Registries Remotely</h2></div></b>
 
 <div align="left">
 
@@ -74,22 +74,22 @@
 
 <div align= "center"> 
 
-<br>
 <section id="config">
-  <h4>Windows-config.</h4>
+  <h4>Automatic Windows-Config.</h4>
 
 
-<I><div style="font-size: 11px;">
+<div style="font-size: 11px;">
 
 Registry <b>Regex</b>  &rarr; <i>Ctrl+Shift+F</i> 
 
 To perform Regex searches in the registry, use the following CMD command:
+
 ``` CMD
 :: CMD Registry Regex
 reg query HKEY_CLASSES_ROOT /f "<regex_search>" /s /e
 ```
 
-[![CMD-setx](https://img.shields.io/badge/setx-000000.svg?style=flat&logo=windows-terminal&logoColor=white)](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/setx) to enable <b>User &amp; System Environment Variables in cd:
+[![CMD-setx](https://img.shields.io/badge/setx-000000.svg?style=flat&logo=windows-terminal&logoColor=white)](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/setx) to enable <b>User &amp; System Environment Variables &amp; PATHs</b> in cd:
 
 ``` CMD 
 :: CMD User / System Environment Variables 
@@ -97,6 +97,22 @@ runas /user:Administrator "%PATH%\System_Environment.bat"
 
 rem Make sure to have the admin password for the admin found in your .crd file (encrypted or not)
 rundll32.exe keymgr.dll,KRShowKeyMgr "%PATH%\file.crd"
+```
+
+[![.bashrc](https://img.shields.io/badge/.bashrc-000000.svg?style=flat&logo=git&logoColor=orange)](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/setx) to enable <b>.bashrc &amp; .profile</b> in Windows Startup/Bash sessions automatically for all Users:
+
+``` bash
+#Create .bashrc & .profile files in $HOME
+code ~/.bashrc
+code ~/.profile
+
+#Load them automatically.
+source ~/.profile & ~/.bashrc
+
+#Finished.
+
+#Note that the .sh: .profile & .bashrc loads automatically what the .bat & .ps1 would do in every execution.
+#.bashrc & .profile must be in $HOME for them to be loaded,  won't in remote/local repos.
 ```
 
 <div align= "left"> 
