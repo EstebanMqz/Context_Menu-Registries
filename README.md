@@ -77,6 +77,11 @@
 <section id="config">
   <h4>Automatic Windows-Config.</h4>
 
+<div style="font-size: 13px;">
+
+> **Note:** Only be runnning the [`.bat`](https://github.com/EstebanMqz/Registries/blob/main/System_Environments.bat), [`.sh`](https://github.com/EstebanMqz/Registries/blob/main/System_Environments.sh) &amp; [`.ps1`](https://github.com/EstebanMqz/Registries/blob/main/System_Environments.ps1) &amp; specially [```.profile```](https://github.com/EstebanMqz/Registries/blob/main/$HOME/.profile) &amp; [``.bashrc``](https://github.com/EstebanMqz/Registries/blob/main/$HOME/.profile) programs within [<b>**$HOME**</b>](https://www.gnu.org/software/bash/manual/html_node/Bash-Startup-Files.html)  with a previous [`Windows OS Restoration`](https://support.microsoft.com/en-us/windows/use-system-restore-a5ae3ed9-07c4-fd56-45ee-096777ecd14e). <br><br>
+</div>
+
 
 <div style="font-size: 11px;">
 
@@ -100,7 +105,7 @@ rundll32.exe keymgr.dll,KRShowKeyMgr "%PATH%\file.crd"
 ```
 
 [![.bashrc](https://img.shields.io/badge/.bashrc-000000.svg?style=flat&logo=git&logoColor=orange)](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/setx) to enable <b>.bashrc &amp; .profile</b> in Windows Startup/Bash sessions automatically for all Users:
-
+> 
 ``` bash
 #Create .bashrc & .profile files in $HOME
 code ~/.bashrc

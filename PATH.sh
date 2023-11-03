@@ -16,6 +16,7 @@ directories=(
 "/C/Windows/System32/WindowsPowerShell/v1.0"
 "/C/Windows/System32/Wbem"
 "/C/Windows/System32/OpenSSH"
+"/C/Windows/System32/OpenSSH"
 )
 
 for dir in "${directories[@]}"; do
@@ -25,3 +26,4 @@ for dir in "${directories[@]}"; do
     echo "Directory $dir does not exist."
   fi
 done
+
