@@ -120,7 +120,11 @@ source ~/.profile & ~/.bashrc
 #.bashrc & .profile must be in $HOME for them to be loaded,  won't in remote/local repos.
 ```
 
-<div align= "left"> 
+<div align= "left"> <br>
+
+###### References: 
+
+<i> Actual current [`$PATH`](https://github.com/EstebanMqz/Registries/blob/main/PATH.txt) &amp; [`$printenv`](https://github.com/EstebanMqz/Registries/blob/main/PATH.txt) Environment Variables. </i> <br>
 
 [See-also](https://github.com/EstebanMqz/GPG-Git-Encryption-Tool-760-4071bits#references)
 </i>
