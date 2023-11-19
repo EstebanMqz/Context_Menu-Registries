@@ -79,10 +79,13 @@
 
 <div style="font-size: 13px;">
 
-> **Note:** Only be runnning the [`.bat`](https://github.com/EstebanMqz/Registries/blob/main/System_Environments.bat), [`.sh`](https://github.com/EstebanMqz/Registries/blob/main/System_Environments.sh) &amp; [`.ps1`](https://github.com/EstebanMqz/Registries/blob/main/System_Environments.ps1) &amp; specially [```.profile```](https://github.com/EstebanMqz/Registries/blob/main/$HOME/.profile) &amp; [``.bashrc``](https://github.com/EstebanMqz/Registries/blob/main/$HOME/.profile) programs within [<b>**$HOME**</b>](https://www.gnu.org/software/bash/manual/html_node/Bash-Startup-Files.html) with a previous <a href="https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.management/checkpoint-computer?view=powershell-5.1"><img src="https://img.shields.io/badge/CMD-Restore_Point-000000.svg?style=flat&amp;logo=powershell&amp;logoColor=blue" alt="CMD-Restore_Point"></a>. <br><br>
-</div>
+> **Note:** Only be runnning the [`.bat`](https://github.com/EstebanMqz/Registries/blob/main/System_Environments.bat), [`.sh`](https://github.com/EstebanMqz/Registries/blob/main/System_Environments.sh) &amp; [`.ps1`](https://github.com/EstebanMqz/Registries/blob/main/System_Environments.ps1) &amp; specially [```.profile```](https://github.com/EstebanMqz/Registries/blob/main/$HOME/.profile) &amp; [``.bashrc``](https://github.com/EstebanMqz/Registries/blob/main/$HOME/.profile) }programs within [<b>**$HOME**</b>](https://www.gnu.org/software/bash/manual/html_node/Bash-Startup-Files.html) with a previous <a href="https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.management/checkpoint-computer?view=powershell-5.1"><img src="https://img.shields.io/badge/CMD-Restore_Point-000000.svg?style=flat&amp;logo=powershell&amp;logoColor=blue" alt="CMD-Restore_Point"></a>. <br><br>
 
 <div style="font-size: 11px;">
+
+``` bash
+./external.bat #e.g assuming ext Drive is D:.
+```
 
 Registry <b>Regex</b>  &rarr; <i>Ctrl+Shift+F</i> 
 
