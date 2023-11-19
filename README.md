@@ -79,22 +79,21 @@
 
 <div style="font-size: 13px;">
 
-> **Note:** Only be runnning the [`.bat`](https://github.com/EstebanMqz/Registries/blob/main/System_Environments.bat), [`.sh`](https://github.com/EstebanMqz/Registries/blob/main/System_Environments.sh) &amp; [`.ps1`](https://github.com/EstebanMqz/Registries/blob/main/System_Environments.ps1) &amp; specially [```.profile```](https://github.com/EstebanMqz/Registries/blob/main/$HOME/.profile) &amp; [``.bashrc``](https://github.com/EstebanMqz/Registries/blob/main/$HOME/.profile) programs within [<b>**$HOME**</b>](https://www.gnu.org/software/bash/manual/html_node/Bash-Startup-Files.html)  with a previous [`Windows OS Restoration`](https://support.microsoft.com/en-us/windows/use-system-restore-a5ae3ed9-07c4-fd56-45ee-096777ecd14e). <br><br>
+> **Note:** Only be runnning the [`.bat`](https://github.com/EstebanMqz/Registries/blob/main/System_Environments.bat), [`.sh`](https://github.com/EstebanMqz/Registries/blob/main/System_Environments.sh) &amp; [`.ps1`](https://github.com/EstebanMqz/Registries/blob/main/System_Environments.ps1) &amp; specially [```.profile```](https://github.com/EstebanMqz/Registries/blob/main/$HOME/.profile) &amp; [``.bashrc``](https://github.com/EstebanMqz/Registries/blob/main/$HOME/.profile) programs within [<b>**$HOME**</b>](https://www.gnu.org/software/bash/manual/html_node/Bash-Startup-Files.html) with a previous <a href="https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.management/checkpoint-computer?view=powershell-5.1"><img src="https://img.shields.io/badge/CMD-Restore_Point-000000.svg?style=flat&amp;logo=powershell&amp;logoColor=blue" alt="CMD-Restore_Point"></a>. <br><br>
 </div>
-
 
 <div style="font-size: 11px;">
 
 Registry <b>Regex</b>  &rarr; <i>Ctrl+Shift+F</i> 
 
-To perform Regex searches in the registry, use the following CMD command:
+<a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/reg-query"><img src="https://img.shields.io/badge/reg_query-000000.svg?style=flat&amp;logo=windows-terminal&amp;logoColor=blue" alt="reg_query"></a> searches in the registry, use the following CMD command:
 
 ``` CMD
 :: CMD Registry Regex
 reg query HKEY_CLASSES_ROOT /f "<regex_search>" /s /e
 ```
 
-[![CMD-setx](https://img.shields.io/badge/setx-000000.svg?style=flat&logo=windows-terminal&logoColor=white)](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/setx) to enable <b>User &amp; System Environment Variables &amp; PATHs</b> in cd:
+[![CMD-setx](https://img.shields.io/badge/setx-000000.svg?style=flat&logo=windows-terminal&logoColor=white)](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/setx) <b>User &amp; System Environment Variables &amp; PATHs</b> in cd:
 
 ``` CMD 
 :: CMD User / System Environment Variables 
@@ -104,7 +103,7 @@ rem Make sure to have the admin password for the admin found in your .crd file (
 rundll32.exe keymgr.dll,KRShowKeyMgr "%PATH%\file.crd"
 ```
 
-[![.bashrc](https://img.shields.io/badge/.bashrc-000000.svg?style=flat&logo=git&logoColor=orange)](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/setx) to enable <b>.bashrc &amp; .profile</b> in Windows Startup/Bash sessions automatically for all Users:
+[![.bashrc](https://img.shields.io/badge/.bashrc-000000.svg?style=flat&logo=git&logoColor=orange)](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/setx) <b>[.bashrc](https://linux.die.net/man/1/bash) &amp; [.profile](https://linux.die.net/man/1/profiles)</b> in Startup sessions automatically for all Users:
 > 
 ``` bash
 #Create .bashrc & .profile files in $HOME
