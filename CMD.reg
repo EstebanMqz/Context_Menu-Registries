@@ -7,9 +7,9 @@ Windows Registry Editor Version 5.00
 
 %% Create CMD Context Menu & Command for the Registry Editor 
 [HKEY_CLASSES_ROOT\Directory\Background\shell\cmd]
-@ = "CMD @ cd"
+@ = "CMD Here"
 "Icon" = "C:\\Windows\\System32\\cmd.exe"
-MUIVerb = "CMD @ cd"
+MUIVerb = "CMD Here"
 [HKEY_CLASSES_ROOT\Directory\Background\shell\cmd\command]
 @="cmd.exe /s /k /runas pushd \"%V\""
 

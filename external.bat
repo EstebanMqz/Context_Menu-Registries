@@ -1,3 +1,3 @@
 @echo on
-rem Backup all files from C: to D: (fast systems external retrieval)
+rem Backup subdir hidden (rm read-only) C: to D:, output.
 xcopy C:\*.* D: /E /H /K /C

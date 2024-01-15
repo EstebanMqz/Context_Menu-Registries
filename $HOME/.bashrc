@@ -1,17 +1,8 @@
 #!/bin/bash
 
 # Author: Esteban Márquez D. @https://www.github.com/EstebanMqz
-# Description: User/Sys Windows Env & PATH Variables startup file.
-
-# Unix-Shell: $ pwd = echo $HOME (Home dir)
-
-# If the following commands are created/enabled with the .sh the .bashrc / .profile load infinitely (load itself).
-# [ -f ~/.profile ] && . ~/.profile
-# [ -f ~/.bashrc ] && . ~/.bashrc
-
-# Unix-Shell: $ pwd = echo $HOME 
-
-# CREATE FILE: code ~/.profile WITH .sh:
+# Description: User/Sys Unix-like ENVS & PATH Variables startup file.
+# Create File: code ~/.bashrc 
 
 Environment=(PhysX NvDLISR system32 MATLAB dotnet nodejs php_8_2_9 ComposerSetup Git anaconda_navigator Python311 VS WindowsPowerShell Wbem System32)
 
@@ -42,8 +33,3 @@ done
 for index in ${!Environment[*]}; do
   export ${Environment[$index]}="${directories[$index]}"
 done
-
-# References:
-
-# ~/.profile #Loaded when USER's startups.
-# ~/.bashrc #Loaded when Terminals launched.

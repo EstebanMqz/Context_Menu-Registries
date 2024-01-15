@@ -1,0 +1,14 @@
+Windows Registry Editor Version 5.00
+%Author: EstebanMqz(www.github.com/EstebanMqz)
+
+%% regedit Existing Node.js Context Menu & Command Deletion. - User's Option: Manual del) 
+[-HKEY_CLASSES_ROOT\Directory\Background\shell\node]
+[-HKEY_CLASSES_ROOT\Directory\Background\shell\node\command]
+
+%% Create Node.js Context Menu & Command for the Registry Editor 
+[HKEY_CLASSES_ROOT\Directory\Background\shell\node]
+@ = "Node.js Here"
+"Icon" = "C:\\Program Files\\nodejs\\node.exe"
+MUIVerb = "Node.js Here"
+[HKEY_CLASSES_ROOT\Directory\Background\shell\node\command]
+@="cmd.exe /s /k pushd \"%V\" && node"

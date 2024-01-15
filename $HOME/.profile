@@ -45,7 +45,6 @@ done
 
 # References:
 
-# ~/.profile #Loaded when USER's startups.
-# ~/.bashrc #Loaded when Terminals launched.
-
-# VALIDATE PATHs & ENV: echo $PATH ; printenv
+# ~/.profile #Loaded when Unix-like USER's startups. 
+# Not native to Windows OS.
+# See: wsl --help (wsl --install to install/launch Linux distributions)

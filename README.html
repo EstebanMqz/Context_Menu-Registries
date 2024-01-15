@@ -2883,80 +2883,101 @@ body,
             <div class="github-markdown-content"><span id="markdown-mermaid" aria-hidden="true"
                     data-dark-mode-theme="dark"
                     data-light-mode-theme="default"></span>
-                <div align="center"><h2><b>Automatically Load Windows Registries Remotely</h2></div></b>
-<div align="left">
-<div align="right">
-<p><a href="https://git-scm.com/"><img src="https://img.shields.io/badge/git-2.42.0-darkblue.svg" alt="git"></a>  
-<a href="https://www.gnu.org/software/bash/"><img src="https://img.shields.io/badge/bash-5.2.15-darkblue.svg" alt="bash"></a>  
-<a href="https://git-scm.com"><img src = "https://img.shields.io/badge/Git-F05032.svg?style=flat&logo=Git&logoColor=white"></a>  
-<a href="https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/reg"><img width="25px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Logo_windows_simples.svg/2280px-Logo_windows_simples.svg.png?f=webp"></a></p>
+                <style>
+.centered-content {
+    border: 1px solid gray;
+    padding: 10px;
+    text-align: center;
+    color: #26a822;
+</style>
+<h2 style="text-align: center; font-weight: bold; text-shadow: 1px 1px white; color: gray;"> 
+    <a href="https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/reg">
+        <img style="vertical-align: middle;" width="30px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Registry.svg/1920px-Registry.svg.png">
+    </a>
+    <a href="https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/reg">
+      <img style="vertical-align: middle;" width="30px" src="https://img.icons8.com/?size=48&id=Fnme1aXsw34v&format=png">
+   </a>
+<pre><code>Remote System Config.
+</code></pre>
+</h2>   
+<div style="height: 3px; background: linear-gradient(to right, #d45d08, blue);"></div>
+<h4 style="font-size: 15px font-weight: italics; text-shadow: 2px 2px darkred; color: white;"> References: </h4>
+<div class="centered-content">
+   <p><a href="https://git-scm.com"><img src = "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Git_icon.svg/25px-Git_icon.svg.png"></a> &nbsp;&nbsp; <a href="https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/reg"><img width="25px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Logo_windows_simples.svg/2280px-Logo_windows_simples.svg.png?f=webp"></a> &nbsp;&nbsp; <img src="https://img.shields.io/badge/Bash-5.1.4-F05032.svg?style=flat&amp;logo=gnu-bash" alt="Windows_Bash"> &nbsp;&nbsp; <a href="https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.management/checkpoint-computer?view=powershell-5.1"><img src="https://img.shields.io/badge/CMD-Restore_Point-000000.svg?style=flat&amp;logo=powershell&amp;logoColor=blue" alt="CMD-Restore_Point"></a> &nbsp;&nbsp; <a href="https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/xcopy"><img src="https://img.shields.io/badge/xcopy-000000.svg?style=flat&amp;logo=windows-terminal" alt="xcopy"></a> &nbsp;  &nbsp; <a href="https://www.gnu.org/software/bash/manual/bash.html#Bash-Startup-Files">
+<hr>
+<p></a>   <a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/reg-query"><img src="https://img.shields.io/badge/reg_query-000000.svg?style=flat&amp;logo=powershell" alt="reg_query"></a>   <a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/reg-add"><img src="https://img.shields.io/badge/reg_add-000000.svg?style=flat&amp;logo=powershell" alt="reg_add"></a>   <a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/reg-delete"><img src="https://img.shields.io/badge/reg_delete-000000.svg?style=flat&amp;logo=powershell" alt="reg_delete"></a>   <a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/reg-load"><img src="https://img.shields.io/badge/reg_load-000000.svg?style=flat&amp;logo=powershell" alt="reg_load"></a>   <a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/reg-save"><img src="https://img.shields.io/badge/reg_save-000000.svg?style=flat&amp;logo=powershell" alt="reg_save"></a>   <a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/reg-restore"><img src="https://img.shields.io/badge/reg_restore-000000.svg?style=flat&amp;logo=powershell" alt="reg_restore"></a>   <a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/reg-unload"><img src="https://img.shields.io/badge/reg_unload-000000.svg?style=flat&amp;logo=powershell" alt="reg_unload"></a>   <a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/reg-copy"><img src="https://img.shields.io/badge/reg_copy-000000.svg?style=flat&amp;logo=powershell" alt="reg_copy"></a>   <a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/reg-compare"><img src="https://img.shields.io/badge/reg_compare-000000.svg?style=flat&amp;logo=powershell" alt="reg_compare"></a>   <a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/reg-export"><img src="https://img.shields.io/badge/reg_export-000000.svg?style=flat&amp;logo=powershell" alt="reg_export"></a>   <a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/reg-import"><img src="https://img.shields.io/badge/reg_import-000000.svg?style=flat&amp;logo=powershell" alt="reg_import"></a></p>
 </div>
-<hr>
-<ol>
-<li>
-<p>  <a href="https://git-scm.com/"><img src="https://img.shields.io/badge/Git-F05032?style=flat&amp;logo=git&amp;logoColor=white" alt="Git"></a>   <b>Bash, GUI &amp; gitk @ 📁</b>  <br>
-<a href="https://github.com/EstebanMqz/Registries/blob/main/bash.reg">Bash.reg</a>   <a href="https://github.com/EstebanMqz/Registries/blob/main/bash.reg">Git-Gui.reg</a>   <a href="https://github.com/EstebanMqz/Registries/blob/main/bash.reg">gitk.reg</a>  <br><br></p>
-</li>
-<li>
-<p>  <a href="https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/cmd"><img src="https://img.shields.io/badge/CMD-000000.svg?style=flat&amp;logo=windows-terminal&amp;logoColor=white" alt="CMD logo"></a> <b>CMD @ 📁</b> <br>
-<a href="https://github.com/EstebanMqz/Registries/blob/main/CMD.reg">CMD.reg</a></p>
-<hr>
-<p>Set up <i><a href="https://learn.microsoft.com/en-us/windows/security/application-security/application-control/user-account-control/">UAC</a>:</i></p>
-<pre><code class="language-CMD">:: <span class="hljs-built_in">CMD</span> UAC Admin Behavior
-reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System /v ConsentPromptBehaviorAdmin /t REG_DWORD /d <span class="hljs-number">2</span> /f
+<h4>
+<p>User Account Control <a href="https://learn.microsoft.com/en-us/windows/security/application-security/application-control/user-account-control/">UAC</a>:</h4></p>
+<b div style="font-size: 15px"> 
+Acquire Highest Privileges.
+</div>
+<pre><code class="language-bat">@<span class="hljs-built_in">echo</span> on
+<span class="hljs-comment">rem </span>
+reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System /v ConsentPromptBehaviorAdmin /t REG_DWORD /d <span class="hljs-number">2</span> /f &amp; 
 </code></pre>
 <p>Personal CMD <b>.reg</b> dir. <i><u>(e.g):</i></u><br></p>
-<p><b>[Computer\HKEY_CLASSES_ROOT\Directory\Background\shell\cmd]:</b><br></p>
 <ul>
 <li><i>Advanced Permissions &gt;&gt; Change Owner → Current Users.<br></li>
 <li>Removing <b>TrustedInstaller</b> Full Control &gt;&gt; Enabling <b>Users</b> Full Control.</i><br></li>
 </ul>
-<p><b>[-Computer\HKEY_CLASSES_ROOT\Directory\Background\shell\cmd]</b>.</p>
+<div style="font-size: 12px;">
+<ol>
+<li>  <a href="https://git-scm.com/"><img src="https://img.shields.io/badge/Git-F05032?style=flat&amp;logo=git&amp;logoColor=white" alt="Git"></a>   <b>Bash, GUI &amp; gitk @ 📁</b>  <br>
+<a href="https://github.com/EstebanMqz/Registries/blob/main/bash.reg">Bash.reg</a>   <a href="https://github.com/EstebanMqz/Registries/blob/main/bash.reg">Git-Gui.reg</a>   <a href="https://github.com/EstebanMqz/Registries/blob/main/bash.reg">gitk.reg</a>  <br><br></li>
+</ol>
+<div style="height: 2px; background: linear-gradient(to right, darkblue, blue);"></div>
+<br>
+<ol start="2">
+<li>  <a href="https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/cmd"><img src="https://img.shields.io/badge/CMD-000000.svg?style=flat&amp;logo=windows-terminal&amp;logoColor=white" alt="CMD logo"></a> <b>CMD @ 📁</b> <br>
+<a href="https://github.com/EstebanMqz/Registries/blob/main/CMD.reg">CMD.reg</a></li>
+</ol>
+<div style="height: 2px; background: linear-gradient(to right, darkblue, blue);"></div>
+<br>
 <hr>
 <p><b>3.       PowerShell &amp; PowerShell GUI @ 📁</b> </p>
-<span style="font-size: 14px;">
 <p>Icon's registry <a href="https://github.com/PowerShell/PowerShell">Powershell.exe</a> <i>double-back-slashed <b></i>.reg</b></i> <b>PATH:</b></span></p>
 <pre><code class="language-powershell"><span class="hljs-built_in">Write-Output</span>(([<span class="hljs-type">System.Diagnostics.Process</span>]::GetCurrentProcess().MainModule.FileName)).replace(<span class="hljs-string">&#x27;\&#x27;</span>, <span class="hljs-string">&#x27;\\&#x27;</span>) <span class="hljs-comment">#PowerShell terminal</span>
 </code></pre>
-</li>
-</ol>
 <br> 
-<span style="font-size: 14px;">
-<hr>
+---
 <p><a href="https://github.com/EstebanMqz/Registries/blob/main/PowerShell.reg">PowerShell.reg</a>
   <a href="https://docs.microsoft.com/en-us/powershell/"><img width="18px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/PowerShell_5.0_icon.png/18px-PowerShell_5.0_icon.png"></a> <br></span>
 <br></p>
-<p><b>4.       <a href="https://github.com/EstebanMqz/Registries/blob/main/VSCode.reg">VSCode.reg</a>   <a href="https://code.visualstudio.com"><img src="https://img.shields.io/badge/VS_Code%20Web-010b38?style=flat-square&amp;logo=visual-studio-code&amp;logoColor=266fff" alt="VS-Code-Web"></a> <br></p>
-<p><b>5.       <a href="https://github.com/EstebanMqz/Registries/blob/main/PyCharm.reg">PyCharm.reg</a>   <a href="https://www.jetbrains.com/pycharm/"><img width="18px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/PyCharm_Icon.svg/512px-PyCharm_Icon.svg.png"></a> <br></p>
-<p><b>6.       <a href="https://github.com/EstebanMqz/Registries/blob/main/Anaconda.reg">Anaconda.reg</a>   <a href="https://anaconda.org"><img src="https://img.shields.io/badge/Anaconda-44A833?style=flat&amp;logo=Anaconda&amp;logoColor=white" alt="Anaconda"></a> <br></p>
-<p><b>7.       <a href="https://github.com/EstebanMqz/Registries/blob/main/Notepad.reg">Notepad.reg</a>   <a href="https://en.wikipedia.org/wiki/Microsoft_Notepad"><img width="18px" src="https://upload.wikimedia.org/wikipedia/en/thumb/2/2a/Notepad.png/180px-Notepad.png"></a> <br></p>
+<p><b>4.       <a href="https://github.com/EstebanMqz/Registries/blob/main/VSCode.reg">VSCode.reg</a>   <a href="https://code.visualstudio.com"><img src="https://img.shields.io/badge/VS_Code%20Web-010b38?style=flat-square&amp;logo=visual-studio-code&amp;logoColor=266fff" alt="VS-Code-Web"></a></b><br></p>
+<p><b>5.       <a href="https://github.com/EstebanMqz/Registries/blob/main/PyCharm.reg">PyCharm.reg</a>   <a href="https://www.jetbrains.com/pycharm/"><img width="18px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/PyCharm_Icon.svg/512px-PyCharm_Icon.svg.png"></a></b> <br></p>
+<p><b>6.       <a href="https://github.com/EstebanMqz/Registries/blob/main/Anaconda.reg">Anaconda.reg</a>   <a href="https://anaconda.org"><img src="https://img.shields.io/badge/Anaconda-44A833?style=flat&amp;logo=Anaconda&amp;logoColor=white" alt="Anaconda"></a></b><br></p>
+<p><b>7.       <a href="https://github.com/EstebanMqz/Registries/blob/main/Notepad.reg">Notepad.reg</a>   <a href="https://en.wikipedia.org/wiki/Microsoft_Notepad"><img width="18px" src="https://upload.wikimedia.org/wikipedia/en/thumb/2/2a/Notepad.png/180px-Notepad.png"></a></b><br></p>
 </span>
 <hr>
 <div align= "center"> 
+   <h4>Automatic Linux & Windows Config.</h4>
+</div> 
 <section id="config">
-  <h4>Automatic Windows-Config.</h4>
-<div style="font-size: 13px;">
+<p>Have User &amp; <b><a href="https://docs.microsoft.com/en-us/windows/win32/procthread/environment-variables">System Environment Variables</a></b> &amp; <b><a href="https://docs.microsoft.com/en-us/windows/win32/procthread/environment-variables#searching-for-directories">PATHs</a></b> at Startup automatically:</p>
+<div style="font-size: 15px;">
 <blockquote>
-<p><strong>Note:</strong> Only be runnning the <a href="https://github.com/EstebanMqz/Registries/blob/main/System_Environments.bat"><code>.bat</code></a>, <a href="https://github.com/EstebanMqz/Registries/blob/main/System_Environments.sh"><code>.sh</code></a> &amp; <a href="https://github.com/EstebanMqz/Registries/blob/main/System_Environments.ps1"><code>.ps1</code></a> &amp; specially <a href="https://github.com/EstebanMqz/Registries/blob/main/$HOME/.profile"><code>.profile</code></a> &amp; <a href="https://github.com/EstebanMqz/Registries/blob/main/$HOME/.profile"><code>.bashrc</code></a> programs within <a href="https://www.gnu.org/software/bash/manual/html_node/Bash-Startup-Files.html"><b><strong>$HOME</strong></b></a> with a previous <a href="https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.management/checkpoint-computer?view=powershell-5.1"><img src="https://img.shields.io/badge/CMD-Restore_Point-000000.svg?style=flat&amp;logo=powershell&amp;logoColor=blue" alt="CMD-Restore_Point"></a>. <br><br></p>
+<p><strong>Note:</strong> Only create/edit <a href="https://github.com/EstebanMqz/Registries/blob/main/$HOME/.profile"><code>.profile</code></a> &amp; <a href="https://github.com/EstebanMqz/Registries/blob/main/$HOME/.profile"><code>.bashrc</code></a> with a previous   <a href="https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.management/checkpoint-computer?view=powershell-5.1"><img src="https://img.shields.io/badge/CMD-Restore_Point-000000.svg?style=flat&amp;logo=powershell&amp;logoColor=blue" alt="CMD-Restore_Point"></a> or <a href="https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/xcopy"><img src="https://img.shields.io/badge/xcopy-000000.svg?style=flat&amp;logo=windows-terminal&amp;logoColor=white" alt="CMD-xcopy"></a>  <br></p>
 </blockquote>
-<div style="font-size: 11px;">
-<pre><code class="language-bash">./external.bat <span class="hljs-comment">#e.g assuming ext Drive is D:.</span>
+<div style="font-size: 12px;">
+<i>Backup subdir hidden (rm read-only) C: to D:, output.</i>
+<pre><code class="language-bash"><span class="hljs-built_in">cd</span> D: &amp; label D: SSD_ext  <span class="hljs-comment">#Rename Drive</span>
+./external.bat <span class="hljs-comment">#Backup C in D with /E /H /K /C options.</span>
 </code></pre>
 <p>Registry <b>Regex</b>  → <i>Ctrl+Shift+F</i></p>
 <p><a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/reg-query"><img src="https://img.shields.io/badge/reg_query-000000.svg?style=flat&amp;logo=windows-terminal&amp;logoColor=blue" alt="reg_query"></a> searches in the registry, use the following CMD command:</p>
 <pre><code class="language-CMD">:: <span class="hljs-built_in">CMD</span> Registry Regex
 reg query HKEY_CLASSES_ROOT /f &quot;&lt;regex_search&gt;&quot; /s /e
 </code></pre>
-<p><a href="https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/setx"><img src="https://img.shields.io/badge/setx-000000.svg?style=flat&amp;logo=windows-terminal&amp;logoColor=white" alt="CMD-setx"></a> <b>User &amp; System Environment Variables &amp; PATHs</b> in cd:</p>
 <pre><code class="language-CMD">:: <span class="hljs-built_in">CMD</span> User / System Environment Variables 
 runas /user:Administrator &quot;<span class="hljs-variable">%PATH%</span>\System_Environment.bat&quot;
 <span class="hljs-comment">
 rem Make sure to have the admin password for the admin found in your .crd file (encrypted or not)</span>
 rundll32.exe keymgr.dll,KRShowKeyMgr &quot;<span class="hljs-variable">%PATH%</span>\file.crd&quot;
 </code></pre>
-<p><a href="https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/setx"><img src="https://img.shields.io/badge/.bashrc-000000.svg?style=flat&amp;logo=git&amp;logoColor=orange" alt=".bashrc"></a> <b><a href="https://linux.die.net/man/1/bash">.bashrc</a> &amp; <a href="https://linux.die.net/man/1/profiles">.profile</a></b> in Startup sessions automatically for all Users:</p>
-<blockquote></blockquote>
+<p><a href="https://www.gnu.org/software/bash/manual/bash.html#Bash-Startup-Files"><img src="https://img.shields.io/badge/~/.bashrc_&amp;_~/.profile-000000.svg?style=flat&amp;logo=git&amp;logoColor=orange" alt=".bashrc"></a></p>
 <pre><code class="language-bash"><span class="hljs-comment">#Create .bashrc &amp; .profile files in $HOME</span>
+<span class="hljs-built_in">cd</span> <span class="hljs-variable">$HOME</span>
 code ~/.bashrc
 code ~/.profile
 
