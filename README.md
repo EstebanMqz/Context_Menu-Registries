@@ -1,4 +1,5 @@
-<h3 align="center"> 
+<h1 align="center">
+   Automatically Load Registries <br><br>
    <a href="https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/reg">
       <img width="30px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Logo_windows_simples.svg/2280px-Logo_windows_simples.svg.png?f=webp">
    </a> &nbsp;
@@ -10,8 +11,8 @@
    </a>
    <br><br>
 
-    Automatically Load Registries 
-</h3>
+   
+</h1>
 
 <h3 style="font-size: 15px font-weight: italics; text-shadow: 2px 2px darkred; color: white;"> Tools: </h3>
 
@@ -64,9 +65,9 @@ $currentuser = New-Object System.Security.Principal.NTAccount($env:USERNAME)
 <div style="font-size: 12px;">
 
 <h2 div style="font-size: 15px"> 
- &#x1F4C1; Context Menus & Commands  
+&#x1F4C1; Context Menus & Commands</h2>  
  
- [Environment Variables](https://docs.microsoft.com/en-us/windows/deployment/usmt/usmt-recognized-environment-variables) </b>  
+[Environment Variables](https://docs.microsoft.com/en-us/windows/deployment/usmt/usmt-recognized-environment-variables) </b>  
 <br>
 
 
@@ -109,7 +110,7 @@ Icon's registry [Powershell.exe](https://github.com/PowerShell/PowerShell) <i>do
 --- 
 
 <div align= "center"> 
-   <h4>Automatic Linux & Windows Config.</h4>
+   <h2>Automatic Linux & Windows Config.</h2>
 </div> 
  
 <section id="config">
@@ -168,8 +169,11 @@ source ~/.profile & ~/.bashrc
 #Note that the .sh: .profile & .bashrc loads automatically what the .bat & .ps1 would do in every execution.
 #.bashrc & .profile must be in $HOME for them to be loaded,  won't in remote/local repos.
 ```
-
 </div>
+
+Remotely Loadable Result (.bashrc/.profile):<br>
+
+![Profile Bashrc](profile-bashrc.jpg)
 
 <h3 style="color: ; text-align:left; padding:10px"> 
 Author: <br>
