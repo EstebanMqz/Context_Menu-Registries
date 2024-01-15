@@ -1,33 +1,12 @@
-<!-- ---------------------------------------------------------------------------------CSS-Styles--------------------------------------------------------------------------------------------------------------->
-
-
-
-<style>
-.centered-content {
-    border: 1px solid gray;
-    padding: 10px;
-    text-align: center;
-    color: #26a822;
-}
-
-.small-padding {
-   padding: 20px;  
-}
-</style>
-
-<!-- --------------------------------------------------------------------------------.md/.html----------------------------------------------------------------------------------------------------------------->
-
-
-
-<h3 style="text-align: center; font-weight: bold; text-shadow: 1px 1px white; color: gray;"> 
+<h3 align="center"> 
    <a href="https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/reg">
-      <img style="vertical-align: middle;" width="30px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Logo_windows_simples.svg/2280px-Logo_windows_simples.svg.png?f=webp">
+      <img width="30px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Logo_windows_simples.svg/2280px-Logo_windows_simples.svg.png?f=webp">
    </a> &nbsp;
    <a href="https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/reg">
-   <img style="vertical-align: middle;" width="30px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Registry.svg/1920px-Registry.svg.png">
+   <img width="30px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Registry.svg/1920px-Registry.svg.png">
    </a> &nbsp;
    <a href="https://docs.kernel.org">
-   <img style="vertical-align: middle;" width="30px" src="https://upload.wikimedia.org/wikipedia/commons/3/35/Tux.svg">
+   <img width="30px" src="https://upload.wikimedia.org/wikipedia/commons/3/35/Tux.svg">
    </a>
    <br><br>
 
@@ -37,12 +16,14 @@
 <h3 style="font-size: 15px font-weight: italics; text-shadow: 2px 2px darkred; color: white;"> Tools: </h3>
 
 <h4>
+
 User Account Control [UAC](https://learn.microsoft.com/en-us/windows/security/application-security/application-control/user-account-control/): </h4>
+
 <div style="font-size: 13px;">
-<i>Secure dimmed desktop highest privileges.</i></div>
+<b>Recommended:</b> <i>Secure dimmed desktop highest privileges.</i></div>
 <div style="font-size: 10px;"> <br>
 
-<Details> <Summary> <h6>UAC options:</h3> </Summary>
+<Details open> <Summary> <h6>UAC options:</h3> </Summary>
    </ul>
    <div class="small-padding" style="font-size: 10px;"> 
    <ul>
@@ -66,6 +47,9 @@ reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System /v Consen
 runas /user:Administrator "rundll32.exe keymgr.dll,KRShowKeyMgr"
 ```
 
+[ConsentPromptBehaviorAdmin](https://docs.microsoft.com/en-us/windows/security/identity-protection/user-account-control/user-account-control-group-policy-and-registry-key-settings/ConsentPromptBehaviorAdmin)
+
+
 PS :
 ``` powershell
 $newOwner = New-Object System.Security.Principal.NTAccount($env:USERNAME)
@@ -77,22 +61,22 @@ $adminGroup = New-Object System.Security.Principal.NTAccount($env:COMPUTERNAME, 
 $currentuser = New-Object System.Security.Principal.NTAccount($env:USERNAME)
 ```
 
-
- https://docs.microsoft.com/en-us/windows/security/identity-protection/user-account-control/user-account-control-group-policy-and-registry-key-settings/ConsentPromptBehaviorAdmin  
 <div style="font-size: 12px;">
 
 <h2 div style="font-size: 15px"> 
- &#x1F4C1; Context Menus & Commands  [%SYSTEMROOT%](https://docs.microsoft.com/en-us/windows/deployment/usmt/usmt-recognized-environment-variables) </b>  
+ &#x1F4C1; Context Menus & Commands  
+ 
+ [Environment Variables](https://docs.microsoft.com/en-us/windows/deployment/usmt/usmt-recognized-environment-variables) </b>  
 <br>
 
 
-1. &nbsp; [![Git](https://img.shields.io/badge/Git-F05032?style=flat&logo=git&logoColor=white)](https://git-scm.com/) &nbsp; <b>Bash, GUI & gitk. <br>
+1. [![Git](https://img.shields.io/badge/Git-F05032?style=flat&logo=git&logoColor=white)](https://git-scm.com/) &nbsp; <b>Bash, GUI & gitk. <br>
 [Bash.reg](https://github.com/EstebanMqz/Registries/blob/main/bash.reg) &emsp; [Git-Gui.reg](https://github.com/EstebanMqz/Registries/blob/main/bash.reg) &emsp; [gitk.reg](https://github.com/EstebanMqz/Registries/blob/main/bash.reg)  <br><br>
 
 <div style="height: 2px; background: linear-gradient(to right, darkblue, blue);"></div>
 <br>
 
-2. &nbsp; [![CMD logo](https://img.shields.io/badge/CMD-000000.svg?style=flat&logo=windows-terminal&logoColor=white)](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/cmd) <b>CMD @ &#x1F4C1;</b> <br>
+2.  [![CMD logo](https://img.shields.io/badge/CMD-000000.svg?style=flat&logo=windows-terminal&logoColor=white)](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/cmd) <br>
 [CMD.reg](https://github.com/EstebanMqz/Registries/blob/main/CMD.reg)
 
 <div style="height: 2px; background: linear-gradient(to right, darkblue, blue);"></div>
@@ -114,13 +98,13 @@ Icon's registry [Powershell.exe](https://github.com/PowerShell/PowerShell) <i>do
 
    <b>5. &nbsp;   &nbsp; [VSCode.reg](https://github.com/EstebanMqz/Registries/blob/main/VSCode.reg) &nbsp; [![VS-Code-Web](https://img.shields.io/badge/VS_Code%20Web-010b38?style=flat-square&logo=visual-studio-code&logoColor=266fff)](https://code.visualstudio.com)</b><br>
 
-   <b>6. &nbsp;   &nbsp; [PyCharm.reg](https://github.com/EstebanMqz/Registries/blob/main/PyCharm.reg) &nbsp; [<img width="18px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/PyCharm_Icon.svg/512px-PyCharm_Icon.svg.png">](https://www.jetbrains.com/pycharm/)</b> <br>
+   <b>6. &nbsp;   &nbsp; [PyCharm.reg](https://github.com/EstebanMqz/Registries/blob/main/PyCharm.reg) &nbsp; [<img width="18px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/PyCharm_Icon.svg/512px-PyCharm_Icon.svg.png">](https://www.jetbrains.com/pycharm/)</b><br>
 
    <b>7. &nbsp;   &nbsp; [Anaconda.reg](https://github.com/EstebanMqz/Registries/blob/main/Anaconda.reg) &nbsp; [![Anaconda](https://img.shields.io/badge/Anaconda-44A833?style=flat&logo=Anaconda&logoColor=white)](https://anaconda.org)</b><br>
 
-   <b>8. &nbsp;   &nbsp; [Notepad.reg](https://github.com/EstebanMqz/Registries/blob/main/Notepad.reg) &nbsp; [<img width="18px" src="https://upload.wikimedia.org/wikipedia/en/thumb/2/2a/Notepad.png/180px-Notepad.png">](https://en.wikipedia.org/wiki/Microsoft_Notepad)</b><br>
+   <b>8. &nbsp;   &nbsp; [Notepad.reg](https://github.com/EstebanMqz/Registries/blob/main/Notepad.reg) &nbsp; [<img width="18px" src="https://img.icons8.com/?size=48&id=82ixf4KHn6za&format=png">](https://icons8.com/icon/82ixf4KHn6za/notepad)</b><br>
 
-</span>
+   </span>
 
 --- 
 
