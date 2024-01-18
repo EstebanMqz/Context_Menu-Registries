@@ -2,16 +2,18 @@
    Context Menu Registries    
 </h2>
 
-<h3 style="font-size: 15px font-weight: italics; text-shadow: 2px 2px darkred; color: white;"> Tools: </h3>
+<div style="background-color: #d97707; height: 2px;"></div>
 
-<h4>
+<h3 style="text-shadow: 2px 1px darkgreen; color: white; text-align: left; text-decoration: underline;"> 
+User Account Control:
+</h3>
 
-User Account Control [UAC](https://learn.microsoft.com/en-us/windows/security/application-security/application-control/user-account-control/): </h4>
+#### 1. <b>Execute [``UAC.bat``](https://github.com/EstebanMqz/Registries/blob/main/.bat/UAC.bat) to enable <i>Full Control permissions</i> over OS.</b> </h3> 
 
 <div style="font-size: 13px;">
-<b>Recommended:</b> <i>Secure dimmed desktop highest privileges.</i></div>
-<div style="font-size: 10px;">
+<i>Recommended:</i> Secure dimmed desktop highest privileges.</div>
 
+<div style="font-size: 10px;">
 <Details open> <Summary> <h6>UAC options:</h6> </Summary>
    </ul>
    <div class="small-padding" style="font-size: 10px;"> 
@@ -23,28 +25,65 @@ User Account Control [UAC](https://learn.microsoft.com/en-us/windows/security/ap
       <li><b>4</b>: Sys settings <i>not related</i> to Windows (no pw).</li>
    </ul></div>
 </Details>
+</div>
 
-Switch <b>TrustedInstaller <b>Full Control Permissions to</b> &rarr; <b>Admin</b>.<br>
+Switches [TrustedInstaller](https://answers.microsoft.com/en-us/windows/forum/all/who-is-trustedinstaller-and-why-do-they-seem-to/59d48669-8aab-44fa-9499-c4efdba42f03) <b>Full Control Permissions</b> to &rarr; <b>Admin</b>: <i> (option [2](https://learn.microsoft.com/en-us/windows/security/threat-protection/security-policy-settings/user-account-control-switch-to-the-secure-desktop-when-prompting-for-elevation))</i>.<br>
 
-[``UAC.bat``](https://github.com/EstebanMqz/Registries/blob/main/.bat/UAC.bat) 
 
-```CMD
-@echo on
-rem Windows Registries Admin Consent behavior.
-reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System /v ConsentPromptBehaviorAdmin /t REG_DWORD /d 2 /f &
-runas /user:Administrator "rundll32.exe keymgr.dll,KRShowKeyMgr"
+<i>
+
+```
+Enter the password for Administrator: xxxxx
+Value ConsentPromptBehaviorAdmin exists, overwrite(Yes/No)? Yes
+``` 
+</i>
+
+<h3 style="text-shadow: 2px 1px darkgreen; color: white; text-align: left; text-decoration: underline;"> 
+Access Control List:
+</h3>
+
+Modify Registries [ACL](https://learn.microsoft.com/en-us/dotnet/api/microsoft.azure.management.datalake.analytics.models.aclcreateorupdateparameters?view=azure-dotnet-legacy)
+
+[``services.ps1``](https://github.com/EstebanMqz/Registries/blob/main/.ps1/services.ps1)
+
+
+- `New-Object`: Creates a new instance of a .NET object.
+- `Get-Acl`: Gets the ACL of a specified item.
+- `Set-Acl`: Sets the ACL of a specified item.
+- `NTAccount`: Represents a Windows user or group account.
+- `RegistryAccessRule`: Represents a rule for accessing a registry key.
+
+The script performs the following actions:
+
+1. Changes the owner of the registry key to the current user.
+2. Denies full control to the TrustedInstaller service.
+3. Grants full control to the current user and the Administrators group.
+
+This script is useful for managing registry permissions and ensuring proper access control for the specified registry key.
+This PowerShell script modifies the Access Control List (ACL) for the HKLM:\SYSTEM\CurrentControlSet\Services registry key. It uses the New-Object, Get-Acl, Set-Acl cmdlets and the NTAccount and RegistryAccessRule classes to change the owner to the current user, deny full control to the TrustedInstaller service, and grant full control to the current user and the Administrators group.
+
+<font size= 3>
+
+```bat
+REM - Review credentials & admin. 
+rundll32.exe keymgr.dll,KRShowKeyMgr 
 ```
 
-[ConsentPromptBehaviorAdmin](https://docs.microsoft.com/en-us/windows/security/identity-protection/user-account-control/user-account-control-group-policy-and-registry-key-settings/ConsentPromptBehaviorAdmin)
+<h6 style> See also:</h6>
 
+&#x26A1; [GPG-RSA 4096 bits Encryption](https://github.com/EstebanMqz/GPG-RSA-Git-encryption-1026-4096bits#references) <i>for [.crd](https://microsoft.fandom.com/wiki/Cardfile) encrypted backup (high-fast).</i>
+
+</font>
+
+<div style="background-color: #d97707; height: 2px;"></div><br><br>
 
 [``services.ps1``](https://github.com/EstebanMqz/Registries/blob/main/.ps1/services.ps1) 
 
+
+<h2> &#x1F4C1; Context & Commands</h2> 
+
 <div style="font-size: 12px;">
 
-<h2 div style="font-size: 15px"> 
-&#x1F4C1; Context Menus & Commands</h2>  
- 
 [Environment Variables](https://docs.microsoft.com/en-us/windows/deployment/usmt/usmt-recognized-environment-variables) </b>  
 <br>
 
@@ -92,7 +131,7 @@ Write-Output(([System.Diagnostics.Process]::GetCurrentProcess().MainModule.FileN
 ---
 
 <div align= "center"> 
-   <h2>Automatic Linux & Windows Config.</h2>
+   <h1>Automatic Linux & Windows Config.</h1>
 </div> 
  
 <section id="config">
@@ -128,7 +167,6 @@ rem Make sure to have the admin password for the admin found in your .crd file (
 rundll32.exe keymgr.dll,KRShowKeyMgr "%PATH%\file.crd"
 ```
 
-[![.bashrc](https://img.shields.io/badge/~/.bashrc_&_~/.profile-000000.svg?style=flat&logo=git&logoColor=orange)](https://www.gnu.org/software/bash/manual/bash.html#Bash-Startup-Files)
 
 ```bash
 #Create .bashrc & .profile files in $HOME
@@ -147,6 +185,7 @@ source ~/.profile & ~/.bashrc
 
 </div>
 
+
 Remotely Loadable Result (.bashrc/.profile):<br>
 
 ![Profile Bashrc](images/.bashrc.jpg)
@@ -161,47 +200,37 @@ Author: <br>
 [<img width="40px" src="https://cdn3d.iconscout.com/3d/free/thumb/free-github-6343501-5220956.png?f=webp">](https://github.com/EstebanMqz?tab=repositories)
 [<img width="40px" src="https://img.icons8.com/color/452/gitlab.png">](https://gitlab.com/EstebanMqz) </h3>
 
-<h6 style><i> References:</h6></i>
-
-<div class="centered-content"><p>
-
-<a href="https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/reg">
-   <img width="30px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Logo_windows_simples.svg/2280px-Logo_windows_simples.svg.png?f=webp">
-</a> &nbsp;
-<a href="https://docs.kernel.org">
-<img width="30px" src="https://upload.wikimedia.org/wikipedia/commons/3/35/Tux.svg">
-</a>
-<a href="https://git-scm.com"><img src = "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Git_icon.svg/25px-Git_icon.svg.png"></a>
-&nbsp; <br> <br>
-
-<a href="https://www.gnu.org/software/bash/manual/bash.html" ><img src="https://img.shields.io/badge/Bash-5.1.4-F05032.svg?style=flat&amp;logo=gnu-bash" alt="Windows_Bash">
-&nbsp;
-<a href="https://docs.microsoft.com/en-us/windows/wsl/">
-<img src="https://img.shields.io/badge/WSL-2.0-0078D6.svg?style=flat&amp;logo=windows" alt="WSL">
-</a>
-<a href="https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/xcopy"><img src="https://img.shields.io/badge/xcopy-000000.svg?style=flat&amp;logo=windows-terminal" alt="xcopy">
-</a> &ensp; <a href="https://www.gnu.org/software/bash/manual/bash.html#Bash-Startup-Files">
-<a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/reg"><img src="https://img.shields.io/badge/Registry-reg-000000.svg?style=flat&amp;logo=powershell" alt="reg"></a>
-<a href="https://docs.microsoft.com/en-us/windows/win32/procthread/environment-variables">
-<img src="https://img.shields.io/badge/PATHs-black" alt="PATHs">
-</a>
-<a href="https://docs.microsoft.com/en-us/windows/win32/procthread/environment-variables">
-<img src="https://img.shields.io/badge/User-Environment-black" alt="User Env Variables">
-</a>
-<a href="https://docs.microsoft.com/en-us/windows/win32/procthread/environment-variables">
-<img src="https://img.shields.io/badge/System-%20Environment-black" alt="System Env Variables">
-</a>
-</a>
-
-</div>
-
-<i> Verification </i> <br>
+<h5 style> Verification:</h5>
 
 ```bash
-printenv #Environment Variables that define the behavior of OS processes.
-$PATH #Directories related to every executable. 
+printenv #Verify Set Env variables guiding respective OS processes.
+$PATH #Directories related to executables.
 ```
 
-<br><br>
+<h6> References:</h6>
+<div class="centered-content"><p>
+<a href="https://www.gnu.org/software/bash/manual/bash.html">
+    <img src="https://img.shields.io/badge/Bash-5.1.4-F05032.svg?style=flat&amp;logo=gnu-bash" alt="Windows_Bash">
+</a>
+<a href="https://docs.microsoft.com/en-us/windows/wsl/">
+    <img src="https://img.shields.io/badge/WSL-2.0-0078D6.svg?style=flat&amp;logo=windows" alt="WSL">
+</a>
+<a href="https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/xcopy">
+    <img src="https://img.shields.io/badge/xcopy-000000.svg?style=flat&amp;logo=windows-terminal" alt="xcopy">
+</a>
+<a href="https://www.gnu.org/software/bash/manual/bash.html#Bash-Startup-Files"></a>
+<a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/reg">
+    <img src="https://img.shields.io/badge/Registry-reg-000000.svg?style=flat&amp;logo=powershell" alt="reg"></a>
+<a href="https://docs.microsoft.com/en-us/windows/win32/procthread/environment-variables">
+    <img src="https://img.shields.io/badge/PATHs-black" alt="PATHs"></a>
+<a href="https://docs.microsoft.com/en-us/windows/win32/procthread/environment-variables">
+    <img src="https://img.shields.io/badge/User-Environment-black" alt="User Env Variables"></a>
+<a href="https://docs.microsoft.com/en-us/windows/win32/procthread/environment-variables">
+    <img src="https://img.shields.io/badge/System-%20Environment-black" alt="System Env Variables"></a>
+</div>
 
-See also: [GPG-RSA 4096 bits Encryption](https://github.com/EstebanMqz/GPG-RSA-Git-encryption-1026-4096bits#references)
+---
+
+
+
+

@@ -1,30 +1,35 @@
+<# Powershell:
+ACL ownership of 'regedit.exe': Grants Full Control Permissions on Registry Editor with highest privileges. #>
+# Create NTAccount for current user
+Set-ExecutionPolicy Bypass -Scope Process -Force
 $newOwner = New-Object System.Security.Principal.NTAccount($env:USERNAME)
+# Get ACL for Services registry key
 $acl = Get-Acl HKLM:\SYSTEM\CurrentControlSet\Services
-$acl.SetOwner($newOwner)
+# Set user as owner
+$acl.SetOwner($newOwner) 
+# Create NTAccount for TrustedInstaller (if it doesn't exist)
 $trustedInstaller = New-Object System.Security.Principal.NTAccount("NT SERVICE\TrustedInstaller")
-$accessRule = New-Object System.Security.AccessControl.RegistryAccessRule($trustedInstaller, "FullControl", "Deny")
-$acl.AddAccessRule($accessRule)
-$adminGroup = New-Object System.Security.Principal.NTAccount($env:COMPUTERNAME, "Administrators")
+# Deny full control to TrustedInstaller
+$accessRule = New-Object System.Security.AccessControl.RegistryAccessRule($trustedInstaller, "FullControl", "Deny") 
+# Add rule to ACL
+$acl.AddAccessRule($accessRule) 
+# Create NTAccount for Administrators group.
+$adminGroup = New-Object System.Security.Principal.NTAccount($env:COMPUTERNAME, "Administrators") 
+# Create NTAccount for current user (optional).
 $currentuser = New-Object System.Security.Principal.NTAccount($env:USERNAME)
-$accessRule = New-Object System.Security.AccessControl.RegistryAccessRule($currentuser, "FullControl", "Allow")
-$acl.AddAccessRule($accessRule)
-$accessRule = New-Object System.Security.AccessControl.RegistryAccessRule($adminGroup, "FullControl", "Allow")
-$acl.AddAccessRule($accessRule)
+# Allow full control to current user (optional).
+$accessRule = New-Object System.Security.AccessControl.RegistryAccessRule($currentuser, "FullControl", "Allow") 
+$acl.AddAccessRule($accessRule) # Add rule to ACL
+# Create NTAccount for admin.
+$accessRule = New-Object System.Security.AccessControl.RegistryAccessRule($adminGroup, "FullControl", "Allow") 
+# Allow full control to admin..
+$acl.AddAccessRule($accessRule) 
+# Apply modified ACL to registry key
 Set-Acl HKLM:\SYSTEM\CurrentControlSet\Services $acl
 
-
-# #PS to change logon .crd (including all sys services)
-# # Set the password
-# $Password = ConvertTo-SecureString "NewPassword" -AsPlainText -Force
-# # Set the username
-# $Username = "virtualuser"
-# # Get the user account
-# $Account = Get-LocalUser -Name $Username
-# # Set the password for the user account
-# $Account | Set-LocalUser -Password $Password
-# # Get all services
-# $Services = Get-Service
-# # Change the logon credentials for each service
-# foreach ($Service in $Services) {
-#     $Service | Set-Service -Credential (New-Object System.Management.Automation.PSCredential($Username, $Password))
-# }
+<# # learn.microsoft.com/en-us/powershell/module/microsoft.powershell.security/
+# https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.security/get-acl?view=powershell-7.4
+# https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.security/set-acl?view=powershell-7.4
+# https://learn.microsoft.com/en-us/windows/win32/api/iaccess/nf-iaccess-iaccesscontrol-setowner#parameters
+# https://learn.microsoft.com/en-us/dotnet/api/system.security.accesscontrol.filesystemsecurity.addaccessrule?view=net-8.0
+# https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/new-object?view=powershell-7.4 #>

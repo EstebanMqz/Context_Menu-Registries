@@ -46,4 +46,8 @@ done
 # References:
 
 # ~/.profile #Loaded when USER's startups.
-# ~/.bashrc #Loaded when Terminals launched.
+[![.profile](https://img.shields.io/badge/~/.profile-000000.svg?style=flat&logo=git&logoColor=orange)](https://www.ibm.com/docs/en/zos/2.3.0?topic=homeprofile-environment-variables-that-you-can-customize
+
+
+Load when Terminals are launched. 
+[![.bashrc](https://img.shields.io/badge/~/.bashrc_&_~/.profile-000000.svg?style=flat&logo=git&logoColor=orange)](https://www.gnu.org/software/bash/manual/bash.html#Bash-Startup-Files)
