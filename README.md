@@ -5,46 +5,16 @@
 <div style="background-color: #d97707; height: 2px;"></div>
 
 <h3 style="text-shadow: 2px 1px darkgreen; color: white; text-align: left; text-decoration: underline;"> 
-User Account Control:
-</h3>
 
-#### 1. <b>Execute [``UAC.bat``](https://github.com/EstebanMqz/Registries/blob/main/.bat/UAC.bat) to enable <i>Full Control permissions</i> over OS.</b> </h3> 
+Access Control List:</h3>
 
-<div style="font-size: 13px;">
-<i>Recommended:</i> Secure dimmed desktop highest privileges.</div>
-
-<div style="font-size: 10px;">
-<Details open> <Summary> <h6>UAC options:</h6> </Summary>
-   </ul>
-   <div class="small-padding" style="font-size: 10px;"> 
-   <ul>
-      <li><b>0</b>: No prompt.</li>
-      <li><b>1</b>: Windows settings changes .</li>
-      <li><b>2</b>: Secure dimmed desktop.</li>
-      <li><b>3</b>: Sys settings <i>not related</i> to Windows</li>
-      <li><b>4</b>: Sys settings <i>not related</i> to Windows (no pw).</li>
-   </ul></div>
-</Details>
-</div>
-
-Switches [TrustedInstaller](https://answers.microsoft.com/en-us/windows/forum/all/who-is-trustedinstaller-and-why-do-they-seem-to/59d48669-8aab-44fa-9499-c4efdba42f03) <b>Full Control Permissions</b> to &rarr; <b>Admin</b>: <i> (option [2](https://learn.microsoft.com/en-us/windows/security/threat-protection/security-policy-settings/user-account-control-switch-to-the-secure-desktop-when-prompting-for-elevation))</i>.<br>
-
-
-<i>
-
-```
-Enter the password for Administrator: xxxxx
-Value ConsentPromptBehaviorAdmin exists, overwrite(Yes/No)? Yes
-``` 
-</i>
-
-<h3 style="text-shadow: 2px 1px darkgreen; color: white; text-align: left; text-decoration: underline;"> 
-Access Control List:
-</h3>
-
-Modify Registries [ACL](https://learn.microsoft.com/en-us/dotnet/api/microsoft.azure.management.datalake.analytics.models.aclcreateorupdateparameters?view=azure-dotnet-legacy)
+This PowerShell script adjusts the [ACL](https://learn.microsoft.com/en-us/dotnet/api/microsoft.azure.management.datalake.analytics.models.aclcreateorupdateparameters?view=azure-dotnet-legacy)
+for 
+<i>[HKLM:\SYSTEM\CurrentControlSet\Services](https://learn.microsoft.com/en-us/windows-hardware/drivers/install/hklm-system-currentcontrolset-control-registry-tree).</i> <br>
+Grants <b>Full Control</b> to Administrator over the System:<br>
 
 [``services.ps1``](https://github.com/EstebanMqz/Registries/blob/main/.ps1/services.ps1)
+
 
 
 - `New-Object`: Creates a new instance of a .NET object.
@@ -68,6 +38,50 @@ This PowerShell script modifies the Access Control List (ACL) for the HKLM:\SYST
 REM - Review credentials & admin. 
 rundll32.exe keymgr.dll,KRShowKeyMgr 
 ```
+
+<div style="background-color: #d97707; height: 2px;"></div>
+<br>
+
+
+<h3 style="text-shadow: 2px 1px darkgreen; color: white; text-align: left; text-decoration: underline;"> 
+User Account Control:
+</h3>
+
+#### 1. <b>Execute [``UAC.bat``](https://github.com/EstebanMqz/Registries/blob/main/.bat/UAC.bat) to enable <i>Full Control permissions</i> over OS.</b> </h3> 
+
+<div style="font-size: 13px;">
+<i>Recommended:</i> Secure dimmed desktop highest privileges.</div>
+
+<div style="font-size: 10px;">
+<Details open> <Summary> <h6>UAC options:</h6> </Summary>
+   </ul>
+   <div class="small-padding" style="font-size: 10px;"> 
+   <ul>
+      <li><b>0</b>: No prompt.</li>
+      <li><b>1</b>: Windows settings changes .</li>
+      <li><b>2</b>: Secure dimmed desktop.</li>
+      <li><b>3</b>: Sys settings <i>not related</i> to Windows</li>
+      <li><b>4</b>: Sys settings <i>not related</i> to Windows (no pw).</li>
+   </ul></div>
+</Details>
+</div>
+
+
+
+Switches [TrustedInstaller](https://answers.microsoft.com/en-us/windows/forum/all/who-is-trustedinstaller-and-why-do-they-seem-to/59d48669-8aab-44fa-9499-c4efdba42f03) <b>Full Control Permissions</b> to &rarr; <b>Admin</b>: <i> (option [2](https://learn.microsoft.com/en-us/windows/security/threat-protection/security-policy-settings/user-account-control-switch-to-the-secure-desktop-when-prompting-for-elevation))</i>.<br>
+
+<i>
+
+```
+Enter the password for Administrator: xxxxx
+Value ConsentPromptBehaviorAdmin exists, overwrite(Yes/No)? Yes
+``` 
+</i>
+
+Now, you have <i>Full Control permissions</i> over your <b>OS</b>. 
+###### See also: [WSL](https://learn.microsoft.com/en-us/windows/wsl/install)
+
+
 
 <h6 style> See also:</h6>
 
@@ -136,11 +150,17 @@ Write-Output(([System.Diagnostics.Process]::GetCurrentProcess().MainModule.FileN
  
 <section id="config">
 
-Have User &amp; <b>[System Environment Variables](https://docs.microsoft.com/en-us/windows/win32/procthread/environment-variables)</b> &amp; <b>[PATHs](https://docs.microsoft.com/en-us/windows/win32/procthread/environment-variables#searching-for-directories)</b> at Startup automatically:
+<p style="font-size:16px; text-align: center;">Have User &amp; <b><a href="https://docs.microsoft.com/en-us/windows/win32/procthread/environment-variables">System Environment Variables</a></b> &amp; <b><a href="https://phoenixnap.com/kb/linux-add-to-path#:~:text=PATH%20is%20an%20environment%20variable,to%20remove%20it%20in%20Linux.">PATHs</a></b> at <b>OS Startup</b></p>
 
-<div style="font-size: 15px;">
 
-> **Note:** Only create/edit [`.profile`](https://github.com/EstebanMqz/Registries/blob/main/$HOME/.profile) &amp; [`.bashrc`](https://github.com/EstebanMqz/Registries/blob/main/$HOME/.profile) with a previous &nbsp; <a href="https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.management/checkpoint-computer?view=powershell-5.1"><img src="https://img.shields.io/badge/CMD-Restore_Point-000000.svg?style=flat&amp;logo=powershell&amp;logoColor=blue" alt="CMD-Restore_Point"></a> or [![CMD-xcopy](https://img.shields.io/badge/xcopy-000000.svg?style=flat&logo=windows-terminal&logoColor=white)](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/xcopy) <br>
+###### Recommended:
+
+
+For [`.profile`](https://github.com/EstebanMqz/Registries/blob/main/$HOME/.profile) &amp; [`.bashrc`](https://github.com/EstebanMqz/Registries/blob/main/$HOME/.profile) set:<br>
+<a href="https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.management/checkpoint-computer?view=powershell-5.1"><img src="https://img.shields.io/badge/CMD-Restore_Point-000000.svg?style=flat&amp;logo=powershell&amp;logoColor=blue" alt="CMD-Restore_Point"></a>
+or <a href="https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/xcopy"><img src="https://img.shields.io/badge/xcopy-000000.svg?style=flat&logo=windows-terminal&logoColor=white" alt="CMD-xcopy"></a>
+
+<br>
 
 <div style="font-size: 12px;">
 <i>Backup subdir hidden (rm read-only) C: to D:, output.</i>
@@ -200,7 +220,10 @@ Author: <br>
 [<img width="40px" src="https://cdn3d.iconscout.com/3d/free/thumb/free-github-6343501-5220956.png?f=webp">](https://github.com/EstebanMqz?tab=repositories)
 [<img width="40px" src="https://img.icons8.com/color/452/gitlab.png">](https://gitlab.com/EstebanMqz) </h3>
 
-<h5 style> Verification:</h5>
+<h5 style> 
+
+<b>[System Environment Variables](https://docs.microsoft.com/en-us/windows/win32/procthread/environment-variables)</b> &amp; <b>[PATHs](https://docs.microsoft.com/en-us/windows/win32/procthread/environment-variables#searching-for-directories)</b>
+in OS Workspace:</h5>
 
 ```bash
 printenv #Verify Set Env variables guiding respective OS processes.
@@ -208,16 +231,21 @@ $PATH #Directories related to executables.
 ```
 
 <h6> References:</h6>
-<div class="centered-content"><p>
+
+<div style="border: 1px solid black; padding: 10px;" align="center">
+
+<a href="https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/reg">
+<img style="vertical-align: middle;" width="30px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Logo_windows_simples.svg/2280px-Logo_windows_simples.svg.png?f=webp"></a> &nbsp;
+<a href="https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/reg">
+<img style="vertical-align: middle;" width="30px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Registry.svg/1920px-Registry.svg.png"></a> &nbsp;
+<a href="https://docs.kernel.org">
+<img style="vertical-align: middle;" width="30px" src="https://upload.wikimedia.org/wikipedia/commons/3/35/Tux.svg"><br><br>
 <a href="https://www.gnu.org/software/bash/manual/bash.html">
-    <img src="https://img.shields.io/badge/Bash-5.1.4-F05032.svg?style=flat&amp;logo=gnu-bash" alt="Windows_Bash">
-</a>
+    <img src="https://img.shields.io/badge/Bash-5.1.4-F05032.svg?style=flat&amp;logo=gnu-bash" alt="Windows_Bash"></a>
 <a href="https://docs.microsoft.com/en-us/windows/wsl/">
-    <img src="https://img.shields.io/badge/WSL-2.0-0078D6.svg?style=flat&amp;logo=windows" alt="WSL">
-</a>
+    <img src="https://img.shields.io/badge/WSL-2.0-0078D6.svg?style=flat&amp;logo=windows" alt="WSL"></a>
 <a href="https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/xcopy">
-    <img src="https://img.shields.io/badge/xcopy-000000.svg?style=flat&amp;logo=windows-terminal" alt="xcopy">
-</a>
+    <img src="https://img.shields.io/badge/xcopy-000000.svg?style=flat&amp;logo=windows-terminal" alt="xcopy"></a>
 <a href="https://www.gnu.org/software/bash/manual/bash.html#Bash-Startup-Files"></a>
 <a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/reg">
     <img src="https://img.shields.io/badge/Registry-reg-000000.svg?style=flat&amp;logo=powershell" alt="reg"></a>
@@ -228,8 +256,9 @@ $PATH #Directories related to executables.
 <a href="https://docs.microsoft.com/en-us/windows/win32/procthread/environment-variables">
     <img src="https://img.shields.io/badge/System-%20Environment-black" alt="System Env Variables"></a>
 </div>
+</div>
+</div>
 
----
 
 
 
