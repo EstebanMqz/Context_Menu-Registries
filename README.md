@@ -6,33 +6,14 @@
 
 <h3 style="text-shadow: 2px 1px darkgreen; color: white; text-align: left; text-decoration: underline;"> 
 
+
 Access Control List:</h3>
+For authenticity release signing Software by Publisher's [Certificate Authority (CA)](https://learn.microsoft.com/en-us/windows-server/identity/ad-cs/certification-authority-role) an enterprise must validate its integrity for distribution and its ownership as is without further modifications.
 
-This PowerShell script adjusts the [ACL](https://learn.microsoft.com/en-us/dotnet/api/microsoft.azure.management.datalake.analytics.models.aclcreateorupdateparameters?view=azure-dotnet-legacy)
-for 
-<i>[HKLM:\SYSTEM\CurrentControlSet\Services](https://learn.microsoft.com/en-us/windows-hardware/drivers/install/hklm-system-currentcontrolset-control-registry-tree).</i> <br>
-Grants <b>Full Control</b> to Administrator over the System:<br>
-
+To create a .pfx certificate customized to you
 [``services.ps1``](https://github.com/EstebanMqz/Registries/blob/main/.ps1/services.ps1)
 
 
-
-- `New-Object`: Creates a new instance of a .NET object.
-- `Get-Acl`: Gets the ACL of a specified item.
-- `Set-Acl`: Sets the ACL of a specified item.
-- `NTAccount`: Represents a Windows user or group account.
-- `RegistryAccessRule`: Represents a rule for accessing a registry key.
-
-The script performs the following actions:
-
-1. Changes the owner of the registry key to the current user.
-2. Denies full control to the TrustedInstaller service.
-3. Grants full control to the current user and the Administrators group.
-
-This script is useful for managing registry permissions and ensuring proper access control for the specified registry key.
-This PowerShell script modifies the Access Control List (ACL) for the HKLM:\SYSTEM\CurrentControlSet\Services registry key. It uses the New-Object, Get-Acl, Set-Acl cmdlets and the NTAccount and RegistryAccessRule classes to change the owner to the current user, deny full control to the TrustedInstaller service, and grant full control to the current user and the Administrators group.
-
-<font size= 3>
 
 ```bat
 REM - Review credentials & admin. 
