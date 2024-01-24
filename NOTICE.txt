@@ -1,0 +1,17 @@
+=====================================================================================================
+==          NOTICE file corresponding to the Apache License, Version 2.0 for                       ==
+==  [Registries](https://github.com/EstebanMqz/Registries) usage, redistributions or contributions.==		       
+=====================================================================================================
+
+Attach the following in your work References: 
+
+(Optional:) [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+
+"© Copyright 2024 [EstebanMqz](https://github.com/EstebanMqz)
+developed with [Registries](https://github.com/EstebanMqz/Registries)."
+
+Note: Portions of this LICENSE and NOTICE were developed at the [NCSA](https://www.ncsa.illinois.edu)
+domain epicenter of SuperComputers. A recognition granted by the 
+[NSF](https://en.wikipedia.org/wiki/National_Science_Foundation),
+independent USA federal agency from the funding research, education, science and engineering. 	
+It also contains work of "RSA-Data-Security.Inc" & modifications from "Spyglass.Inc" & "Bellcore.Inc".

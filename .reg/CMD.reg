@@ -11,5 +11,4 @@ Windows Registry Editor Version 5.00
 "Icon" = "C:\\Windows\\System32\\cmd.exe"
 MUIVerb = "CMD Here"
 [HKEY_CLASSES_ROOT\Directory\Background\shell\cmd\command]
-@="cmd.exe /s /k /runas pushd \"%V\""
-
+@="cmd.exe /s /k pushd \"%V\""

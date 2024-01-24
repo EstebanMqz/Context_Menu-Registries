@@ -1,30 +1,10 @@
-<h2 align="center">
-   Context Menu Registries    
-</h2>
+<h1 align="center">
+   Context Background Menus Registries    
+</h1>
 
 <div style="background-color: #d97707; height: 2px;"></div>
 
-<h3 style="text-shadow: 2px 1px darkgreen; color: white; text-align: left; text-decoration: underline;"> 
-
-
-Access Control List:</h3>
-For authenticity release signing Software by Publisher's [Certificate Authority (CA)](https://learn.microsoft.com/en-us/windows-server/identity/ad-cs/certification-authority-role) an enterprise must validate its integrity for distribution and its ownership as is without further modifications.
-
-To create a .pfx certificate customized to you
-[``services.ps1``](https://github.com/EstebanMqz/Registries/blob/main/.ps1/services.ps1)
-
-
-
-```bat
-REM - Review credentials & admin. 
-rundll32.exe keymgr.dll,KRShowKeyMgr 
-```
-
-<div style="background-color: #d97707; height: 2px;"></div>
-<br>
-
-
-<h3 style="text-shadow: 2px 1px darkgreen; color: white; text-align: left; text-decoration: underline;"> 
+<h3 style="text-shadow: 2px 1px darkgreen; color: white; text-align: center; text-decoration: underline;"> 
 User Account Control:
 </h3>
 
@@ -49,8 +29,7 @@ User Account Control:
 
 
 
-Switches [TrustedInstaller](https://answers.microsoft.com/en-us/windows/forum/all/who-is-trustedinstaller-and-why-do-they-seem-to/59d48669-8aab-44fa-9499-c4efdba42f03) <b>Full Control Permissions</b> to &rarr; <b>Admin</b>: <i> (option [2](https://learn.microsoft.com/en-us/windows/security/threat-protection/security-policy-settings/user-account-control-switch-to-the-secure-desktop-when-prompting-for-elevation))</i>.<br>
-
+###### Switches [TrustedInstaller](https://answers.microsoft.com/en-us/windows/forum/all/who-is-trustedinstaller-and-why-do-they-seem-to/59d48669-8aab-44fa-9499-c4efdba42f03) <b>Full Control Permissions</b> to &rarr; <b>Admin</b>: <i> (option [2](https://learn.microsoft.com/en-us/windows/security/threat-protection/security-policy-settings/user-account-control-switch-to-the-secure-desktop-when-prompting-for-elevation))</i>.<br>
 <i>
 
 ```
@@ -59,28 +38,36 @@ Value ConsentPromptBehaviorAdmin exists, overwrite(Yes/No)? Yes
 ``` 
 </i>
 
-Now, you have <i>Full Control permissions</i> over your <b>OS</b>. 
-###### See also: [WSL](https://learn.microsoft.com/en-us/windows/wsl/install)
+<u>Now, you have <i>Full Control permissions</i> over your <b>OS</u>. 
+<h6>Recommended:</h6>
 
-
-
-<h6 style> See also:</h6>
-
-&#x26A1; [GPG-RSA 4096 bits Encryption](https://github.com/EstebanMqz/GPG-RSA-Git-encryption-1026-4096bits#references) <i>for [.crd](https://microsoft.fandom.com/wiki/Cardfile) encrypted backup (high-fast).</i>
-
+[WSL](https://learn.microsoft.com/en-us/windows/wsl/install) [<img width="40px" src="https://www.svgrepo.com/show/184138/linux.svg">](https://learn.microsoft.com/en-us/windows/wsl/install)</b>
 </font>
 
-<div style="background-color: #d97707; height: 2px;"></div><br><br>
+---
 
-[``services.ps1``](https://github.com/EstebanMqz/Registries/blob/main/.ps1/services.ps1) 
+<div style="font-size: 10px;">
+Registry <b>Regex</b> &rarr; <i>Ctrl+Shift+F</i>
 
+<a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/reg-query"><img src="https://img.shields.io/badge/reg_query-000000.svg?style=flat&amp;logo=windows-terminal&amp;logoColor=blue" alt="reg_query"></a> searches in the registry, use the following CMD command:
 
-<h2> &#x1F4C1; Context & Commands</h2> 
+```CMD
+:: CMD Registry Regex
+reg query HKEY_CLASSES_ROOT /f "<regex_search>" /s /e
+```
 
-<div style="font-size: 12px;">
+```CMD
+:: CMD User / System Environment Variables
+runas /user:Administrator "%PATH%\System_Environment.bat"
 
-[Environment Variables](https://docs.microsoft.com/en-us/windows/deployment/usmt/usmt-recognized-environment-variables) </b>  
-<br>
+rem Make sure to have the admin password for the admin found in your .crd file (encrypted or not)
+rundll32.exe keymgr.dll,KRShowKeyMgr "%PATH%\file.crd"
+```
+
+<div style="background-color: #d97707; height: 2px;"></div><br>
+
+<h2 style="text-shadow: 2px 1px orange; color: white; text-align: center; text-decoration: underline;">  Background Context & Commands</h2> 
+<div style="font-size: 12px;"> <br>
 
 
 1. [![Git](https://img.shields.io/badge/Git-F05032?style=flat&logo=git&logoColor=white)](https://git-scm.com/) &nbsp; <b>Bash, GUI & gitk. <br>
@@ -116,59 +103,19 @@ Write-Output(([System.Diagnostics.Process]::GetCurrentProcess().MainModule.FileN
 <b>6. &nbsp; &nbsp; [``PyCharm.reg``](https://github.com/EstebanMqz/Registries/blob/main/.reg/PyCharm.reg) 
    &nbsp; [<img width="18px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/PyCharm_Icon.svg/512px-PyCharm_Icon.svg.png">](https://www.jetbrains.com/pycharm/)</b><br>
 
-<b>7. &nbsp; &nbsp; [``Anaconda.reg``](https://github.com/EstebanMqz/Registries/blob/main/.reg/Anaconda.reg)
-&nbsp; [<img width="18px" src="https://www.dataquest.io/wp-content/uploads/2022/01/anaconda-icon.webp">](https://www.anaconda.org)</b><br>
+<b>7. &nbsp; &nbsp; [``Notepad.reg``](https://github.com/EstebanMqz/Registries/blob/main/.reg/Notepad.reg) &nbsp; [<img width="18px" src="https://img.icons8.com/?size=48&id=82ixf4KHn6za&format=png">](https://icons8.com/icon/82ixf4KHn6za/notepad)</b><br>
 
-<b>8. &nbsp; &nbsp; [``Notepad.reg``](https://github.com/EstebanMqz/Registries/blob/main/.reg/Notepad.reg) &nbsp; [<img width="18px" src="https://img.icons8.com/?size=48&id=82ixf4KHn6za&format=png">](https://icons8.com/icon/82ixf4KHn6za/notepad)</b><br>
+   </span><br>
 
-   </span>
+<div style="background-color: #d97707; height: 2px;"></div><br>
 
----
-
-<div align= "center"> 
-   <h1>Automatic Linux & Windows Config.</h1>
-</div> 
- 
 <section id="config">
+<h2 style="text-shadow: 2px 1px darkgreen; color: darkred; text-align: center; text-decoration: underline;"> <b> Enable <a href="https://learn.microsoft.com/en-us/windows/win32/procthread/changing-environment-variables"> User/System Environment Variables </a></b> &amp; <b><a href="https://phoenixnap.com/kb/linux-add-to-path#:~:text=PATH%20is%20an%20environment%20variable,to%20remove%20it%20in%20Linux.">PATHs</a></b> at <b>Startup</b></h2>
 
-<p style="font-size:16px; text-align: center;">Have User &amp; <b><a href="https://docs.microsoft.com/en-us/windows/win32/procthread/environment-variables">System Environment Variables</a></b> &amp; <b><a href="https://phoenixnap.com/kb/linux-add-to-path#:~:text=PATH%20is%20an%20environment%20variable,to%20remove%20it%20in%20Linux.">PATHs</a></b> at <b>OS Startup</b></p>
+<i>(Without creating environments for the Context Menus)</i>
 
-
-###### Recommended:
-
-
-For [`.profile`](https://github.com/EstebanMqz/Registries/blob/main/$HOME/.profile) &amp; [`.bashrc`](https://github.com/EstebanMqz/Registries/blob/main/$HOME/.profile) set:<br>
-<a href="https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.management/checkpoint-computer?view=powershell-5.1"><img src="https://img.shields.io/badge/CMD-Restore_Point-000000.svg?style=flat&amp;logo=powershell&amp;logoColor=blue" alt="CMD-Restore_Point"></a>
-or <a href="https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/xcopy"><img src="https://img.shields.io/badge/xcopy-000000.svg?style=flat&logo=windows-terminal&logoColor=white" alt="CMD-xcopy"></a>
-
-<br>
-
-<div style="font-size: 12px;">
-<i>Backup subdir hidden (rm read-only) C: to D:, output.</i>
-
-```bash
-cd D: & label D: SSD_ext  #Rename Drive
-./external.bat #Backup C in D with /E /H /K /C options.
-```
-
-Registry <b>Regex</b> &rarr; <i>Ctrl+Shift+F</i>
-
-<a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/reg-query"><img src="https://img.shields.io/badge/reg_query-000000.svg?style=flat&amp;logo=windows-terminal&amp;logoColor=blue" alt="reg_query"></a> searches in the registry, use the following CMD command:
-
-```CMD
-:: CMD Registry Regex
-reg query HKEY_CLASSES_ROOT /f "<regex_search>" /s /e
-```
-
-```CMD
-:: CMD User / System Environment Variables
-runas /user:Administrator "%PATH%\System_Environment.bat"
-
-rem Make sure to have the admin password for the admin found in your .crd file (encrypted or not)
-rundll32.exe keymgr.dll,KRShowKeyMgr "%PATH%\file.crd"
-```
-
-
+1. ```$ pwd = echo $HOME```
+2. Export [`.profile`](https://github.com/EstebanMqz/Registries/blob/main/$HOME/.profile) &amp; [`.bashrc`](https://github.com/EstebanMqz/Registries/blob/main/$HOME/.profile) to $HOME path:<br>
 ```bash
 #Create .bashrc & .profile files in $HOME
 cd $HOME
@@ -180,26 +127,16 @@ source ~/.profile & ~/.bashrc
 
 #Finished.
 
-#Note that the .sh: .profile & .bashrc loads automatically what the .bat & .ps1 would do in every execution.
-#.bashrc & .profile must be in $HOME for them to be loaded,  won't in remote/local repos.
+#Note that the .sh: .profile & .bashrc loads automatically what the .bat & would do in every execution.
+#.bashrc & .profile must be in $HOME for them to be loaded, won't in remote/local repos.
 ```
 
 </div>
-
-
 Remotely Loadable Result (.bashrc/.profile):<br>
 
 ![Profile Bashrc](images/.bashrc.jpg)
 
-<h3 style="color: ; text-align:left; padding:10px"> 
-Author: <br>
 
-[<img width="40px" src="https://img.icons8.com/ios/50/0e55b3/resume-website.png">](https://tinyurl.com/Esteban-Profile)
-[<img width="40px" src="https://img.icons8.com/?size=512&id=MR3dZdlA53te&format=png">](https://www.linkedin.com/in/esteban-m-653817205/)
-<a href="https://tinyurl.com/2y86e2wa"><img width="35px" src="https://img.icons8.com/color/452/whatsapp--v1.png" alt="WhatsApp"></a>
-[<img width="40px" src="https://img.icons8.com/color/452/gmail-new.png">](mailto:emarquez1895@gmail.com)
-[<img width="40px" src="https://cdn3d.iconscout.com/3d/free/thumb/free-github-6343501-5220956.png?f=webp">](https://github.com/EstebanMqz?tab=repositories)
-[<img width="40px" src="https://img.icons8.com/color/452/gitlab.png">](https://gitlab.com/EstebanMqz) </h3>
 
 <h5 style> 
 
@@ -211,9 +148,35 @@ printenv #Verify Set Env variables guiding respective OS processes.
 $PATH #Directories related to executables.
 ```
 
-<h6> References:</h6>
+<div style="font-size: 12px;">
 
-<div style="border: 1px solid black; padding: 10px;" align="center">
+###### Recommended:
+<a href="https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.management/checkpoint-computer?view=powershell-5.1"><img src="https://img.shields.io/badge/CMD-Restore_Point-000000.svg?style=flat&amp;logo=powershell&amp;logoColor=blue" alt="CMD-Restore_Point"></a>
+ or [``external.bat``](https://github.com/EstebanMqz/Registries/blob/main/.reg/external.bat) <a href="https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/xcopy"><img src="https://img.shields.io/badge/xcopy-000000.svg?style=flat&logo=windows-terminal&logoColor=white" alt="CMD-xcopy"></a>
+
+<i>Backup HDD: to external SSD:</i>
+
+```bash
+./external.bat #Backup C in D (Assuming your HDD:C & external-SSD:D)
+cd D: & label D: SSD_ext  #Rename D to SSD_ext
+```
+
+<h3 style="color: ; text-align:left; padding:10px"> 
+Author: <br>
+
+[<img width="40px" src="https://img.icons8.com/ios/50/0e55b3/resume-website.png">](https://tinyurl.com/Esteban-Profile)
+[<img width="40px" src="https://img.icons8.com/?size=512&id=MR3dZdlA53te&format=png">](https://www.linkedin.com/in/esteban-m-653817205/)
+<a href="https://tinyurl.com/2y86e2wa"><img width="35px" src="https://img.icons8.com/color/452/whatsapp--v1.png" alt="WhatsApp"></a>
+[<img width="40px" src="https://img.icons8.com/color/452/gmail-new.png">](mailto:emarquez1895@gmail.com)
+[<img width="40px" src="https://cdn3d.iconscout.com/3d/free/thumb/free-github-6343501-5220956.png?f=webp">](https://github.com/EstebanMqz?tab=repositories)
+[<img width="40px" src="https://img.icons8.com/color/452/gitlab.png">](https://gitlab.com/EstebanMqz) </h3>
+
+© Copyright 2024 [EstebanMqz](https://github.com/EstebanMqz)
+Context Menus developed with [Registries](https://github.com/EstebanMqz/Registries).
+<br><br><br>
+<h4> References:</h4>
+
+<div style="border: 1px solid black; padding: 10px;" align="left">
 
 <a href="https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/reg">
 <img style="vertical-align: middle;" width="30px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Logo_windows_simples.svg/2280px-Logo_windows_simples.svg.png?f=webp"></a> &nbsp;
