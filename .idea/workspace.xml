@@ -2,18 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8a09fbb5-da4b-439c-a7d3-a9ed5a3461c4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Node.reg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UAC.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services.ps1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/$HOME/.bashrc" beforeDir="false" afterPath="$PROJECT_DIR$/$HOME/.bashrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/$HOME/.profile" beforeDir="false" afterPath="$PROJECT_DIR$/$HOME/.profile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMD.reg" beforeDir="false" afterPath="$PROJECT_DIR$/CMD.reg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.html" beforeDir="false" afterPath="$PROJECT_DIR$/README.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.html/README.html" beforeDir="false" afterPath="$PROJECT_DIR$/.html/README.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/System_Environment.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/System_Environments.ps1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/VSCode.reg" beforeDir="false" afterPath="$PROJECT_DIR$/VSCode.reg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/external.bat" beforeDir="false" afterPath="$PROJECT_DIR$/external.bat" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +28,8 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.appearance&quot;
   }
 }</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -51,7 +43,17 @@
       <workItem from="1705350002871" duration="3000" />
       <workItem from="1705350141013" duration="8000" />
       <workItem from="1705350161385" duration="1000" />
+      <workItem from="1706970950699" duration="88000" />
+      <workItem from="1706971054736" duration="281000" />
+      <workItem from="1706971346491" duration="405000" />
+      <workItem from="1706971762310" duration="326000" />
+      <workItem from="1706972099584" duration="333000" />
+      <workItem from="1706972443372" duration="516000" />
+      <workItem from="1706973037567" duration="4000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
 </project>

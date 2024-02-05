@@ -2,16 +2,9 @@
 
 # Author: Esteban Márquez D. @https://www.github.com/EstebanMqz
 # Description: User/Sys Windows Env & PATH Variables startup file.
+# CREATE/OPEN File: ``` cd $HOME && code ~/.profile ```
 
-# Unix-Shell: $ pwd = echo $HOME (Home dir)
-
-# If the following commands are created/enabled with the .sh the .bashrc / .profile load infinitely (load itself).
-# [ -f ~/.profile ] && . ~/.profile
-# [ -f ~/.bashrc ] && . ~/.bashrc
-
-# Unix-Shell: $ pwd = echo $HOME 
-
-# CREATE FILE: code ~/.profile WITH .sh:
+#Copy the following Envs/Dirs accordingly to their PATHS for your OS Env Vars Startup files: 
 
 Environment=(PhysX NvDLISR system32 MATLAB dotnet nodejs php_8_2_9 ComposerSetup Git anaconda_navigator Python311 VS WindowsPowerShell Wbem System32)
 
@@ -44,7 +37,4 @@ for index in ${!Environment[*]}; do
 done
 
 # References:
-# ~/.profile #Loaded when USER's startups.
-#[![.profile](https://img.shields.io/badge/~/.profile-000000.svg?style=flat&logo=git&logoColor=orange)](https://www.ibm.com/docs/en/zos/2.3.0?topic=homeprofile-environment-variables-that-you-can-customize
-#Load when Terminals are launched. 
-#[![.bashrc](https://img.shields.io/badge/~/.bashrc_&_~/.profile-000000.svg?style=flat&logo=git&logoColor=orange)](https://www.gnu.org/software/bash/manual/bash.html#Bash-Startup-Files)
+# Load when Terminals are launched. 

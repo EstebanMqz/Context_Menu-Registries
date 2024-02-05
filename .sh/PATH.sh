@@ -1,5 +1,5 @@
 #!/bin/bash
-#Description: Check if the PATHs exist in UNIX-like environments.
+#Description: Check if the PATHs exist in your UNIX-like environment.
 
 directories=(
 "/C/Program Files (x86)/NVIDIA Corporation/PhysX/Common"
@@ -15,7 +15,6 @@ directories=(
 "/C/Users/Esteban/AppData/Local/Programs/Microsoft VS Code/bin"
 "/C/Windows/System32/WindowsPowerShell/v1.0"
 "/C/Windows/System32/Wbem"
-"/C/Windows/System32/OpenSSH"
 "/C/Windows/System32/OpenSSH"
 )
 

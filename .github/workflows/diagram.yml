@@ -1,0 +1,22 @@
+#Set up read and write permissions in .yml file (https://github.com/<user>/<repo>/settings/actions)
+name: Create Diagram
+on:
+  workflow_dispatch: {}
+  push:
+    branches:
+      - main
+jobs:
+  create-diagram:
+    name: Create Diagram
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@main
+      - name: Create images Subdirectory
+        run: mkdir -p ./images
+      - name: Update Diagram 
+        uses: githubocto/repo-visualizer@0.8.2
+        with:
+          excluded_paths: "ignore,.github,dist,node_modules"
+          output_file: "./images/diagram.svg"
+          branch: main
