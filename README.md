@@ -144,11 +144,17 @@ Get Icon's registry  <i>(double-back-slashed)<b></i>.exe</i> PATH:</b>
 
 ```powershell
 #PowerShell terminal
-Write-Output(([System.Diagnostics.Process]::GetCurrentProcess().MainModule.FileName)).replace('\', '\\') 
+#1. Open File Explorer and copy PS.exe Icon in ps1 format: 
+#'https://github.com/EstebanMqz/Registries/blob/main/.reg/PowerShell.reg'
+$PS = [System.Diagnostics.Process]::GetCurrentProcess().MainModule.FileName; Start-Process explorer.exe (Split-Path $PS); $PS = ($PS + '').Replace('\', '\\'); Set-Clipboard -Value $PS; Write-Output $PS
+#e.g: 'C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe'
+#2. Copy PS_ise.exe Icon PATH & do a .Replace('\', '\\\\'). 
+#Confirm your syntaxes with the .reg/PowerShell.reg file 
 ```
 
-The folder contains the [powershell.exe](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_powershell_exe?view=powershell-5.1#parameters) & [power_ise.exe](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_powershell_ise_exe?view=powershell-5.1)<br>
-Run [``PowerShell.reg``](https://github.com/EstebanMqz/Registries/blob/main/.reg/PowerShell.reg) (modify PATHs accordingly).
+The parent folder contains the [powershell.exe](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_powershell_exe?view=powershell-5.1#parameters) & [power_ise.exe](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_powershell_ise_exe?view=powershell-5.1)<br>
+Run [``PowerShell.reg``](https://github.com/EstebanMqz/Registries/blob/main/.reg/PowerShell.reg)<br> 
+<b><u>(modify PATHs accordingly)</b></u>.
 
 ---
 
@@ -206,6 +212,7 @@ source ~/.bashrc
 
 4. Ensure that Environments Startup PATHs are loaded correctly by running:<br>
 
+$PS = [System.Diagnostics.Process]::GetCurrentProcess().MainModule.FileName; Start-Process explorer.exe (Split-Path $PS); $PS = ($PS + '').Replace('\', '\\'); Set-Clipboard -Value $PS; Write-Output $PS
 
 ``` bash
 #Bash
