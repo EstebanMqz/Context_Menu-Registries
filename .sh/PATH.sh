@@ -1,6 +1,8 @@
 #!/bin/bash
 #Description: Check if the PATHs exist in your UNIX-like environment.
 
+
+
 directories=(
 "/C/Program Files (x86)/NVIDIA Corporation/PhysX/Common"
 "/C/Windows/system32"

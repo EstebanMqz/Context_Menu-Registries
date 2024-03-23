@@ -4,6 +4,7 @@
     <list default="true" id="8a09fbb5-da4b-439c-a7d3-a9ed5a3461c4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.html/README.html" beforeDir="false" afterPath="$PROJECT_DIR$/.html/README.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.ps1/PS_ise.ps1" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -50,6 +51,9 @@
       <workItem from="1706972099584" duration="333000" />
       <workItem from="1706972443372" duration="516000" />
       <workItem from="1706973037567" duration="4000" />
+      <workItem from="1707403694885" duration="3000" />
+      <workItem from="1707405186222" duration="7000" />
+      <workItem from="1707405218522" duration="597000" />
     </task>
     <servers />
   </component>

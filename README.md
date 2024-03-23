@@ -8,30 +8,27 @@ Background Context Menu Registries
 [![HTML](https://img.shields.io/badge/HTML-100000?style=flat&logo=html5&logoColor=red)](https://htmlpreview.github.io/?https://github.com/EstebanMqz/Registries/blob/main/.html/README.html)
 </div>
 
-### Quick Acess:
-  
+
 <div align= "center">
 
-This repo is meant to enable <b><u>User/System Environment Variables<b></u> so that [<img width="18px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Git_icon.svg/1024px-Git_icon.svg.png">](https://git-scm.com)&nbsp;[<img width="18px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS48snSTjPW64ev65oSLQjJfKnxqW0ieAsSIgXW0wI3Rt3EJFklPuz2_fDX0Ez_rj5vMyA&usqp=CAU">](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/cmd)&nbsp;<img width="18px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/PowerShell_5.0_icon.png/18px-PowerShell_5.0_icon.png">&nbsp;[<img width="18px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/PyCharm_Icon.svg/512px-PyCharm_Icon.svg.png">](https://www.jetbrains.com/pycharm/)&nbsp;[<img width="18px" src="https://img.icons8.com/?size=48&id=82ixf4KHn6za&format=png">](https://icons8.com/icon/82ixf4KHn6za/notepad)</b> prompts in cd are displayed in all &#128194; Backgrounds: 
+Enable <b><u>User/System Environment Variables<b></u> so that [<img width="18px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Git_icon.svg/1024px-Git_icon.svg.png">](https://git-scm.com)&nbsp;[<img width="18px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS48snSTjPW64ev65oSLQjJfKnxqW0ieAsSIgXW0wI3Rt3EJFklPuz2_fDX0Ez_rj5vMyA&usqp=CAU">](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/cmd)&nbsp;<img width="18px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/PowerShell_5.0_icon.png/18px-PowerShell_5.0_icon.png">&nbsp;[<img width="18px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/PyCharm_Icon.svg/512px-PyCharm_Icon.svg.png">](https://www.jetbrains.com/pycharm/)&nbsp;[<img width="18px" src="https://img.icons8.com/?size=48&id=82ixf4KHn6za&format=png">](https://icons8.com/icon/82ixf4KHn6za/notepad)</b> prompts in cd are displayed in all &#128194; Backgrounds: 
 
 
 <img src="images/.bashrc.jpg" alt="Profile Bashrc" width="400" style="border: 1px solid white;"><br>
-</div>
-<div style="background-color: #d97707; height: 2px;"></div>
-
-<h3 style="text-shadow: 2px 1px darkgreen; color: white; text-align: center; text-decoration: underline;"> 
+</div><div style="background-color: #d97707; height: 2px;"></div><h3 style="text-shadow: 2px 1px darkgreen; color: white; text-align: center; text-decoration: underline;"> 
 User Account Control:
 </h3>
 
-#### 1. Grant your `<USERNAME>` Administrative Permissions.
 
-Run [``Admin.ps1``](https://github.com/EstebanMqz/Registries/blob/main/.ps1/Admin.ps1) with Administrative privileges  
+#### 1. Grant `%USERNAME$` Administrative permissions.
 
-``` shell
-#PS
-cd $PATH
+Run [``Admin.ps1``](https://github.com/EstebanMqz/Registries/blob/main/.ps1/Admin.ps1). 
+
+``` powershell
+#Powershell 
 ./Admin.ps1
 
+#Out: 
 Administrative Permissions to <$env:USERNAME>: Successful.
 ```
 
@@ -73,9 +70,25 @@ SystemPropertiesAdvanced
 ##### 4. Use [``PATH.sh``](https://github.com/EstebanMqz/Registries/blob/main/.sh/PATH.sh) and [``System_Environments.sh``](https://github.com/EstebanMqz/Registries/blob/main/.sh/PATH.sh) your PATHs & directories.
 
 ``` bash
+#PATHs
 where node && where gitk && where cmd && where powershell && where pycharm && where notepad && where code
 ```
----
+
+``` bash
+#ICONs PATHs.
+(where powershell.exe powershell_ise.exe) | sed 's/\\/\\\\\\\\/g'
+(where bash.exe ; where gitk.exe ; where git-gui.exe) | sed 's/\\/\\\\/g'
+(where node; where cmd.exe; where notepad.exe; find "$LOCALAPPDATA" -name pycharm64.exe 2>/dev/null) | sed -e 's/\\/\\\\/g' -e 's/\//\\\\/g'
+```
+
+``` Ubuntu
+su -c 'apt-get install sudo' && sudo apt-get update
+if [ "$UID" -eq 0 ]; then echo 'You are root.'; else echo 'You are not root.'; fi
+```
+
+``` bat
+SystemPropertiesAdvanced 
+```
 
 <h6>Recommended:</h6>
 
@@ -85,7 +98,9 @@ where node && where gitk && where cmd && where powershell && where pycharm && wh
 <div style="font-size: 10px;">
 Registry <b>Regex</b> &rarr; <i>Ctrl+Shift+F</i>
 
-<a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/reg-query"><img src="https://img.shields.io/badge/reg_query-000000.svg?style=flat&amp;logo=windows-terminal&amp;logoColor=blue" alt="reg_query"></a> searches in the registry, use the following CMD command:
+<a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/reg-query">
+<img src="https://img.shields.io/badge/reg_query-000000.svg?style=flat&amp;logo=windows-terminal&amp;logoColor=blue" alt="reg_query"></a><br> 
+Searches in the registry, use the following CMD command:
 
 ```CMD
 :: CMD Registry Regex
@@ -98,7 +113,9 @@ reg query HKEY_CLASSES_ROOT /f "<regex_search>" /s /e
 <h1 style="text-shadow: 2px 1px orange; color: white; text-align: center; text-decoration: underline;">  Background Context & Commands</h1> 
 <div style="font-size: 14px;"> <br>
 
-<i>Remove TrustedInstaller FullControl</i> on needed <b>Registries</b>, grant it to <b>Administrator</b> manually in [Registry Editor](https://learn.microsoft.com/en-us/troubleshoot/windows-server/performance/windows-registry-advanced-users)<br>
+<h3>Description:</h3>
+
+Remove TrustedInstaller FullControl</i> on needed <b>Registries</b>, grant it to <b>Administrator</b> manually in [Registry Editor](https://learn.microsoft.com/en-us/troubleshoot/windows-server/performance/windows-registry-advanced-users)<br>
 
 ---
 ###### Recommended:
@@ -120,11 +137,10 @@ start regedit
 ```
 
 <b>Download and Double-click .reg files: </b><br>
-<i>Modify [regedit](https://learn.microsoft.com/en-us/troubleshoot/windows-server/performance/windows-registry-advanced-users) - [HKEY_CLASSES_ROOT](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2003/cc739822(v=ws.10)) accordingly to [`reg keys`](https://github.com/EstebanMqz/Registries/tree/main/.reg)</i>.
+<i>Modify [regedit](https://learn.microsoft.com/en-us/troubleshoot/windows-server/performance/windows-registry-advanced-users) - [HKEY_CLASSES_ROOT](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2003/cc739822(v=ws.10)) accordingly to [`.reg keys`](https://github.com/EstebanMqz/Registries/tree/main/.reg) in all flles</i>.
 <br>
 
-</b>Note:</b> Ignore modification alerts <u>after backup.</u> </i>
-
+</b>Note:</b> Ignore modification alerts <u>after backup.</u></i><br>
 
 <b>1. <b>Bash, GUI & gitk [<img width="18px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Git_icon.svg/1024px-Git_icon.svg.png">](https://git-scm.com)  <br>
 
@@ -140,16 +156,10 @@ Run [``CMD.reg``](https://github.com/EstebanMqz/Registries/blob/main/.reg/CMD.re
 
 <b>3. PowerShell & GUI [<img width="18px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/PowerShell_5.0_icon.png/18px-PowerShell_5.0_icon.png">](https://docs.microsoft.com/en-us/powershell/)</b>&emsp;
 
-Get Icon's registry  <i>(double-back-slashed)<b></i>.exe</i> PATH:</b>
+Get Icon's PATH  <i>(double-back-slashed)<b></i>.exe</i> PATH:</b>
 
-```powershell
-#PowerShell terminal
-#1. Open File Explorer and copy PS.exe Icon in ps1 format: 
-#'https://github.com/EstebanMqz/Registries/blob/main/.reg/PowerShell.reg'
-$PS = [System.Diagnostics.Process]::GetCurrentProcess().MainModule.FileName; Start-Process explorer.exe (Split-Path $PS); $PS = ($PS + '').Replace('\', '\\'); Set-Clipboard -Value $PS; Write-Output $PS
-#e.g: 'C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe'
-#2. Copy PS_ise.exe Icon PATH & do a .Replace('\', '\\\\'). 
-#Confirm your syntaxes with the .reg/PowerShell.reg file 
+```bash
+$ps : where "powershell.exe" "powershell_ise.exe" ; echo $ps
 ```
 
 The parent folder contains the [powershell.exe](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_powershell_exe?view=powershell-5.1#parameters) & [power_ise.exe](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_powershell_ise_exe?view=powershell-5.1)<br>
@@ -185,32 +195,37 @@ Run [``PowerShell.reg``](https://github.com/EstebanMqz/Registries/blob/main/.reg
 To be able to use the previously enabled [.reg](https://github.com/EstebanMqz/Registries/tree/main/.reg) files you will need to do the following:
 
 
-1. Open [``$HOME``](https://github.com/EstebanMqz/Registries/blob/main/%24HOME/.bashrc) & Create/Open [``./bashrc``](https://github.com/EstebanMqz/Registries/blob/main/%24HOME/.bashrc) & [``./profile``](https://github.com/EstebanMqz/Registries/blob/main/%24HOME/.bashrc)
+6. Open your <b>Unix-like environment</b> and input. <i><br>
+It will open startup files which could be virtual for your OS With a few modifications on [`~/.bashrc`](https://github.com/EstebanMqz/Registries/blob/main/%24HOME/.bashrc)</i>.
+
+<br>
+
 ``` bash
 #Bash: Create/Open ~/.profile && ~/.bashrc in $HOME.
 cd $HOME && code ~/.profile && code ~/.bashrc
 ```
+
 <br>
 
-1. Copy contents according to your environments and directories:<br>
+2. Copy contents according to your environments and directories:<br>
 
 + [``System_Environments.sh``](https://github.com/EstebanMqz/Registries/blob/main/.sh/System_Environments.sh) &rarr; <a href="https://github.com/EstebanMqz/Registries/blob/main/%24HOME/.profile"><img src="https://img.shields.io/badge/~/.profile-000000.svg?style=flat&logo=git&logoColor=orange" alt=".profile" style="vertical-align: middle;"></a><br>
 
 + [``PATH.sh``](https://github.com/EstebanMqz/Registries/blob/main/.sh/PATH.sh) &rarr; 
 <a href="https://github.com/EstebanMqz/Registries/blob/main/%24HOME/.bashrc"><img src="https://img.shields.io/badge/~/.bashrc-000000.svg?style=flat&logo=gnu-bash&logoColor=darkgreen" alt=".bashrc" style="vertical-align: middle;"></a>
-<br><br>
-
-3. Add at the end of [`~/.profile`](https://github.com/EstebanMqz/Registries/blob/main/%24HOME/.profile) the following command:
-
-``` bash
-#./profile
-#<'script'>
-
-source ~/.bashrc 
-```
 <br>
 
-4. Ensure that Environments Startup PATHs are loaded correctly by running:<br>
+3. Add the following command at the end of [`$HOME$~/.profile`](https://github.com/EstebanMqz/Registries/blob/main/%24HOME/.profile):
+
+``` bash
+# ~./profile.
+#'<.sh>
+source ~/.bashrc.
+```
+
+<br>
+
+4. Ensure that Environments Startup PATHs are loaded correctly by running in `bash`():<br>
 
 $PS = [System.Diagnostics.Process]::GetCurrentProcess().MainModule.FileName; Start-Process explorer.exe (Split-Path $PS); $PS = ($PS + '').Replace('\', '\\'); Set-Clipboard -Value $PS; Write-Output $PS
 
@@ -243,8 +258,8 @@ printenv && echo $PATH
 #Directories & PATHs related to executables.
 ```
 
-6. Startup [.bashrc](https://github.com/EstebanMqz/Registries/blob/main/$HOME/.bashrc.sh) / [.profile](https://github.com/EstebanMqz/Registries/blob/main/$HOME/PATH.sh) should enable Registries & Commands in 📁 Backgrounds in any [pwd](https://en.wikipedia.org/wiki/Pwd):
-
+1. Startup [.bashrc](https://www.gnu.org/software/bash/manual/html_node/Bash-Startup-Files.html) / [.profile](https://www.ibm.com/docs/en/zos/2.1.0?topic=shell-customizing-homeprofile) should enable Registries & Commands in 📁 Backgrounds in any [pwd](https://en.wikipedia.org/wiki/Pwd) :
+<br>
 <div align= "center">
 <img src="images/.bashrc.jpg" alt="Profile Bashrc" width="400" style="border: 1px solid white;"><br>
 </div><br>
