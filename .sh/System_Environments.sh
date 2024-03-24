@@ -2,11 +2,13 @@
 
 # Author: Esteban Márquez D. @https://www.github.com/EstebanMqz
 # Description: User/Sys Windows Env & PATH Variables startup file.
-# CREATE/OPEN File: ``` cd $HOME && code ~/.profile ```
+# CREATE/OPEN Server Startup Files .bashrc & .profile
 
 #Copy the following Envs/Dirs accordingly to their PATHS for your OS Env Vars Startup files: 
 
 Environment=(PhysX NvDLISR system32 MATLAB dotnet nodejs php_8_2_9 ComposerSetup Git anaconda_navigator Python311 VS WindowsPowerShell Wbem System32)
+
+Environment=(PhysX system32 MATLAB dotnet nodejs php_8_2_9 ComposerSetup Git Anaconda_navigator Python311 VS WindowsPowerShell Wbem System32)
 
 directories=(
 "/C/Program Files (x86)/NVIDIA Corporation/PhysX/Common"

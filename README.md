@@ -61,34 +61,43 @@ Value ConsentPromptBehaviorAdmin exists, overwrite(Yes/No)? Yes
 ``` 
 </i>
 
-##### 3. Add your Environment Variables & PATHs with `Advanced System Settings`
+##### 3. Add your Environment Variables & PATHs:
+
 ``` CMD
-REM CMD
 SystemPropertiesAdvanced
 ```
 
-##### 4. Use [``PATH.sh``](https://github.com/EstebanMqz/Registries/blob/main/.sh/PATH.sh) and [``System_Environments.sh``](https://github.com/EstebanMqz/Registries/blob/main/.sh/PATH.sh) your PATHs & directories.
+##### 4. Use [``PATHs_verification.sh``](https://github.com/EstebanMqz/Registries/blob/main/.sh/PATHs_verification.sh) &[``System_Environments.sh``](https://github.com/EstebanMqz/Registries/blob/main/.sh/PATH.sh) your PATHs & directories.
+
+``` bash
+#PATHs
+
+```
 
 ``` bash
 #PATHs
 where node && where gitk && where cmd && where powershell && where pycharm && where notepad && where code
-```
-
-``` bash
 #ICONs PATHs.
 (where powershell.exe powershell_ise.exe) | sed 's/\\/\\\\\\\\/g'
 (where bash.exe ; where gitk.exe ; where git-gui.exe) | sed 's/\\/\\\\/g'
 (where node; where cmd.exe; where notepad.exe; find "$LOCALAPPDATA" -name pycharm64.exe 2>/dev/null) | sed -e 's/\\/\\\\/g' -e 's/\//\\\\/g'
 ```
 
-``` Ubuntu
-su -c 'apt-get install sudo' && sudo apt-get update
-if [ "$UID" -eq 0 ]; then echo 'You are root.'; else echo 'You are not root.'; fi
+``` bash
+su -c 'apt-get install sudo' && sudo apt-get update && sudo passwd root
+
+if [ "$UID" -eq 0 ]; then
+    echo 'You are root.'; 
+else 
+    echo 'You are not root.';
+fi
 ```
 
 ``` bat
 SystemPropertiesAdvanced 
 ```
+
+---
 
 <h6>Recommended:</h6>
 
