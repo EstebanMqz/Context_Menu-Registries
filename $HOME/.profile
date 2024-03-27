@@ -1,55 +1,73 @@
 #!/bin/bash
 
-# Author: Esteban Márquez D. @https://www.github.com/EstebanMqz
-# Description: User/Sys Linux Envs & PATHs startup file when terminal is launched.
+# Description: Exports Environment Variables & PATHs if necessary, NVM & Node.js with Bash Initalization & Auto-completion & Source ./bashrc to ./profile. to match unix-like envs.
 
-# Define the environment variables and their directories:
-declare -A env_vars=(
-    ["VSCode"]="/c/Users/Esteban/AppData/Local/Programs/Microsoft VS Code"
-    ["Python311-Lib"]="/c/Users/Esteban/AppData/Local/Programs/Python/Python311/Lib/site-packages"
-    ["Python311-python.exe"]="/c/Users/Esteban/AppData/Local/Programs/Python/Python311"
-    ["Python311-Scripts"]="/c/Users/Esteban/AppData/Local/Programs/Python/Python311/Scripts"
-    ["Python312-Lib"]="/c/Users/Esteban/AppData/Local/Programs/Python/Python312/Lib/site-packages"
-    ["Python312-python.exe"]="/c/Users/Esteban/AppData/Local/Programs/Python/Python312"
-    ["Python312-Scripts"]="/c/Users/Esteban/AppData/Local/Programs/Python/Python312/Scripts"
-    ["Local-Temp"]="/c/Users/Esteban/AppData/Local/Temp"
-    ["Anaconda3"]="/c/ProgramData/Anaconda3"
-    ["anaconda.exe"]="/c/ProgramData/Anaconda3/Scripts/anaconda-navigator.exe"
-    ["ComposerSetup"]="/c/ProgramData/ComposerSetup"
-    ["dotnet"]="/c/Program Files/dotnet"
-    ["Git"]="/c/Program Files/Git/cmd"
-    ["MATLAB"]="/c/Program Files/MATLAB/R2021a/bin"
-    ["nodejs"]="/c/Program Files/nodejs"
-    ["NVIDIA "]="/c/Program Files/NVIDIA Corporation"
-    ["R-4.2.2"]="/c/Program Files/R/R-4.2.2"
-    ["php-8.2.9"]="/c/php-8.2.9"
-    ["bun"]="c/Users/Esteban/.bun/bin/bun.exe"
-    [".NET"]="/c/Windows/Microsoft.NET/Framework64/v4.0.30319/csc.exe"
-    ["WindowsPowershell"]="/c/Windows/System32/WindowsPowerShell/v1.0"
-    ["Wbem"]="/c/Windows/System32/Wbem"
-    ["OpenSSH"]="/c/Windows/System32/OpenSSH"
-    ["PhysX"]="/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common"
-    ["NvDLISR"]="/c/Program Files/NVIDIA Corporation/NvDLISR" #To interact directly with ML & img process
-    ["WindowsPowerShell"]="/c/Windows/System32/WindowsPowerShell/v1.0"
-    ["system32"]="/c/Windows/system32" #System built-in var & wbem
-    ["OpenSSH"]="/c/Windows/System32/OpenSSH"
+#CREATE/OPEN (.sh): cd $HOME & code ~/.profile
+
+
+Environment=(VSCode Python311Lib Python11exe Python311Scripts Python312Lib Python12exe Python312Scripts LocalTemp Anaconda3 Anaconda3exe ComposerSetup dotnet Git MATLAB nodejs NVIDIA R422 php bun NET WindowsPowershell PhysX NvDLISR system32)
+
+directories=(
+"/c/Users/Esteban/AppData/Local/Programs/Microsoft VS Code"
+"/c/Users/Esteban/AppData/Local/Programs/Python/Python311/Lib/site-packages"
+"/c/Users/Esteban/AppData/Local/Programs/Python/Python311/python.exe"
+"/c/Users/Esteban/AppData/Local/Programs/Python/Python311/Scripts"
+"/c/Users/Esteban/AppData/Local/Programs/Python/Python312/Lib/site-packages"
+"/c/Users/Esteban/AppData/Local/Programs/Python/Python312/python.exe"
+"/c/Users/Esteban/AppData/Local/Programs/Python/Python312/Scripts"
+"/c/Users/Esteban/AppData/Local/Temp"
+"/c/ProgramData/Anaconda3"
+"/c/ProgramData/Anaconda3/Scripts/anaconda-navigator.exe"
+"/c/ProgramData/ComposerSetup"
+"/c/Program Files/dotnet"
+"/c/Program Files/Git/cmd"
+"/c/Program Files/MATLAB/R2021a/bin"
+"/c/Program Files/nodejs"
+"/c/Program Files/NVIDIA Corporation"
+"/c/Program Files/R/R-4.2.2"
+"/c/php-8.2.9"
+"c/Users/Esteban/.bun/bin/bun.exe"
+"/c/Windows/Microsoft.NET/Framework64/v4.0.30319/csc.exe"
+"/c/Windows/System32/WindowsPowerShell/v1.0"
+"/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common"
+"/c/Program Files/NVIDIA Corporation/NvDLISR"
+"/c/Windows/system32"
 )
 
-# Export Variables and directories to PATHs if not already there.
-for var in "${!env_vars[@]}"; do
-    export "$var"="${env_vars[$var]}"
-    if [[ ":$PATH:" != *":${env_vars[$var]}:"* ]]; then
-        export PATH="$PATH:${env_vars[$var]}"
-    fi
+# Export PATHs if necessary.
+for dir in "${directories[@]}"
+do
+  if [[ ":$PATH:" != *":$dir:"* ]]; then
+    export PATH="$PATH:$dir"
+  fi
 done
 
-# NVM initalization in bash & enable NVM command Auto-Completion. 
+# Set Environment Variables if necessary.
+for i in "${!Environment[@]}"; do
+  var=${Environment[i]}
+  if [[ -z "${!var}" ]]; then
+    export "${Environment[i]}"="${directories[i]}"
+  fi
+done
+
+# NVM $HOME initalization in Bash & enable NVM commands auto completion. 
 export NVM_DIR="$HOME/.nvm" 
-[ -s "$NVM_DIR/nvm.sh"] && \. "$NVM_DIR/nvm.sh" 
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" 
 [ -s "$NVM_DIR/bash_completion"] && \. "$NVM_DIR/bash_completion" 
 
-source ~/.bashrc #Ensure that startup environments and directories in ~/.profile are available in terminals.
+# Node.js/npm & binaries accesible in PATHs.
+node_bin_path="$NVM_DIR/versions/node/v21.6.1/bin"
+export PATH="$PATH:$node_bin_path"
+export PATH="$PATH:$NVM_DIR/versions/node/$(nvm current)/bin"
 
-# References:
-# ~/.profile #Loaded when USER's startups.
-#[![.profile](https://img.shields.io/badge/~/.profile-000000.svg?style=flat&logo=git&logoColor=orange)](https://github.com/EstebanMqz/Registries/blob/main/%24HOME/.profile)
+# Source ./bashrc to ./profile. 
+if [ -n "$BASH_VERSION" ]; then
+    if [ -f "$HOME/.bashrc" ]; then
+        . "$HOME/.bashrc"
+    fi
+fi
+
+# Author: Esteban Márquez D. @https://www.github.com/EstebanMqz
+# References: https://github.com/EstebanMqz/Registries/blob/main/$HOME/.profile
+
+# Badge: #[![.profile](https://img.shields.io/badge/~/.profile-000000.svg?style=flat&logo=git&logoColor=orange)](https://github.com/EstebanMqz/Registries/blob/main/$HOME/.profile)
