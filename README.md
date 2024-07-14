@@ -1,4 +1,4 @@
-<h1 align="center" style="text-shadow: 2px 1px darkblue; color: white; text-align: center; text-decoration: underline;"> 
+<h1 align="center" style="text-shadow: 2px 2px darkblue; color: white; text-align: center; text-decoration: underline;"> 
 
 Background Context Menu Registries 
 </h1>
@@ -8,10 +8,18 @@ Background Context Menu Registries
 [![HTML](https://img.shields.io/badge/HTML-100000?style=flat&logo=html5&logoColor=red)](https://htmlpreview.github.io/?https://github.com/EstebanMqz/Registries/blob/main/.html/README.html)
 </div>
 
-
 <div align= "center">
 
-Enable <b><u>User/System Environment Variables<b></u> so that [<img width="18px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Git_icon.svg/1024px-Git_icon.svg.png">](https://git-scm.com)&nbsp;[<img width="18px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS48snSTjPW64ev65oSLQjJfKnxqW0ieAsSIgXW0wI3Rt3EJFklPuz2_fDX0Ez_rj5vMyA&usqp=CAU">](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/cmd)&nbsp;<img width="18px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/PowerShell_5.0_icon.png/18px-PowerShell_5.0_icon.png">&nbsp;[<img width="18px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/PyCharm_Icon.svg/512px-PyCharm_Icon.svg.png">](https://www.jetbrains.com/pycharm/)&nbsp;[<img width="18px" src="https://img.icons8.com/?size=48&id=82ixf4KHn6za&format=png">](https://icons8.com/icon/82ixf4KHn6za/notepad)</b> prompts in cd are displayed in all &#128194; Backgrounds: 
+Enable [<b><u>User/System Environment Variables<b></u>](https://learn.microsoft.com/en-us/windows/win32/procthread/environment-variables) so that 
+[<img width="18px" src="https://img.icons8.com/?size=100&id=F4uMFPZgS0gt&format=png">](https://anaconda.org) 
+[<img width="18px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS48snSTjPW64ev65oSLQjJfKnxqW0ieAsSIgXW0wI3Rt3EJFklPuz2_fDX0Ez_rj5vMyA&usqp=CAU">](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/cmd)
+[<img width="18px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Git_icon.svg/1024px-Git_icon.svg.png">](https://git-scm.com)
+[<img width="18px" src="https://www.vectorlogo.zone/logos/nodejs/nodejs-icon.svg">](https://anaconda.org)
+[<img width="18px" src="https://img.icons8.com/?size=48&id=82ixf4KHn6za&format=png">](https://apps.microsoft.com/detail/9msmlrh6lzf3?hl=en-US&gl=US) 
+[<img width="18px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/PowerShell_5.0_icon.png/18px-PowerShell_5.0_icon.png">](https://learn.microsoft.com/en-us/powershell/)
+[<img width="18px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/PyCharm_Icon.svg/512px-PyCharm_Icon.svg.png">](https://www.jetbrains.com/pycharm/)
+[<img width="18px" src="https://img.icons8.com/?size=100&id=iFPHC1KfnoxC&format=png">](https://code.visualstudio.com)
+prompts in <i>cd</i> are displayed in every Folder &#128194; 
 
 
 <img src="images/.bashrc.jpg" alt="Profile Bashrc" width="400" style="border: 1px solid white;"><br>
