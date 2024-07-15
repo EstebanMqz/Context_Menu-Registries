@@ -8,9 +8,18 @@ Background Context Menu Registries
 [![HTML](https://img.shields.io/badge/HTML-100000?style=flat&logo=html5&logoColor=red)](https://htmlpreview.github.io/?https://github.com/EstebanMqz/Registries/blob/main/.html/README.html)
 </div>
 
+<a href="UAC">1. UAC (User Account Control)</a><br>
++ <a href="#Admin"> Admin. Permissions</a><br>
++ <a href="#Secure"> Secure Desktop UAC</a><br>
++ <a href="#PATHs"> Variables & PATHs</a><br>
+<a href="#BG">Folder's Commands </a><br>
+<a href="#Startup">Inquiries</a><br>
+
 <div align= "center">
 
-Enable [<b><u>User/System Environment Variables<b></u>](https://learn.microsoft.com/en-us/windows/win32/procthread/environment-variables) so that 
+
+
+Enable [<b><u>User/System Environment Variables<b></u>](https://learn.microsoft.com/en-us/windows/win32/procthread/environment-variables) to have 
 [<img width="18px" src="https://img.icons8.com/?size=100&id=F4uMFPZgS0gt&format=png">](https://anaconda.org) 
 [<img width="18px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS48snSTjPW64ev65oSLQjJfKnxqW0ieAsSIgXW0wI3Rt3EJFklPuz2_fDX0Ez_rj5vMyA&usqp=CAU">](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/cmd)
 [<img width="18px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Git_icon.svg/1024px-Git_icon.svg.png">](https://git-scm.com)
@@ -19,16 +28,19 @@ Enable [<b><u>User/System Environment Variables<b></u>](https://learn.microsoft.
 [<img width="18px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/PowerShell_5.0_icon.png/18px-PowerShell_5.0_icon.png">](https://learn.microsoft.com/en-us/powershell/)
 [<img width="18px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/PyCharm_Icon.svg/512px-PyCharm_Icon.svg.png">](https://www.jetbrains.com/pycharm/)
 [<img width="18px" src="https://img.icons8.com/?size=100&id=iFPHC1KfnoxC&format=png">](https://code.visualstudio.com)
-prompts in <i>cd</i> are displayed in every Folder &#128194; 
+access in [<i>cd</i>](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/cd) $\forall$  &#128194; 
 
 
 <img src="images/.bashrc.jpg" alt="Profile Bashrc" width="400" style="border: 1px solid white;"><br>
 </div><div style="background-color: #d97707; height: 2px;"></div><h3 style="text-shadow: 2px 1px darkgreen; color: white; text-align: center; text-decoration: underline;"> 
-User Account Control:
+
+<section id="UAC">
+1. User Account Control:
 </h3>
 
+<section id="Admin">
 
-#### 1. Grant `%USERNAME$` Administrative permissions.
+#### 1.1 Grant [`$Env:Username`]() Admin. permissions.
 
 Run [``Admin.ps1``](https://github.com/EstebanMqz/Registries/blob/main/.ps1/Admin.ps1). 
 
@@ -40,8 +52,9 @@ Run [``Admin.ps1``](https://github.com/EstebanMqz/Registries/blob/main/.ps1/Admi
 Administrative Permissions to <$env:USERNAME>: Successful.
 ```
 
+<section id="Secure">
 
-#### 2. <i> Left-click</i> <b>[``UAC.bat``](https://github.com/EstebanMqz/Registries/blob/main/.bat/UAC.bat) to enable secure desktop UAC.</b> </h3> 
+#### 1.2 <i> Left-click</i> <b>[``UAC.bat``](https://github.com/EstebanMqz/Registries/blob/main/.bat/UAC.bat) to enable secure desktop UAC.</b> </h3> 
 
 <div style="font-size: 13px;">
 <i>Recommended:</i> <b>Secure dimmed desktop</b> highest privileges.</div>
@@ -69,13 +82,15 @@ Value ConsentPromptBehaviorAdmin exists, overwrite(Yes/No)? Yes
 ``` 
 </i>
 
-##### 3. Add your Environment Variables & PATHs:
+##### 1.3 Add your Environment Variables & PATHs:
+
+<section id="PATHs">
 
 ``` CMD
 SystemPropertiesAdvanced
 ```
 
-##### 4. Use [``PATHs_verification.sh``](https://github.com/EstebanMqz/Registries/blob/main/.sh/PATHs_verification.sh) &[``System_Environments.sh``](https://github.com/EstebanMqz/Registries/blob/main/.sh/PATH.sh) your PATHs & directories.
+##### 1.4 Use [``PATHs_verification.sh``](https://github.com/EstebanMqz/Registries/blob/main/.sh/PATHs_verification.sh) &[``System_Environments.sh``](https://github.com/EstebanMqz/Registries/blob/main/.sh/PATH.sh) with your PATHs & directories.
 
 ``` bash
 #PATHs
@@ -127,8 +142,10 @@ reg query HKEY_CLASSES_ROOT /f "<regex_search>" /s /e
 
 <div style="background-color: #d97707; height: 2px;"></div><br>
 
-<h1 style="text-shadow: 2px 1px orange; color: white; text-align: center; text-decoration: underline;">  Background Context & Commands</h1> 
+<h1 style="text-shadow: 2px 1px orange; color: white; text-align: center; text-decoration: underline;">  2. Background Context & Commands</h1> 
 <div style="font-size: 14px;"> <br>
+
+<section id="BG">
 
 <h3>Description:</h3>
 
@@ -209,10 +226,12 @@ Run [``PowerShell.reg``](https://github.com/EstebanMqz/Registries/blob/main/.reg
 <section id="config">
 <h2 style="text-shadow: 2px 1px darkgreen; color: darkred; text-align: center; text-decoration: underline;"> <b> Enable <a href="https://learn.microsoft.com/en-us/windows/win32/procthread/changing-environment-variables"> User/System Environment Variables </a></b> &amp; <b><a href="https://phoenixnap.com/kb/linux-add-to-path#:~:text=PATH%20is%20an%20environment%20variable,to%20remove%20it%20in%20Linux.">PATHs</a></b> at <b>Startup</b></h2>
 
+<section id="Startup">
+
 To be able to use the previously enabled [.reg](https://github.com/EstebanMqz/Registries/tree/main/.reg) files you will need to do the following:
 
 
-6. Open your <b>Unix-like environment</b> and input. <i><br>
+1. Open your <b>Unix-like environment</b> and input. <i><br>
 It will open startup files which could be virtual for your OS With a few modifications on [`~/.bashrc`](https://github.com/EstebanMqz/Registries/blob/main/%24HOME/.bashrc)</i>.
 
 <br>
