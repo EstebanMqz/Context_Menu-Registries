@@ -1,26 +1,15 @@
 <h1 align="center" style="text-shadow: 2px 2px darkblue; color: white; text-align: center; text-decoration: underline;"> 
 
-Background Context Menu Registries 
+Context Menu Registries &#128194; 
 </h1>
+<div align="left">
+<a href="https://htmlpreview.github.io/?https://github.com/EstebanMqz/Context_Menu-Registries/blob/main/.html/README.html">
+  <img src="https://img.shields.io/badge/HTML-100000?style=flat&logo=html5&logoColor=red" alt="HTML" width="100" height="40">
+</a></div>
 
-<div align="right">
+<div align="center" style="font-size: 18px; width: 100%; height: 100px; margin: 2px; border: 2px solid;">
 
-[![HTML](https://img.shields.io/badge/HTML-100000?style=flat&logo=html5&logoColor=red)](https://htmlpreview.github.io/?https://github.com/EstebanMqz/Registries/blob/main/.html/README.html)
-</div>
-
-<a href="UAC">1. UAC (User Account Control)</a><br>
-+ <a href="#Admin"> Admin. Permissions</a><br>
-+ <a href="#Secure"> Secure Desktop UAC</a><br>
-+ <a href="#PATHs"> Variables & PATHs</a><br>
-<a href="#BG">Folder's Commands </a><br>
-<a href="#Startup">Inquiries</a><br>
-
-<div align= "center">
-
-
-
-Enable [<b><u>User/System Environment Variables<b></u>](https://learn.microsoft.com/en-us/windows/win32/procthread/environment-variables) to have 
-[<img width="18px" src="https://img.icons8.com/?size=100&id=F4uMFPZgS0gt&format=png">](https://anaconda.org) 
+Enable [<b><u>User/System Environment Variables<b></u>](https://learn.microsoft.com/en-us/windows/win32/procthread/environment-variables) to have [<img width="18px" src="https://img.icons8.com/?size=100&id=F4uMFPZgS0gt&format=png">](https://anaconda.org) 
 [<img width="18px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS48snSTjPW64ev65oSLQjJfKnxqW0ieAsSIgXW0wI3Rt3EJFklPuz2_fDX0Ez_rj5vMyA&usqp=CAU">](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/cmd)
 [<img width="18px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Git_icon.svg/1024px-Git_icon.svg.png">](https://git-scm.com)
 [<img width="18px" src="https://www.vectorlogo.zone/logos/nodejs/nodejs-icon.svg">](https://anaconda.org)
@@ -28,8 +17,17 @@ Enable [<b><u>User/System Environment Variables<b></u>](https://learn.microsoft.
 [<img width="18px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/PowerShell_5.0_icon.png/18px-PowerShell_5.0_icon.png">](https://learn.microsoft.com/en-us/powershell/)
 [<img width="18px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/PyCharm_Icon.svg/512px-PyCharm_Icon.svg.png">](https://www.jetbrains.com/pycharm/)
 [<img width="18px" src="https://img.icons8.com/?size=100&id=iFPHC1KfnoxC&format=png">](https://code.visualstudio.com)
-access in [<i>cd</i>](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/cd) $\forall$  &#128194; 
+access in [<i>cd</i>](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/cd) ∀ &#128194; 
+</div>
+ 
+<a href="UAC"><b>1. UAC (User Account Control)</b></a><br>
++ <a href="#Admin"><i>1.1 Admin. Permissions</i></a><br>
++ <a href="#Secure"><i>1.2 Secure Desktop UAC</i></a><br>
++ <a href="#PATHs"><i>1.3 Variables & PATHs</i></a><br>
++ <a href="#BG"><i>1.4 &#128194; Commands</i></a><br>
++ <a href="#Startup"><i> Inquiries </i></a><br>
 
+<div align= "center">
 
 <img src="images/.bashrc.jpg" alt="Profile Bashrc" width="400" style="border: 1px solid white;"><br>
 </div><div style="background-color: #d97707; height: 2px;"></div><h3 style="text-shadow: 2px 1px darkgreen; color: white; text-align: center; text-decoration: underline;"> 
@@ -54,10 +52,10 @@ Administrative Permissions to <$env:USERNAME>: Successful.
 
 <section id="Secure">
 
-#### 1.2 <i> Left-click</i> <b>[``UAC.bat``](https://github.com/EstebanMqz/Registries/blob/main/.bat/UAC.bat) to enable secure desktop UAC.</b> </h3> 
+#### 1.2 <i> Left-click</i> <b>[``UAC.bat``](https://github.com/EstebanMqz/Context_Menu-Registries/blob/main/.bat/UAC.bat) to enable secure desktop [UAC](https://learn.microsoft.com/en-us/windows/security/application-security/application-control/user-account-control/settings-and-configuration?tabs=intune).</b> </h3> 
 
 <div style="font-size: 13px;">
-<i>Recommended:</i> <b>Secure dimmed desktop</b> highest privileges.</div>
+<i>Recommended:</i> <b>Secure dimmed desktop</b></div>
 
 <div style="font-size: 10px;">
 <Details open> <Summary> <h6>UAC options:</h6> </Summary>
@@ -82,20 +80,63 @@ Value ConsentPromptBehaviorAdmin exists, overwrite(Yes/No)? Yes
 ``` 
 </i>
 
-##### 1.3 Add your Environment Variables & PATHs:
-
+##### 1.3 Add your Environment Variables & PATHs 
 <section id="PATHs">
 
 ``` CMD
+rem CMD
 SystemPropertiesAdvanced
 ```
+Click & edit Env Vars. manually in `Advanced System Settings`.<br>
+ 
+<div align= center>
+<img src="images/Env_Vars.jpg" alt="Env_Vars" width="170" style="border: 1px solid black;"></div><br>
 
-##### 1.4 Use [``PATHs_verification.sh``](https://github.com/EstebanMqz/Registries/blob/main/.sh/PATHs_verification.sh) &[``System_Environments.sh``](https://github.com/EstebanMqz/Registries/blob/main/.sh/PATH.sh) with your PATHs & directories.
+<div style="font-size: 14px;">
+
+Modify [PATHs.sh](https://github.com/EstebanMqz/Context_Menu-Registries/blob/main/.sh/PATHs.sh) according to your PATHs & Dirs <i>(e.g)</i>:
+<br>
 
 ``` bash
-#PATHs
+# Bash
+./PATHs.sh
+
+#Out:
+# The PATHs of the programs are:
+# C:\Program Files\nodejs\node.exe
+# C:\Users\Esteban\.nvm\versions\node\v21.6.1\bin\node.exe
+# C:\Program Files\Git\mingw64\bin\gitk
+# C:\Program Files\Git\cmd\gitk.exe
+# C:\Windows\System32\cmd.exe
+# C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+# C:\Users\Esteban\AppData\Local\JetBrains\Toolbox\scripts\pycharm.cmd
+# C:\Program Files\Git\usr\bin\notepad
+# C:\Windows\System32\notepad.exe
+# C:\Windows\notepad.exe
+# C:\Users\Esteban\AppData\Local\Microsoft\WindowsApps\notepad.exe
+# C:\Users\Esteban\AppData\Local\Programs\Microsoft VS Code\Code.exe
+# C:\Users\Esteban\AppData\Local\Programs\Microsoft VS Code\bin\code
+# C:\Users\Esteban\AppData\Local\Programs\Microsoft VS Code\bin\code.cmd
+
+# Icons PATHs are the following:
+# C:\\\\Windows\\\\System32\\\\WindowsPowerShell1.0\\\\powershell.exe
+# C:\\\\Windows\\\\System32\\\\WindowsPowerShell1.0\\\\powershell_ise.exe
+# C:\\\\Program Files\\\\Git\\\\usiash.exe
+# C:\\\\Windows\\\\System3ash.exe
+# C:\\\\Usersteban\\\\AppData\\\\Local\\\\Microsoft\\\\WindowsAppash.exe
+# C:\\\\Program Files\\\\Git
 
 ```
+
+``` bash
+./Envs_Verif.sh
+```
+
+
+
+##### 1.4
+
+
 
 ``` bash
 #PATHs
@@ -171,14 +212,14 @@ start regedit
 ```
 
 <b>Download and Double-click .reg files: </b><br>
-<i>Modify [regedit](https://learn.microsoft.com/en-us/troubleshoot/windows-server/performance/windows-registry-advanced-users) - [HKEY_CLASSES_ROOT](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2003/cc739822(v=ws.10)) accordingly to [`.reg keys`](https://github.com/EstebanMqz/Registries/tree/main/.reg) in all flles</i>.
+<i>Modify [regedit](https://learn.microsoft.com/en-us/troubleshoot/windows-server/performance/windows-registry-advanced-users) - [HKEY_CLASSES_ROOT](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2003/cc739822(v=ws.10)) accordingly to [`.reg keys`](https://github.com/EstebanMqz/Context_Menu-Registries/tree/main/.reg) in all flles</i>.
 <br>
 
-</b>Note:</b> Ignore modification alerts <u>after backup.</u></i><br>
+<b>Note:</b> Ignore modification alerts <u>after backup.</u></i><br>
 
-<b>1. <b>Bash, GUI & gitk [<img width="18px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Git_icon.svg/1024px-Git_icon.svg.png">](https://git-scm.com)  <br>
+<b>1. Bash, GUI & gitk [<img width="18px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Git_icon.svg/1024px-Git_icon.svg.png">](https://git-scm.com) </b><br>
 
-Run [``Bash.reg``](https://github.com/EstebanMqz/Registries/blob/main/.reg/bash.reg)  [``Git-Gui.reg``](https://github.com/EstebanMqz/Registries/blob/main/.reg/bash.reg)  [``gitk.reg``](https://github.com/EstebanMqz/Registries/blob/main/.reg/bash.reg) <br>
+Run [``Bash.reg``](https://github.com/EstebanMqz/Context_Menu-Registries/blob/main/.reg/bash.reg)  [``Git-Gui.reg``](https://github.com/EstebanMqz/Context_Menu-Registries/blob/main/.reg/bash.reg)  [``gitk.reg``](https://github.com/EstebanMqz/Context_Menu-Registries/blob/main/.reg/bash.reg) <br>
 
 ---
 
@@ -197,27 +238,27 @@ $ps : where "powershell.exe" "powershell_ise.exe" ; echo $ps
 ```
 
 The parent folder contains the [powershell.exe](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_powershell_exe?view=powershell-5.1#parameters) & [power_ise.exe](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_powershell_ise_exe?view=powershell-5.1)<br>
-Run [``PowerShell.reg``](https://github.com/EstebanMqz/Registries/blob/main/.reg/PowerShell.reg)<br> 
+Run [``PowerShell.reg``](https://github.com/EstebanMqz/Context_Menu-Registries/blob/main/.reg/PowerShell.reg)<br> 
 <b><u>(modify PATHs accordingly)</b></u>.
 
 ---
 
 <b>4. &nbsp; &nbsp; VSCode &nbsp; [<img width="18px" src="https://www.svgrepo.com/show/374171/vscode.svg">](https://docs.microsoft.com/en-us/powershell/)</b><br>
 
-[``VSCode.reg``](https://github.com/EstebanMqz/Registries/blob/main/.reg/VSCode.reg) 
+[``VSCode.reg``](https://github.com/EstebanMqz/Context_Menu-Registriesblob/main/.reg/VSCode.reg) 
 <br>
 
 ---
 
 <b>5. &nbsp; &nbsp; Pycharm &nbsp; [<img width="18px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/PyCharm_Icon.svg/512px-PyCharm_Icon.svg.png">](https://www.jetbrains.com/pycharm/)</b><br>
 
-[``PyCharm.reg``](https://github.com/EstebanMqz/Registries/blob/main/.reg/PyCharm.reg)
+[``PyCharm.reg``](https://github.com/EstebanMqz/Context_Menu-Registries/blob/main/.reg/PyCharm.reg)
 
 ---
 
 <b>6. &nbsp; &nbsp; Notepad  &nbsp; [<img width="18px" src="https://img.icons8.com/?size=48&id=82ixf4KHn6za&format=png">](https://icons8.com/icon/82ixf4KHn6za/notepad)</b><br>
 
- [``Notepad.reg``](https://github.com/EstebanMqz/Registries/blob/main/.reg/Notepad.reg)
+ [``Notepad.reg``](https://github.com/EstebanMqz/Context_Menu-Registries/blob/main/.reg/Notepad.reg)
 
    </span><br>
 
