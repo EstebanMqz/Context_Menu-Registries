@@ -20,21 +20,25 @@ Enable [<b><u>User/System Environment Variables<b></u>](https://learn.microsoft.
 access in [<i>cd</i>](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/cd) ∀ &#128194; 
 </div>
  
-<a href="UAC"><b>1. UAC (User Account Control)</b></a><br>
+<b> 1. UAC (User Account Control) </b><br>
 + <a href="#Admin"><i>1.1 Admin. Permissions</i></a><br>
 + <a href="#Secure"><i>1.2 Secure Desktop UAC</i></a><br>
 + <a href="#PATHs"><i>1.3 Variables & PATHs</i></a><br>
-+ <a href="#BG"><i>1.4 &#128194; Commands</i></a><br>
-+ <a href="#Startup"><i> Inquiries </i></a><br>
+
+<b> 2. &#128194; Background Commands</b><br>
+
+<br><br>
 
 <div align= "center">
+<b>Result:</b><br><br>
 
-<img src="images/.bashrc.jpg" alt="Profile Bashrc" width="400" style="border: 1px solid white;"><br>
-</div><div style="background-color: #d97707; height: 2px;"></div><h3 style="text-shadow: 2px 1px darkgreen; color: white; text-align: center; text-decoration: underline;"> 
+<img src="images/.bashrc.jpg" alt="Profile Bashrc" width="400" style="border: 1px solid white;">
+<br><br></div>
 
-<section id="UAC">
-1. User Account Control:
-</h3>
+<div style="background-color: #d97707; height: 2px;"></div><br>
+
+<h1 style="text-shadow: 2px 1px green; color: white; text-align: center; text-decoration: underline;">  1. User Account Control (UAC) </h1> 
+<br>
 
 <section id="Admin">
 
@@ -49,7 +53,7 @@ Run [``Admin.ps1``](https://github.com/EstebanMqz/Registries/blob/main/.ps1/Admi
 #Out: 
 Administrative Permissions to <$env:USERNAME>: Successful.
 ```
-
+---
 <section id="Secure">
 
 #### 1.2 <i> Left-click</i> <b>[``UAC.bat``](https://github.com/EstebanMqz/Context_Menu-Registries/blob/main/.bat/UAC.bat) to enable secure desktop [UAC](https://learn.microsoft.com/en-us/windows/security/application-security/application-control/user-account-control/settings-and-configuration?tabs=intune).</b> </h3> 
@@ -58,6 +62,8 @@ Administrative Permissions to <$env:USERNAME>: Successful.
 <i>Recommended:</i> <b>Secure dimmed desktop</b></div>
 
 <div style="font-size: 10px;">
+
+<div align="left" style="font-size: 18px; width: 100%; height: 160px; margin: 1px; border: 1px solid;">
 <Details open> <Summary> <h6>UAC options:</h6> </Summary>
    </ul>
    <div class="small-padding" style="font-size: 10px;"> 
@@ -69,32 +75,33 @@ Administrative Permissions to <$env:USERNAME>: Successful.
       <li><b>4</b>: Sys settings <i>not related</i> to Windows (no pw).</li>
    </ul></div>
 </Details>
-</div>
+</div></div>
 
 ###### Option [2](https://learn.microsoft.com/en-us/windows/security/threat-protection/security-policy-settings/user-account-control-switch-to-the-secure-desktop-when-prompting-for-elevation)</i>:<br>
-<i>
+
 
 ```
 Enter the password for Administrator: xxxxx
 Value ConsentPromptBehaviorAdmin exists, overwrite(Yes/No)? Yes
 ``` 
-</i>
 
-##### 1.3 Add your Environment Variables & PATHs 
+----
+#### 1.3 Add your [Environment Variables](https://learn.microsoft.com/en-us/windows/win32/procthread/environment-variables) & [PATHs](https://learn.microsoft.com/en-us/dotnet/standard/io/file-path-formats) 
+
 <section id="PATHs">
 
 ``` CMD
 rem CMD
 SystemPropertiesAdvanced
 ```
-Click & edit Env Vars. manually in `Advanced System Settings`.<br>
+Click & edit in `Advanced System Settings` the button:<br>
  
 <div align= center>
 <img src="images/Env_Vars.jpg" alt="Env_Vars" width="170" style="border: 1px solid black;"></div><br>
 
 <div style="font-size: 14px;">
 
-Modify [PATHs.sh](https://github.com/EstebanMqz/Context_Menu-Registries/blob/main/.sh/PATHs.sh) according to your PATHs & Dirs <i>(e.g)</i>:
+Once opened, modify [PATHs.sh](https://github.com/EstebanMqz/Context_Menu-Registries/blob/main/.sh/PATHs.sh) file according to your PATHs & Dirs <i>(e.g)</i>:
 <br>
 
 ``` bash
@@ -128,88 +135,30 @@ Modify [PATHs.sh](https://github.com/EstebanMqz/Context_Menu-Registries/blob/mai
 
 ```
 
-``` bash
-./Envs_Verif.sh
-```
+###### Recommended:
 
-
-
-##### 1.4
-
-
-
-``` bash
-#PATHs
-where node && where gitk && where cmd && where powershell && where pycharm && where notepad && where code
-#ICONs PATHs.
-(where powershell.exe powershell_ise.exe) | sed 's/\\/\\\\\\\\/g'
-(where bash.exe ; where gitk.exe ; where git-gui.exe) | sed 's/\\/\\\\/g'
-(where node; where cmd.exe; where notepad.exe; find "$LOCALAPPDATA" -name pycharm64.exe 2>/dev/null) | sed -e 's/\\/\\\\/g' -e 's/\//\\\\/g'
-```
-
-``` bash
-su -c 'apt-get install sudo' && sudo apt-get update && sudo passwd root
-
-if [ "$UID" -eq 0 ]; then
-    echo 'You are root.'; 
-else 
-    echo 'You are not root.';
-fi
-```
-
-``` bat
-SystemPropertiesAdvanced 
-```
-
----
-
-<h6>Recommended:</h6>
-
-[WSL](https://learn.microsoft.com/en-us/windows/wsl/install) [<img width="40px" src="https://www.svgrepo.com/show/184138/linux.svg">](https://learn.microsoft.com/en-us/windows/wsl/install)</b>
-</font>
-
-<div style="font-size: 10px;">
-Registry <b>Regex</b> &rarr; <i>Ctrl+Shift+F</i>
-
-<a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/reg-query">
-<img src="https://img.shields.io/badge/reg_query-000000.svg?style=flat&amp;logo=windows-terminal&amp;logoColor=blue" alt="reg_query"></a><br> 
-Searches in the registry, use the following CMD command:
-
-```CMD
-:: CMD Registry Regex
-reg query HKEY_CLASSES_ROOT /f "<regex_search>" /s /e
-```
+[WSL](https://learn.microsoft.com/en-us/windows/wsl/install) [<img width="40px" src="https://www.svgrepo.com/show/184138/linux.svg">](https://learn.microsoft.com/en-us/windows/wsl/install)
+</b></div>
 
 
 <div style="background-color: #d97707; height: 2px;"></div><br>
 
 <h1 style="text-shadow: 2px 1px orange; color: white; text-align: center; text-decoration: underline;">  2. Background Context & Commands</h1> 
-<div style="font-size: 14px;"> <br>
+<br>
 
-<section id="BG">
-
-<h3>Description:</h3>
-
-Remove TrustedInstaller FullControl</i> on needed <b>Registries</b>, grant it to <b>Administrator</b> manually in [Registry Editor](https://learn.microsoft.com/en-us/troubleshoot/windows-server/performance/windows-registry-advanced-users)<br>
-
----
-###### Recommended:
-<a href="https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.management/checkpoint-computer?view=powershell-5.1"><img src="https://img.shields.io/badge/CMD-Restore_Point-000000.svg?style=flat&amp;logo=powershell&amp;logoColor=blue" alt="CMD-Restore_Point"></a>
-or <a href="https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/xcopy"><img src="https://img.shields.io/badge/xcopy-000000.svg?style=flat&logo=windows-terminal&logoColor=white" alt="CMD-xcopy"></a> with [``external.bat``](https://github.com/EstebanMqz/Registries/blob/main/.bat/external.bat)
-
-<i>Backup HDD: to external SSD:</i>
-
-```bash
-./external.bat #(Assuming your HDD:C & external-SSD:D. Change .bat if not.)
-cd D: & label D: SSD_ext  #Rename D to SSD_ext
-```
----
 
 
 ```CMD
 Rem CMD
 start regedit
 ```
+
+Remove TrustedInstaller FullControl on <i>needed</i> <b>Registries</b>, grant it to <b>Administrator</b> manually in &nbsp; <a href="https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/reg">
+<img style="vertical-align: middle;" width="30px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Registry.svg/1920px-Registry.svg.png"></a> <br>
+
+
+
+
 
 <b>Download and Double-click .reg files: </b><br>
 <i>Modify [regedit](https://learn.microsoft.com/en-us/troubleshoot/windows-server/performance/windows-registry-advanced-users) - [HKEY_CLASSES_ROOT](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2003/cc739822(v=ws.10)) accordingly to [`.reg keys`](https://github.com/EstebanMqz/Context_Menu-Registries/tree/main/.reg) in all flles</i>.
@@ -233,9 +182,7 @@ Run [``CMD.reg``](https://github.com/EstebanMqz/Registries/blob/main/.reg/CMD.re
 
 Get Icon's PATH  <i>(double-back-slashed)<b></i>.exe</i> PATH:</b>
 
-```bash
-$ps : where "powershell.exe" "powershell_ise.exe" ; echo $ps
-```
+
 
 The parent folder contains the [powershell.exe](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_powershell_exe?view=powershell-5.1#parameters) & [power_ise.exe](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_powershell_ise_exe?view=powershell-5.1)<br>
 Run [``PowerShell.reg``](https://github.com/EstebanMqz/Context_Menu-Registries/blob/main/.reg/PowerShell.reg)<br> 
@@ -260,8 +207,19 @@ Run [``PowerShell.reg``](https://github.com/EstebanMqz/Context_Menu-Registries/b
 
  [``Notepad.reg``](https://github.com/EstebanMqz/Context_Menu-Registries/blob/main/.reg/Notepad.reg)
 
-   </span><br>
+---
+###### Recommended:
 
+<a href="https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.management/checkpoint-computer?view=powershell-5.1"><img src="https://img.shields.io/badge/CMD-Restore_Point-000000.svg?style=flat&amp;logo=powershell&amp;logoColor=blue" alt="CMD-Restore_Point"></a>
+or <a href="https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/xcopy"><img src="https://img.shields.io/badge/xcopy-000000.svg?style=flat&logo=windows-terminal&logoColor=white" alt="CMD-xcopy"></a> with [``external.bat``](https://github.com/EstebanMqz/Registries/blob/main/.bat/external.bat)
+
+<i>Backup HDD: to external SSD:</i>
+
+```bash
+./external.bat #(Assuming your HDD:C & external-SSD:D. Change .bat if not.)
+cd D: & label D: SSD_ext  #Rename D to SSD_ext
+```
+<br>
 <div style="background-color: #d97707; height: 2px;"></div><br>
 
 <section id="config">

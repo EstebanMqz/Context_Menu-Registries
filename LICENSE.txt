@@ -176,7 +176,7 @@ Apache License
    You may obtain a copy of the original License at http://www.apache.org/licenses/LICENSE-2.0
 
    APPENDIX: How to redistribute, modify or contribute this Apache License to your work:
-   attach [NOTICE]([Registries](https://github.com/EstebanMqz/Registries) boilerplate to 
+   attach [NOTICE]([Registries](https://github.com/EstebanMqz/Context-Menu-Registries) boilerplate to 
    a README.md file for the work's usage, contribution or modification.
    
    Unless required by applicable law or agreed to in writing, software
