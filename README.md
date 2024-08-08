@@ -26,6 +26,13 @@ access in [<i>cd</i>](https://learn.microsoft.com/en-us/windows-server/administr
 + <a href="#PATHs"><i>1.3 Variables & PATHs</i></a><br>
 
 <b> 2. &#128194; Background Commands</b><br>
++ <a href="#Git"><i>2.1 Bash, GUI & gitk &nbsp; [<img width="18px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Git_icon.svg/1024px-Git_icon.svg.png">](https://git-scm.com)</i></a><br>
++ <a href="#CMD"><i>2.2 Command Prompt &nbsp; [<img width="18px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS48snSTjPW64ev65oSLQjJfKnxqW0ieAsSIgXW0wI3Rt3EJFklPuz2_fDX0Ez_rj5vMyA&usqp=CAU">](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/cmd)</i></a><br>
++ <a href="#PowerShell"><i>2.3 PowerShell & GUI &nbsp; [<img width="18px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/PowerShell_5.0_icon.png/18px-PowerShell_5.0_icon.png">](https://docs.microsoft.com/en-us/powershell/)</i></a><br>
++ <a href="#VSCode"><i>2.4 VSCode &nbsp; [<img width="18px" src="https://www.svgrepo.com/show/374171/vscode.svg">](https://docs.microsoft.com/en-us/powershell/)</i></a><br>
++ <a href="#PyCharm"><i>2.5 Pycharm &nbsp; [<img width="18px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/PyCharm_Icon.svg/512px-PyCharm_Icon.svg.png">](https://www.jetbrains.com/pycharm/)</i></a><br>
++ <a href="#Notepad"><i>2.6 Notepad &nbsp; [<img width="18px" src="https://img.icons8.com/?size=48&id=82ixf4KHn6za&format=png">](https://icons8.com/icon/82ixf4KHn6za/notepad)</i></a><br>
++ <a href="#Node"><i>2.7 Node.js &nbsp; [<img width="18px" src="https://www.vectorlogo.zone/logos/nodejs/nodejs-icon.svg">](https://nodejs.org/en)</i></a><br>
 
 <br><br>
 
@@ -59,9 +66,12 @@ Administrative Permissions to <$env:USERNAME>: Successful.
 #### 1.2 <i> Left-click</i> <b>[``UAC.bat``](https://github.com/EstebanMqz/Context_Menu-Registries/blob/main/.bat/UAC.bat) to enable secure desktop [UAC](https://learn.microsoft.com/en-us/windows/security/application-security/application-control/user-account-control/settings-and-configuration?tabs=intune).</b> </h3> 
 
 <div style="font-size: 13px;">
-<i>Recommended:</i> <b>Secure dimmed desktop</b></div>
+<i>Recommended:</i> 
 
-<div style="font-size: 10px;">
+<b>[Secure dimmed desktop](https://learn.microsoft.com/en-us/windows/security/threat-protection/security-policy-settings/user-account-control-switch-to-the-secure-desktop-when-prompting-for-elevation)
+</b></div>
+
+<div style="font-size: 13px;">
 
 <div align="left" style="font-size: 18px; width: 100%; height: 160px; margin: 1px; border: 1px solid;">
 <Details open> <Summary> <h6>UAC options:</h6> </Summary>
@@ -75,25 +85,27 @@ Administrative Permissions to <$env:USERNAME>: Successful.
       <li><b>4</b>: Sys settings <i>not related</i> to Windows (no pw).</li>
    </ul></div>
 </Details>
-</div></div>
-
-###### Option [2](https://learn.microsoft.com/en-us/windows/security/threat-protection/security-policy-settings/user-account-control-switch-to-the-secure-desktop-when-prompting-for-elevation)</i>:<br>
-
+</div>
 
 ```
 Enter the password for Administrator: xxxxx
 Value ConsentPromptBehaviorAdmin exists, overwrite(Yes/No)? Yes
 ``` 
+</div>
 
 ----
 #### 1.3 Add your [Environment Variables](https://learn.microsoft.com/en-us/windows/win32/procthread/environment-variables) & [PATHs](https://learn.microsoft.com/en-us/dotnet/standard/io/file-path-formats) 
 
 <section id="PATHs">
 
+<div style="font-size: 13px;">
+
 ``` CMD
 rem CMD
 SystemPropertiesAdvanced
 ```
+</div>
+
 Click & edit in `Advanced System Settings` the button:<br>
  
 <div align= center>
@@ -164,33 +176,33 @@ Remove TrustedInstaller FullControl on <i>needed</i> <b>Registries</b>, grant it
 <i>Modify [regedit](https://learn.microsoft.com/en-us/troubleshoot/windows-server/performance/windows-registry-advanced-users) - [HKEY_CLASSES_ROOT](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2003/cc739822(v=ws.10)) accordingly to [`.reg keys`](https://github.com/EstebanMqz/Context_Menu-Registries/tree/main/.reg) in all flles</i>.
 <br>
 
-<b>Note:</b> Ignore modification alerts <u>after backup.</u></i><br>
 
 <b>1. Bash, GUI & gitk [<img width="18px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Git_icon.svg/1024px-Git_icon.svg.png">](https://git-scm.com) </b><br>
+<section id="Git">
 
 Run [``Bash.reg``](https://github.com/EstebanMqz/Context_Menu-Registries/blob/main/.reg/bash.reg)  [``Git-Gui.reg``](https://github.com/EstebanMqz/Context_Menu-Registries/blob/main/.reg/bash.reg)  [``gitk.reg``](https://github.com/EstebanMqz/Context_Menu-Registries/blob/main/.reg/bash.reg) <br>
 
 ---
 
 <b>2. Command Prompt &nbsp; [<img width="18px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS48snSTjPW64ev65oSLQjJfKnxqW0ieAsSIgXW0wI3Rt3EJFklPuz2_fDX0Ez_rj5vMyA&usqp=CAU">](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/cmd) <br>
+<section id="CMD">
 
 Run [``CMD.reg``](https://github.com/EstebanMqz/Registries/blob/main/.reg/CMD.reg)
 
 ---
 
 <b>3. PowerShell & GUI [<img width="18px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/PowerShell_5.0_icon.png/18px-PowerShell_5.0_icon.png">](https://docs.microsoft.com/en-us/powershell/)</b>&emsp;
-
-Get Icon's PATH  <i>(double-back-slashed)<b></i>.exe</i> PATH:</b>
-
-
+<section id="PowerShell">
+Get Icon's PATHs  <i>(double-back-slashed)<b></i>.exe</i> PATHs:</b>
 
 The parent folder contains the [powershell.exe](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_powershell_exe?view=powershell-5.1#parameters) & [power_ise.exe](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_powershell_ise_exe?view=powershell-5.1)<br>
 Run [``PowerShell.reg``](https://github.com/EstebanMqz/Context_Menu-Registries/blob/main/.reg/PowerShell.reg)<br> 
-<b><u>(modify PATHs accordingly)</b></u>.
+<i>(modify PATHs accordingly)</i>.
 
 ---
 
 <b>4. &nbsp; &nbsp; VSCode &nbsp; [<img width="18px" src="https://www.svgrepo.com/show/374171/vscode.svg">](https://docs.microsoft.com/en-us/powershell/)</b><br>
+<section id="VSCode">
 
 [``VSCode.reg``](https://github.com/EstebanMqz/Context_Menu-Registriesblob/main/.reg/VSCode.reg) 
 <br>
@@ -198,6 +210,7 @@ Run [``PowerShell.reg``](https://github.com/EstebanMqz/Context_Menu-Registries/b
 ---
 
 <b>5. &nbsp; &nbsp; Pycharm &nbsp; [<img width="18px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/PyCharm_Icon.svg/512px-PyCharm_Icon.svg.png">](https://www.jetbrains.com/pycharm/)</b><br>
+<section id="PyCharm">
 
 [``PyCharm.reg``](https://github.com/EstebanMqz/Context_Menu-Registries/blob/main/.reg/PyCharm.reg)
 
@@ -205,7 +218,16 @@ Run [``PowerShell.reg``](https://github.com/EstebanMqz/Context_Menu-Registries/b
 
 <b>6. &nbsp; &nbsp; Notepad  &nbsp; [<img width="18px" src="https://img.icons8.com/?size=48&id=82ixf4KHn6za&format=png">](https://icons8.com/icon/82ixf4KHn6za/notepad)</b><br>
 
- [``Notepad.reg``](https://github.com/EstebanMqz/Context_Menu-Registries/blob/main/.reg/Notepad.reg)
+<section id="Notepad">
+
+[``Notepad.reg``](https://github.com/EstebanMqz/Context_Menu-Registries/blob/main/.reg/Notepad.reg)
+
+
+<b>7. &nbsp; &nbsp; Node.js &nbsp; [<img width="18px" src="https://www.vectorlogo.zone/logos/nodejs/nodejs-icon.svg">](https://nodejs.org/en)</b><br>
+
+<section id="Node">
+
+[``Node.reg``](https://github.com/EstebanMqz/Context_Menu-Registries/blob/main/.reg/Node.reg)
 
 ---
 ###### Recommended:
@@ -213,12 +235,16 @@ Run [``PowerShell.reg``](https://github.com/EstebanMqz/Context_Menu-Registries/b
 <a href="https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.management/checkpoint-computer?view=powershell-5.1"><img src="https://img.shields.io/badge/CMD-Restore_Point-000000.svg?style=flat&amp;logo=powershell&amp;logoColor=blue" alt="CMD-Restore_Point"></a>
 or <a href="https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/xcopy"><img src="https://img.shields.io/badge/xcopy-000000.svg?style=flat&logo=windows-terminal&logoColor=white" alt="CMD-xcopy"></a> with [``external.bat``](https://github.com/EstebanMqz/Registries/blob/main/.bat/external.bat)
 
-<i>Backup HDD: to external SSD:</i>
+#####  <b>Backup HDD : $SSD_{ext}$</b>
+
+<i>Assuming your HDD:C & $SSD_{ext}:$D.</i>
 
 ```bash
-./external.bat #(Assuming your HDD:C & external-SSD:D. Change .bat if not.)
+./external.bat 
 cd D: & label D: SSD_ext  #Rename D to SSD_ext
 ```
+
+<i><b>Note:</b> Ignore modification alerts after backup.</i><br>
 <br>
 <div style="background-color: #d97707; height: 2px;"></div><br>
 
@@ -226,6 +252,8 @@ cd D: & label D: SSD_ext  #Rename D to SSD_ext
 <h2 style="text-shadow: 2px 1px darkgreen; color: darkred; text-align: center; text-decoration: underline;"> <b> Enable <a href="https://learn.microsoft.com/en-us/windows/win32/procthread/changing-environment-variables"> User/System Environment Variables </a></b> &amp; <b><a href="https://phoenixnap.com/kb/linux-add-to-path#:~:text=PATH%20is%20an%20environment%20variable,to%20remove%20it%20in%20Linux.">PATHs</a></b> at <b>Startup</b></h2>
 
 <section id="Startup">
+
+
 
 To be able to use the previously enabled [.reg](https://github.com/EstebanMqz/Registries/tree/main/.reg) files you will need to do the following:
 
