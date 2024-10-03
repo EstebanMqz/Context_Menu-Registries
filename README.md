@@ -380,13 +380,7 @@ WSL enabled OS [Directories](https://learn.microsoft.com/en-us/windows-server/ad
 
 <summary> <div b style="font-family: Arial, sans-serif; color: #c4c8ff; font-size: 18px;"> Business Inquiries:</b> </div> </summary>
 
-[<img width="40px" height="40px" src="https://img.icons8.com/ios/50/0e55b3/resume-website.png" alt="Resume">](https://estebanmqz.github.io/EstebanMqz/html/Resume.html)
-[<img width="40px" height="40px" src="https://img.icons8.com/?size=512&amp;id=MR3dZdlA53te&amp;format=png" alt="LinkedIn">](https://www.linkedin.com/in/estebanmqz/)
-[<img width="36px" height="36px" src="https://cdn.worldvectorlogo.com/logos/whatsapp-business-bg.svg" alt="Business">](https://tinyurl.com/BusinessNo)
-<a href="https://mail.google.com/mail/?view=cm&fs=1&to=emarquez1895@gmail.com" target="Greetings Esteban I reviewed your work, skills and experience and I wish to schedule a Business Meeting with you." style="text-decoration: none;"><img width="60px" height="60px" style="max-width: 100%; max-height: 100%; margin-bottom: -7px;" src="https://www.svgrepo.com/show/530453/mail-reception.svg" alt="Mail">
-</a>
-[<img width="40px" height="40px" style="max-width: 100%; max-height: 100%;" src="https://cdn3d.iconscout.com/3d/free/thumb/free-github-6343501-5220956.png?f=webp" alt="Github">](https://github.com/EstebanMqz?tab=repositories)
-[<img width="40px" height="40px" style="max-width: 100%; max-height: 100%;" src="https://img.icons8.com/color/452/gitlab.png" alt="GitLab">](https://gitlab.com/EstebanMqz)
+[<img width="40px" height="40px" src="https://www.svgrepo.com/show/452228/html-5.svg" alt="Resume">](https://estebanmqz.github.io/EstebanMqz/) &nbsp; [<img width="40px" height="40px" src="https://img.icons8.com/?size=512&amp;id=MR3dZdlA53te&amp;format=png" alt="LinkedIn">](https://www.linkedin.com/in/estebanmqz/) &nbsp; [<img width="36px" height="36px" src="https://cdn.worldvectorlogo.com/logos/whatsapp-business-bg.svg" alt="Business">](https://tinyurl.com/Estebans-Phone) &nbsp; <a href="mailto:emarquez1895@gmail.com" style="text-decoration: none;"><img width="40px" height="40px" style="max-width: 100%; max-height: 100%;" src="https://img.icons8.com/color/452/gmail-new.png" alt="Gmail"></a> &nbsp; [<img width="40px" height="40px" style="max-width: 100%; max-height: 100%;" src="https://cdn3d.iconscout.com/3d/free/thumb/free-github-6343501-5220956.png?f=webp" alt="Github">](https://github.com/EstebanMqz) &nbsp; [<img width="40px" height="40px" style="max-width: 100%; max-height: 100%;" src="https://img.icons8.com/color/452/gitlab.png" alt="GitLab">](https://gitlab.com/EstebanMqz)
 
 <div align= "left">
 <div style="font-family: Arial, sans-serif; color: #c4c8ff; font-size: 15px;">
