@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Description: Exports Environment Variables & PATHs if necessary, NVM & Node.js with Bash Initalization & Auto-completion. It also sources ./bashrc to ./profile. to match Unix-like envs.
+# Description: Exports Environment Variables & PATHs if necessary, NVM & Node.js with Bash Initalization & Auto-completion. It also sources %USERPROFILE%\.bashrc to %USERPROFILE%\.profile to match Unix-like envs.
 
 #CREATE/OPEN (.sh): cd $HOME & code ~/.profile 
 
@@ -29,7 +29,7 @@ directories=(
 "/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common"
 "/c/Program Files/NVIDIA Corporation/NvDLISR"
 "/c/Windows/system32"
-"/c/Users/Esteban/gh-cli/bin"
+"/c/Users/Esteban/gh-cli/bin/gh.exe"
 "/c/Program Files/System32/jq.exe"
 )
 
@@ -49,16 +49,16 @@ for i in "${!Environment[@]}"; do
   fi
 done
 
-# NVM %USERPROFILE% initalization in Bash & enable NVM commands Auto Completion. 
+# NVM %USERPROFILE% initialization in Bash & enable NVM commands Auto Completion. 
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
-[ -s "$NVM_DIR/bash_completion"] && \. "$NVM_DIR/bash_completion"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
 
-# Node.js/npm & binaries accesible in PATHs.
+# Node.js/npm & binaries accessible in PATHs.
 export PATH="$PATH:$NVM_DIR/versions/node/$(nvm current)/bin"
 export PATH="$PATH:$node_bin_path"
 
-#FNM setup binaries accesible in PATHs.
+# FNM setup binaries accessible in PATHs.
 FNM_PATH="/c/Users/Esteban/.local/share/fnm"
 if [ -d "$FNM_PATH" ]; then
   export PATH="$FNM_PATH:$PATH"
@@ -68,11 +68,11 @@ fi
 # Ensure npm global packages are in PATH
 export PATH="$PATH:$(npm bin -g)"
 
-# Source ./bashrc to ./profile. 
+# Source .bashrc in .profile.
 if [ -n "$BASH_VERSION" ]; then
-    if [ -f "$HOME/.bashrc" ]; then
-        . "$HOME/.bashrc"
-    fi
+  if [ -f "$HOME/.bashrc" ]; then
+    . "$HOME/.bashrc"
+  fi
 fi
 
 # Author: Esteban Márquez D. @https://www.github.com/EstebanMqz
@@ -80,4 +80,4 @@ fi
 
 # Badge: #[![.profile](https://img.shields.io/badge/~/.profile-000000.svg?style=flat&logo=git&logoColor=orange)](https://github.com/EstebanMqz/Registries/blob/main/$HOME/.profile)
 
-#Note: This script is a snippet from the .profile file for the Author's personal use, exclusively. Anyone can use it as reference for their own .profile file in $HOME 
+#Note: This script is a snippet from the .profile file for the Author's personal use, exclusively. Anyone can use it as reference for their own %USERPROFILE%\.profile file. 

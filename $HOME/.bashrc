@@ -1,10 +1,10 @@
 #!/bin/bash
 
-# Description: Exports Environment Variables & PATHs if necessary, NVM & Node.js with Bash Initalization & Auto-completion.
+# Description: Exports Environment Variables & PATHs if necessary, NVM & Node.js with Bash Initalization & Auto-completion. %USERPROFILE%\.bashrc is sourced to %USERPROFILE%\.profile. to match Unix-like envs.
 
 #CREATE/OPEN (.sh): cd $HOME & code ~/.profile 
 
-Environment=(VSCode Python311_Lib Python11_exe Python311_Scripts Python312_Lib Python12_exe Python312_Scripts LocalTemp ComposerSetup dotnet Git MATLAB nodejs NVIDIA R422 php bun NET WindowsPowershell PhysX NvDLISR system32 gh-cli JQ)
+Environment=(VSCode Python311_Lib Python11_exe Python311_Scripts Python312_Lib Python12_exe Python312_Scripts LocalTemp ComposerSetup dotnet Git MATLAB nodejs NVIDIA R422 php bun NET WindowsPowershell PhysX NvDLISR system32 gh_cli JQ)
 
 directories=(
 "/c/Users/Esteban/AppData/Local/Programs/Microsoft VS Code"
@@ -30,11 +30,11 @@ directories=(
 "/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common"
 "/c/Program Files/NVIDIA Corporation/NvDLISR"
 "/c/Windows/system32"
-"/c/Users/Esteban/gh-cli/bin"
+"/c/Users/Esteban/gh-cli/bin/gh.exe"
 "/c/Program Files/System32/jq.exe"
 )
 
-# Existing .bashrc content
+# Export PATHs if necessary.
 for dir in "${directories[@]}"
 do
   if [[ ":$PATH:" != *":$dir:"* ]]; then
@@ -50,15 +50,16 @@ for i in "${!Environment[@]}"; do
   fi
 done
 
-# NVM %USERPROFILE% initalization in Bash & enable NVM commands Auto Completion. 
+# NVM %USERPROFILE% initialization in Bash & enable NVM commands Auto Completion. 
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
 
 # Node.js/npm & binaries accesible in PATHs.
 export PATH="$PATH:$NVM_DIR/versions/node/$(nvm current)/bin"
 export PATH="$PATH:$node_bin_path"
 
-# fnm
+# FNM setup binaries accessible in PATHs.
 FNM_PATH="/c/Users/Esteban/.local/share/fnm"
 if [ -d "$FNM_PATH" ]; then
   export PATH="$FNM_PATH:$PATH"
@@ -73,4 +74,4 @@ export PATH="$PATH:$(npm bin -g)"
 
 # Badge: #[![.profile](https://img.shields.io/badge/~/.profile-000000.svg?style=flat&logo=git&logoColor=orange)](https://github.com/EstebanMqz/Registries/blob/main/$HOME/.profile)[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion.
 
-#Note: This script is a snippet from the .profile file for the Author's personal use, exclusively. Anyone can use it as reference for their own .profile file. in $HOME 
+#Note: This script is a snippet from the .profile file for the Author's personal use, exclusively. Anyone can use it as reference for their own %USERPROFILE%\.bashrc file.
