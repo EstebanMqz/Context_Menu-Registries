@@ -4,22 +4,20 @@
 
 #CREATE/OPEN (.sh): cd $HOME & code ~/.profile 
 
-Environment=(VSCode Python311_Lib Python11_exe Python311_Scripts Python312_Lib Python12_exe Python312_Scripts LocalTemp ComposerSetup dotnet Git MATLAB nodejs NVIDIA R422 php bun NET WindowsPowershell PhysX NvDLISR system32 gh_cli JQ)
+Environment=(VSCode Python314_Lib Python14_exe Python314_Scripts Python314_site-packages Python12_exe Python312_Scripts LocalTemp ComposerSetup dotnet Git MATLAB nodejs NVIDIA R422 php bun NET WindowsPowershell PhysX NvDLISR system32 gh_cli JQ)
 
 directories=(
 "/c/Users/Esteban/AppData/Local/Programs/Microsoft VS Code"
-"/c/Users/Esteban/AppData/Local/Programs/Python/Python311/Lib/site-packages"
-"/c/Users/Esteban/AppData/Local/Programs/Python/Python311/python.exe"
-"/c/Users/Esteban/AppData/Local/Programs/Python/Python311/Scripts"
-"/c/Users/Esteban/AppData/Local/Programs/Python/Python312/Lib/site-packages"
-"/c/Users/Esteban/AppData/Local/Programs/Python/Python312/python.exe"
-"/c/Users/Esteban/AppData/Local/Programs/Python/Python312/Scripts"
-"/c/Users/Esteban/AppData/Local/Temp"
-"/c/ProgramData/ComposerSetup"
-"/c/Program Files/dotnet"
+"/c/Users/Esteban/AppData/Local/Programs/Python/pythoncore-3.14-64/Lib/site-packages"
+"/c/Users/Esteban/AppData/Local/Programs/Python/pythoncore-3.14-64bit/python.exe"
+"/c/Users/Esteban/AppData/Local/Programs/Python/pythoncore-3.14-64/Scripts"
+"/c/Users/Esteban/AppData/Local/Python/pythoncore-3.14-64/Lib/site-packages"
+"//wsl.localhost/Ubuntu-22.04/usr/bin/composer"
+"//wsl.localhost/Ubuntu-22.04/usr/bin/c++"
+"c/Program Files/dotnet/dotnet.exe"
 "/c/Program Files/Git/cmd"
-"/c/Program Files/MATLAB/R2021a/bin"
-"/c/Program Files/nodejs"
+"/c/Program Files/MATLAB/R2025b"
+"/c/Users/Esteban/.nvm/versions/node/v20.16.0/bin/node.exe"
 "/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR"
 "/c/Program Files/NVIDIA Corporation/PhysX/Common"
 "/c/Program Files/R/R-4.2.2"
@@ -50,14 +48,23 @@ for i in "${!Environment[@]}"; do
   fi
 done
 
-# NVM %USERPROFILE% initialization in Bash & enable NVM commands Auto Completion. 
-export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
+# Add Node.js global binaries to PATH (adjust path as needed)
+export PATH="$PATH:/c/Program Files/nodejs"
 
-# Node.js/npm & binaries accesible in PATHs.
-export PATH="$PATH:$NVM_DIR/versions/node/$(nvm current)/bin"
-export PATH="$PATH:$node_bin_path"
+# Optionally add npm global bin if npm exists
+if command -v npm >/dev/null 2>&1; then
+  export PATH="$PATH:$(npm bin -g)"
+fi
+
+
+# # NVM %USERPROFILE% initialization in Bash & enable NVM commands Auto Completion. 
+# export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
+
+# # Node.js/npm & binaries accesible in PATHs.
+# export PATH="$PATH:$NVM_DIR/versions/node/$(nvm current)/bin"
+# export PATH="$PATH:$node_bin_path"
 
 # FNM setup binaries accessible in PATHs.
 FNM_PATH="/c/Users/Esteban/.local/share/fnm"

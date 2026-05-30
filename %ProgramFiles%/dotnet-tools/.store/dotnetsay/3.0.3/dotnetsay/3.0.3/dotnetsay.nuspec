@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>dotnetsay</id>
+    <version>3.0.3</version>
+    <authors>Richard Lander</authors>
+    <license type="expression">MIT</license>
+    <licenseUrl>https://licenses.nuget.org/MIT</licenseUrl>
+    <readme>README.md</readme>
+    <description>A simple .NET tool that prints dotnetbot</description>
+    <packageTypes>
+      <packageType name="DotnetTool" />
+    </packageTypes>
+    <repository type="git" url="https://github.com/richlander/dotnetsay.git" branch="refs/heads/csproj" commit="3a0af050c13df39b43b7843271af3ddf5bb4e586" />
+  </metadata>
+</package>
