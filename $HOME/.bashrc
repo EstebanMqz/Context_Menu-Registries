@@ -4,7 +4,9 @@
 
 #CREATE/OPEN (.sh): cd $HOME & code ~/.profile 
 
-Environment=(VSCode Python314_Lib Python14_exe Python314_Scripts Python314_site-packages Python12_exe Python312_Scripts LocalTemp ComposerSetup dotnet Git MATLAB nodejs NVIDIA R422 php bun NET WindowsPowershell PhysX NvDLISR system32 gh_cli JQ)
+Environment=(VSCode Python314_Lib Python14_exe Python314_Scripts Python314_site-packages wsl_composer wsl_c++ dotnet Git MATLAB node 
+
+LocalTemp ComposerSetup dotnet Git MATLAB nodejs NVIDIA R422 php bun NET WindowsPowershell PhysX NvDLISR system32 gh_cli JQ)
 
 directories=(
 "/c/Users/Esteban/AppData/Local/Programs/Microsoft VS Code"
@@ -18,6 +20,7 @@ directories=(
 "/c/Program Files/Git/cmd"
 "/c/Program Files/MATLAB/R2025b"
 "/c/Users/Esteban/.nvm/versions/node/v20.16.0/bin/node.exe"
+
 "/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR"
 "/c/Program Files/NVIDIA Corporation/PhysX/Common"
 "/c/Program Files/R/R-4.2.2"
