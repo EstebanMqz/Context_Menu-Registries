@@ -4,9 +4,8 @@
 
 #CREATE/OPEN (.sh): cd $HOME & code ~/.profile 
 
-Environment=(VSCode Python314_Lib Python14_exe Python314_Scripts Python314_site-packages wsl_composer wsl_c++ dotnet Git MATLAB node 
-
-LocalTemp ComposerSetup dotnet Git MATLAB nodejs NVIDIA R422 php bun NET WindowsPowershell PhysX NvDLISR system32 gh_cli JQ)
+Environment=(VSCode Python314_Lib Python14_exe Python314_Scripts Python314_site-packages wsl_composer wsl_c++ dotnet Git MATLAB node node_modules NVIDIA R RStudio
+LocalTemp ComposerSetup dotnet Git MATLAB nodejs R422 php bun NET WindowsPowershell PhysX NvDLISR system32 gh_cli JQ)
 
 directories=(
 "/c/Users/Esteban/AppData/Local/Programs/Microsoft VS Code"
@@ -20,16 +19,16 @@ directories=(
 "/c/Program Files/Git/cmd"
 "/c/Program Files/MATLAB/R2025b"
 "/c/Users/Esteban/.nvm/versions/node/v20.16.0/bin/node.exe"
+"/c/Windows/System32/node_modules"
+"/c/Program Files (x86)/NVIDIA Corporation"
+"/c/Users/Esteban/AppData/Local/R"
+"/c/Users/Esteban/AppData/Local/RStudio"
 
-"/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR"
-"/c/Program Files/NVIDIA Corporation/PhysX/Common"
-"/c/Program Files/R/R-4.2.2"
 "/c/php-8.2.9"
 "c/Users/Esteban/.bun/bin/bun.exe"
 "/c/Windows/Microsoft.NET/Framework64/v4.0.30319/csc.exe"
 "/c/Windows/System32/WindowsPowerShell/v1.0"
 "/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common"
-"/c/Program Files/NVIDIA Corporation/NvDLISR"
 "/c/Windows/system32"
 "/c/Users/Esteban/gh-cli/bin/gh.exe"
 "/c/Program Files/System32/jq.exe"
