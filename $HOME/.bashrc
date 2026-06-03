@@ -4,7 +4,7 @@
 
 #CREATE/OPEN (.sh): cd $HOME & code ~/.profile 
 
-Environment=(VSCode Python314_Lib Python14_exe Python314_Scripts Python314_site-packages wsl_composer wsl_c++ dotnet Git MATLAB node node_modules NVIDIA R RStudio
+Environment=(VSCode Python314_Lib Python14_exe Python314_Scripts Python314_site-packages wsl_composer wsl_c++ dotnet Git MATLAB node node_modules NVIDIA R RStudio Brew
 LocalTemp ComposerSetup dotnet Git MATLAB nodejs R422 php bun NET WindowsPowershell PhysX NvDLISR system32 gh_cli JQ)
 
 directories=(
@@ -23,6 +23,7 @@ directories=(
 "/c/Program Files (x86)/NVIDIA Corporation"
 "/c/Users/Esteban/AppData/Local/R"
 "/c/Users/Esteban/AppData/Local/RStudio"
+
 
 "/c/php-8.2.9"
 "c/Users/Esteban/.bun/bin/bun.exe"
@@ -57,6 +58,19 @@ export PATH="$PATH:/c/Program Files/nodejs"
 if command -v npm >/dev/null 2>&1; then
   export PATH="$PATH:$(npm bin -g)"
 fi
+
+if type brew &>/dev/null
+then
+  HOMEBREW_PREFIX="$(brew --prefix)"
+  if [[ -r "${HOMEBREW_PREFIX}/etc/profile.d/bash_completion.sh" ]]
+  then
+    source "${HOMEBREW_PREFIX}/etc/profile.d/bash_completion.sh"
+  else
+    for COMPLETION in "${HOMEBREW_PREFIX}/etc/bash_completion.d/"*
+    do
+      [[ -r "${COMPLETION}" ]] && source "${COMPLETION}"
+    done
+  fi
 
 
 # # NVM %USERPROFILE% initialization in Bash & enable NVM commands Auto Completion. 

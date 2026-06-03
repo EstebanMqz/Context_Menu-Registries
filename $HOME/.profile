@@ -33,6 +33,21 @@ directories=(
 "/c/Program Files/System32/jq.exe"
 )
 
+# Export PATHs from Homebrew if installed, im .profile and .bashrc for Homebrew's bash completion. (see docs.)
+if type brew &>/dev/null
+then
+  HOMEBREW_PREFIX="$(brew --prefix)"
+  if [[ -r "${HOMEBREW_PREFIX}/etc/profile.d/bash_completion.sh" ]]
+  then
+    source "${HOMEBREW_PREFIX}/etc/profile.d/bash_completion.sh"
+  else
+    for COMPLETION in "${HOMEBREW_PREFIX}/etc/bash_completion.d/"*
+    do
+      [[ -r "${COMPLETION}" ]] && source "${COMPLETION}"
+    done
+  fi
+fi
+
 # Export PATHs if necessary.
 for dir in "${directories[@]}"
 do
@@ -77,7 +92,8 @@ fi
 
 # Author: Esteban Márquez D. @https://www.github.com/EstebanMqz
 # References: https://github.com/EstebanMqz/Registries/blob/main/$HOME/.profile
+# References: https://github.com/EstebanMqz/Registries/blob/main/$HOME/.bashrc
 
 # Badge: #[![.profile](https://img.shields.io/badge/~/.profile-000000.svg?style=flat&logo=git&logoColor=orange)](https://github.com/EstebanMqz/Registries/blob/main/$HOME/.profile)
 
-#Note: This script is a snippet from the .profile file for the Author's personal use, exclusively. Anyone can use it as reference for their own %USERPROFILE%\.profile file. 
+#Note: This script is a snippet from the .profile file for the Author's personal use, exclusively. Anyone can use it as reference for their own %USERPROFILE%\.profile dependding on their apps & devtools and configs. 
